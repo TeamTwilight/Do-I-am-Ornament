@@ -9,7 +9,9 @@ public class TFOrnamentBuilder extends OrnamentBuilder {
 	public boolean emissive = false;
 	public float shadeBrightness = -1.0F;
 	public boolean shearable = false;
+	public float shearSpeed = 1.0F;
 	public boolean fireHazard = false;
+	public float hazardDamage = 0.0F;
 	public boolean sticky = false;
 
 	public TFOrnamentBuilder(OrnamentBuilder builder) {
@@ -48,16 +50,18 @@ public class TFOrnamentBuilder extends OrnamentBuilder {
 	/**
 	 * Determines if the tool uses Shears to harvest
 	 */
-	public TFOrnamentBuilder shearable() {
+	public TFOrnamentBuilder shearable(float speed) {
 		this.shearable = true;
+		this.shearSpeed = speed;
 		return this;
 	}
 
 	/**
 	 * Determines if the block deals fire damage when walked on
 	 */
-	public TFOrnamentBuilder fireHazard() {
+	public TFOrnamentBuilder fireHazard(float damage) {
 		this.fireHazard = true;
+		this.hazardDamage = damage;
 		return this;
 	}
 

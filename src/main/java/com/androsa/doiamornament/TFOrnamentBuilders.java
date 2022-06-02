@@ -22,7 +22,7 @@ public class TFOrnamentBuilders {
 			.noOcclusion()
 			.emissiveRender()
 			.shadeBrightness(1.0F)
-			.fireHazard();
+			.fireHazard(1.0F);
 
 	public static final TFOrnamentBuilder STEELEAF = new TFOrnamentBuilder(
 			new OrnamentBuilder("steeleaf")
@@ -39,7 +39,7 @@ public class TFOrnamentBuilders {
 					.hardnessAndResistance(0.8F)
 					.fall(0.1F)
 					.canOpen())
-			.shearable();
+			.shearable(0.2F);
 
 	public static final TFOrnamentBuilder CARMINITE = new TFOrnamentBuilder(
 			new OrnamentBuilder("carminite")
@@ -73,6 +73,7 @@ public class TFOrnamentBuilders {
 						.properties(Material.WOOD, color)
 						.sound(SoundType.WOOD)
 						.hardnessAndResistance(2.0F)
-						.canOpen());
+						.canOpen()
+						.burnTime(300, 300, 300, 150, 300, 150, 150, 300, 300));
 	}
 }
