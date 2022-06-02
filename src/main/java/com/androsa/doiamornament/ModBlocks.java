@@ -174,6 +174,8 @@ public class ModBlocks {
 
 	private static RegistryObject<OrnamentTFFenceGate> makeFenceGate(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
+		if (!builder.occlusion) props.noOcclusion();
+		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
 
 		return registerBlock(builder.name + "_fence_gate", () -> new OrnamentTFFenceGate(props, builder),
 				(item) -> registerBlockItem(item, CreativeModeTab.TAB_REDSTONE, builder, 2));
@@ -181,6 +183,7 @@ public class ModBlocks {
 
 	private static RegistryObject<OrnamentTFPole> makePole(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
+		if (!builder.occlusion) props.noOcclusion();
 		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
 
 		return registerBlock(builder.name + "_pole", () -> new OrnamentTFPole(props, builder),
@@ -189,6 +192,7 @@ public class ModBlocks {
 
 	private static RegistryObject<OrnamentTFBeam> makeBeam(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
+		if (!builder.occlusion) props.noOcclusion();
 		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
 
 		return registerBlock(builder.name + "_beam", () -> new OrnamentTFBeam(props, builder),
