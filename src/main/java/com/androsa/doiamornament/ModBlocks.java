@@ -112,6 +112,29 @@ public class ModBlocks {
 	public static final RegistryObject<OrnamentTFPole> transformation_plank_pole = makePole(TFOrnamentBuilders.TRANSFORMATION_PLANKS);
 	public static final RegistryObject<OrnamentTFPole> mining_plank_pole = makePole(TFOrnamentBuilders.MINING_PLANKS);
 	public static final RegistryObject<OrnamentTFPole> sorting_plank_pole = makePole(TFOrnamentBuilders.SORTING_PLANKS);
+
+	public static final RegistryObject<OrnamentTFBeam> ironwood_beam = makeBeam(TFOrnamentBuilders.IRONWOOD);
+	public static final RegistryObject<OrnamentTFBeam> fiery_beam = makeBeam(TFOrnamentBuilders.FIERY);
+	public static final RegistryObject<OrnamentTFBeam> steeleaf_beam = makeBeam(TFOrnamentBuilders.STEELEAF);
+	public static final RegistryObject<OrnamentTFBeam> arctic_fur_beam = makeBeam(TFOrnamentBuilders.ARCTIC_FUR);
+	public static final RegistryObject<OrnamentTFBeam> carminite_beam = makeBeam(TFOrnamentBuilders.CARMINITE);
+	public static final RegistryObject<OrnamentTFBeam> twilight_oak_log_beam = makeBeam(TFOrnamentBuilders.TWILIGHT_OAK_LOG);
+	public static final RegistryObject<OrnamentTFBeam> canopy_log_beam = makeBeam(TFOrnamentBuilders.CANOPY_LOG);
+	public static final RegistryObject<OrnamentTFBeam> mangrove_log_beam = makeBeam(TFOrnamentBuilders.MANGROVE_LOG);
+	public static final RegistryObject<OrnamentTFBeam> dark_oak_log_beam = makeBeam(TFOrnamentBuilders.DARK_OAK_LOG);
+	public static final RegistryObject<OrnamentTFBeam> time_log_beam = makeBeam(TFOrnamentBuilders.TIME_LOG);
+	public static final RegistryObject<OrnamentTFBeam> transformation_log_beam = makeBeam(TFOrnamentBuilders.TRANSFORMATION_LOG);
+	public static final RegistryObject<OrnamentTFBeam> mining_log_beam = makeBeam(TFOrnamentBuilders.MINING_LOG);
+	public static final RegistryObject<OrnamentTFBeam> sorting_log_beam = makeBeam(TFOrnamentBuilders.SORTING_LOG);
+	public static final RegistryObject<OrnamentTFBeam> twilight_oak_plank_beam = makeBeam(TFOrnamentBuilders.TWILIGHT_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFBeam> canopy_plank_beam = makeBeam(TFOrnamentBuilders.CANOPY_PLANKS);
+	public static final RegistryObject<OrnamentTFBeam> mangrove_plank_beam = makeBeam(TFOrnamentBuilders.MANGROVE_PLANKS);
+	public static final RegistryObject<OrnamentTFBeam> dark_oak_plank_beam = makeBeam(TFOrnamentBuilders.DARK_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFBeam> time_plank_beam = makeBeam(TFOrnamentBuilders.TIME_PLANKS);
+	public static final RegistryObject<OrnamentTFBeam> transformation_plank_beam = makeBeam(TFOrnamentBuilders.TRANSFORMATION_PLANKS);
+	public static final RegistryObject<OrnamentTFBeam> mining_plank_beam = makeBeam(TFOrnamentBuilders.MINING_PLANKS);
+	public static final RegistryObject<OrnamentTFBeam> sorting_plank_beam = makeBeam(TFOrnamentBuilders.SORTING_PLANKS);
+
 	private static RegistryObject<OrnamentTFStairs> makeStairs(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
 		if (!builder.occlusion) props.noOcclusion();
@@ -163,6 +186,15 @@ public class ModBlocks {
 		return registerBlock(builder.name + "_pole", () -> new OrnamentTFPole(props, builder),
 				(item) -> registerBlockItem(item, CreativeModeTab.TAB_BUILDING_BLOCKS, builder, 6));
 	}
+
+	private static RegistryObject<OrnamentTFBeam> makeBeam(TFOrnamentBuilder builder) {
+		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
+		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
+
+		return registerBlock(builder.name + "_beam", () -> new OrnamentTFBeam(props, builder),
+				(item) -> registerBlockItem(item, CreativeModeTab.TAB_BUILDING_BLOCKS, builder, 7));
+	}
+
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
 		RegistryObject<T> reg = BLOCKS.register(name, block);
 		ITEMS.register(name, item.apply(reg));
