@@ -227,7 +227,7 @@ public class ModBlocks {
 		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
 
 		return registerBlock(builder.name + "_wall", () -> new OrnamentTFWall(props, builder),
-				(item) -> registerBlockItem(item, CreativeModeTab.TAB_BUILDING_BLOCKS, builder, 8));
+				(item) -> registerBlockItem(item, CreativeModeTab.TAB_DECORATIONS, builder, 8));
 	}
 
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
