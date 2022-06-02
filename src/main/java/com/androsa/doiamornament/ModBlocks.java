@@ -135,6 +135,28 @@ public class ModBlocks {
 	public static final RegistryObject<OrnamentTFBeam> mining_plank_beam = makeBeam(TFOrnamentBuilders.MINING_PLANKS);
 	public static final RegistryObject<OrnamentTFBeam> sorting_plank_beam = makeBeam(TFOrnamentBuilders.SORTING_PLANKS);
 
+	public static final RegistryObject<OrnamentTFWall> ironwood_wall = makeWall(TFOrnamentBuilders.IRONWOOD);
+	public static final RegistryObject<OrnamentTFWall> fiery_wall = makeWall(TFOrnamentBuilders.FIERY);
+	public static final RegistryObject<OrnamentTFWall> steeleaf_wall = makeWall(TFOrnamentBuilders.STEELEAF);
+	public static final RegistryObject<OrnamentTFWall> arctic_fur_wall = makeWall(TFOrnamentBuilders.ARCTIC_FUR);
+	public static final RegistryObject<OrnamentTFWall> carminite_wall = makeWall(TFOrnamentBuilders.CARMINITE);
+	public static final RegistryObject<OrnamentTFWall> twilight_oak_log_wall = makeWall(TFOrnamentBuilders.TWILIGHT_OAK_LOG);
+	public static final RegistryObject<OrnamentTFWall> canopy_log_wall = makeWall(TFOrnamentBuilders.CANOPY_LOG);
+	public static final RegistryObject<OrnamentTFWall> mangrove_log_wall = makeWall(TFOrnamentBuilders.MANGROVE_LOG);
+	public static final RegistryObject<OrnamentTFWall> dark_oak_log_wall = makeWall(TFOrnamentBuilders.DARK_OAK_LOG);
+	public static final RegistryObject<OrnamentTFWall> time_log_wall = makeWall(TFOrnamentBuilders.TIME_LOG);
+	public static final RegistryObject<OrnamentTFWall> transformation_log_wall = makeWall(TFOrnamentBuilders.TRANSFORMATION_LOG);
+	public static final RegistryObject<OrnamentTFWall> mining_log_wall = makeWall(TFOrnamentBuilders.MINING_LOG);
+	public static final RegistryObject<OrnamentTFWall> sorting_log_wall = makeWall(TFOrnamentBuilders.SORTING_LOG);
+	public static final RegistryObject<OrnamentTFWall> twilight_oak_planks_wall = makeWall(TFOrnamentBuilders.TWILIGHT_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> canopy_planks_wall = makeWall(TFOrnamentBuilders.CANOPY_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> mangrove_planks_wall = makeWall(TFOrnamentBuilders.MANGROVE_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> dark_oak_planks_wall = makeWall(TFOrnamentBuilders.DARK_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> time_planks_wall = makeWall(TFOrnamentBuilders.TIME_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> transformation_planks_wall = makeWall(TFOrnamentBuilders.TRANSFORMATION_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> mining_planks_wall = makeWall(TFOrnamentBuilders.MINING_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> sorting_planks_wall = makeWall(TFOrnamentBuilders.SORTING_PLANKS);
+
 	private static RegistryObject<OrnamentTFStairs> makeStairs(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
 		if (!builder.occlusion) props.noOcclusion();
@@ -197,6 +219,15 @@ public class ModBlocks {
 
 		return registerBlock(builder.name + "_beam", () -> new OrnamentTFBeam(props, builder),
 				(item) -> registerBlockItem(item, CreativeModeTab.TAB_BUILDING_BLOCKS, builder, 7));
+	}
+
+	private static RegistryObject<OrnamentTFWall> makeWall(TFOrnamentBuilder builder) {
+		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
+		if (!builder.occlusion) props.noOcclusion();
+		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
+
+		return registerBlock(builder.name + "_wall", () -> new OrnamentTFWall(props, builder),
+				(item) -> registerBlockItem(item, CreativeModeTab.TAB_BUILDING_BLOCKS, builder, 8));
 	}
 
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
