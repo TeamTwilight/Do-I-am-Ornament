@@ -1,0 +1,32 @@
+modLoader="javafml" #mandatory
+loaderVersion="[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="GNU General Public Licence v3"
+
+[[mods]] #mandatory
+modId="doiamornament" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="Ornamental: Do I am Ornament?" #mandatory
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+credits="TeamTwilight for hosting the mod." #optional
+authors="Androsa" #optional
+description='''
+More decorative options, now for Twilight Forest.
+
+All your favourite blocks from Twilight Forest now in all arrays of decorative blocks.
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.doiamornament]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[40,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+# Here's another dependency
+[[dependencies.doiamornament]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,)"
+    ordering="NONE"
+    side="BOTH"
+# TODO: Required dependency for Twilight Forest
