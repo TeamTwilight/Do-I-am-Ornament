@@ -62,6 +62,20 @@ public class ModBlocks {
 	public static final RegistryObject<OrnamentTFFence> transformation_log_fence = makeFence(TFOrnamentBuilders.TRANSFORMATION_LOG);
 	public static final RegistryObject<OrnamentTFFence> mining_log_fence = makeFence(TFOrnamentBuilders.MINING_LOG);
 	public static final RegistryObject<OrnamentTFFence> sorting_log_fence = makeFence(TFOrnamentBuilders.SORTING_LOG);
+
+	public static final RegistryObject<OrnamentTFTrapdoor> ironwood_trapdoor = makeTrapdoor(TFOrnamentBuilders.IRONWOOD);
+	public static final RegistryObject<OrnamentTFTrapdoor> fiery_trapdoor = makeTrapdoor(TFOrnamentBuilders.FIERY);
+	public static final RegistryObject<OrnamentTFTrapdoor> steeleaf_trapdoor = makeTrapdoor(TFOrnamentBuilders.STEELEAF);
+	public static final RegistryObject<OrnamentTFTrapdoor> arctic_fur_trapdoor = makeTrapdoor(TFOrnamentBuilders.ARCTIC_FUR);
+	public static final RegistryObject<OrnamentTFTrapdoor> carminite_trapdoor = makeTrapdoor(TFOrnamentBuilders.CARMINITE);
+	public static final RegistryObject<OrnamentTFTrapdoor> twilight_oak_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.TWILIGHT_OAK_LOG);
+	public static final RegistryObject<OrnamentTFTrapdoor> canopy_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.CANOPY_LOG);
+	public static final RegistryObject<OrnamentTFTrapdoor> mangrove_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.MANGROVE_LOG);
+	public static final RegistryObject<OrnamentTFTrapdoor> dark_oak_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.DARK_OAK_LOG);
+	public static final RegistryObject<OrnamentTFTrapdoor> time_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.TIME_LOG);
+	public static final RegistryObject<OrnamentTFTrapdoor> transformation_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.TRANSFORMATION_LOG);
+	public static final RegistryObject<OrnamentTFTrapdoor> mining_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.MINING_LOG);
+	public static final RegistryObject<OrnamentTFTrapdoor> sorting_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.SORTING_LOG);
 	private static RegistryObject<OrnamentTFStairs> makeStairs(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
 		if (!builder.occlusion) props.noOcclusion();
@@ -87,6 +101,16 @@ public class ModBlocks {
 
 		return registerBlock(builder.name + "_fence", () -> new OrnamentTFFence(props, builder),
 				(item) -> registerBlockItem(item, CreativeModeTab.TAB_DECORATIONS, builder, 1));
+	}
+
+	private static RegistryObject<OrnamentTFTrapdoor> makeTrapdoor(TFOrnamentBuilder builder) {
+		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder())
+				.noOcclusion()
+				.isValidSpawn((state, reader, pos, type) -> false);
+		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
+
+		return registerBlock(builder.name + "_trapdoor", () -> new OrnamentTFTrapdoor(props, builder),
+				(item) -> registerBlockItem(item, CreativeModeTab.TAB_REDSTONE, builder, 5));
 	}
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
 		RegistryObject<T> reg = BLOCKS.register(name, block);
