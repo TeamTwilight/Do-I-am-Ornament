@@ -157,6 +157,28 @@ public class ModBlocks {
 	public static final RegistryObject<OrnamentTFWall> mining_planks_wall = makeWall(TFOrnamentBuilders.MINING_PLANKS);
 	public static final RegistryObject<OrnamentTFWall> sorting_planks_wall = makeWall(TFOrnamentBuilders.SORTING_PLANKS);
 
+	public static final RegistryObject<OrnamentTFSaddleDoor> ironwood_saddle_door = makeSaddleDoor(TFOrnamentBuilders.IRONWOOD);
+	public static final RegistryObject<OrnamentTFSaddleDoor> fiery_saddle_door = makeSaddleDoor(TFOrnamentBuilders.FIERY);
+	public static final RegistryObject<OrnamentTFSaddleDoor> steeleaf_saddle_door = makeSaddleDoor(TFOrnamentBuilders.STEELEAF);
+	public static final RegistryObject<OrnamentTFSaddleDoor> arctic_fur_saddle_door = makeSaddleDoor(TFOrnamentBuilders.ARCTIC_FUR);
+	public static final RegistryObject<OrnamentTFSaddleDoor> carminite_saddle_door = makeSaddleDoor(TFOrnamentBuilders.CARMINITE);
+	public static final RegistryObject<OrnamentTFSaddleDoor> twilight_oak_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TWILIGHT_OAK_LOG);
+	public static final RegistryObject<OrnamentTFSaddleDoor> canopy_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.CANOPY_LOG);
+	public static final RegistryObject<OrnamentTFSaddleDoor> mangrove_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.MANGROVE_LOG);
+	public static final RegistryObject<OrnamentTFSaddleDoor> dark_oak_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.DARK_OAK_LOG);
+	public static final RegistryObject<OrnamentTFSaddleDoor> time_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TIME_LOG);
+	public static final RegistryObject<OrnamentTFSaddleDoor> transformation_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TRANSFORMATION_LOG);
+	public static final RegistryObject<OrnamentTFSaddleDoor> mining_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.MINING_LOG);
+	public static final RegistryObject<OrnamentTFSaddleDoor> sorting_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.SORTING_LOG);
+	public static final RegistryObject<OrnamentTFSaddleDoor> twilight_oak_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TWILIGHT_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> canopy_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.CANOPY_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> mangrove_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.MANGROVE_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> dark_oak_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.DARK_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> time_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TIME_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> transformation_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TRANSFORMATION_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> mining_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.MINING_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> sorting_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.SORTING_PLANKS);
+
 	private static RegistryObject<OrnamentTFStairs> makeStairs(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
 		if (!builder.occlusion) props.noOcclusion();
@@ -228,6 +250,15 @@ public class ModBlocks {
 
 		return registerBlock(builder.name + "_wall", () -> new OrnamentTFWall(props, builder),
 				(item) -> registerBlockItem(item, CreativeModeTab.TAB_DECORATIONS, builder, 8));
+	}
+
+	private static RegistryObject<OrnamentTFSaddleDoor> makeSaddleDoor(TFOrnamentBuilder builder) {
+		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder())
+				.noOcclusion();
+		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
+
+		return registerBlock(builder.name + "_saddle_door", () -> new OrnamentTFSaddleDoor(props, builder),
+				(item) -> registerBlockItem(item, CreativeModeTab.TAB_REDSTONE, builder, 9));
 	}
 
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
