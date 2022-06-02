@@ -90,6 +90,28 @@ public class ModBlocks {
 	public static final RegistryObject<OrnamentTFFenceGate> transformation_log_fence_gate = makeFenceGate(TFOrnamentBuilders.TRANSFORMATION_LOG);
 	public static final RegistryObject<OrnamentTFFenceGate> mining_log_fence_gate = makeFenceGate(TFOrnamentBuilders.MINING_LOG);
 	public static final RegistryObject<OrnamentTFFenceGate> sorting_log_fence_gate = makeFenceGate(TFOrnamentBuilders.SORTING_LOG);
+
+	public static final RegistryObject<OrnamentTFPole> ironwood_pole = makePole(TFOrnamentBuilders.IRONWOOD);
+	public static final RegistryObject<OrnamentTFPole> fiery_pole = makePole(TFOrnamentBuilders.FIERY);
+	public static final RegistryObject<OrnamentTFPole> steeleaf_pole = makePole(TFOrnamentBuilders.STEELEAF);
+	public static final RegistryObject<OrnamentTFPole> arctic_fur_pole = makePole(TFOrnamentBuilders.ARCTIC_FUR);
+	public static final RegistryObject<OrnamentTFPole> carminite_pole = makePole(TFOrnamentBuilders.CARMINITE);
+	public static final RegistryObject<OrnamentTFPole> twilight_oak_log_pole = makePole(TFOrnamentBuilders.TWILIGHT_OAK_LOG);
+	public static final RegistryObject<OrnamentTFPole> canopy_log_pole = makePole(TFOrnamentBuilders.CANOPY_LOG);
+	public static final RegistryObject<OrnamentTFPole> mangrove_log_pole = makePole(TFOrnamentBuilders.MANGROVE_LOG);
+	public static final RegistryObject<OrnamentTFPole> dark_oak_log_pole = makePole(TFOrnamentBuilders.DARK_OAK_LOG);
+	public static final RegistryObject<OrnamentTFPole> time_log_pole = makePole(TFOrnamentBuilders.TIME_LOG);
+	public static final RegistryObject<OrnamentTFPole> transformation_log_pole = makePole(TFOrnamentBuilders.TRANSFORMATION_LOG);
+	public static final RegistryObject<OrnamentTFPole> mining_log_pole = makePole(TFOrnamentBuilders.MINING_LOG);
+	public static final RegistryObject<OrnamentTFPole> sorting_log_pole = makePole(TFOrnamentBuilders.SORTING_LOG);
+	public static final RegistryObject<OrnamentTFPole> twilight_oak_plank_pole = makePole(TFOrnamentBuilders.TWILIGHT_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFPole> canopy_plank_pole = makePole(TFOrnamentBuilders.CANOPY_PLANKS);
+	public static final RegistryObject<OrnamentTFPole> mangrove_plank_pole = makePole(TFOrnamentBuilders.MANGROVE_PLANKS);
+	public static final RegistryObject<OrnamentTFPole> dark_oak_plank_pole = makePole(TFOrnamentBuilders.DARK_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFPole> time_plank_pole = makePole(TFOrnamentBuilders.TIME_PLANKS);
+	public static final RegistryObject<OrnamentTFPole> transformation_plank_pole = makePole(TFOrnamentBuilders.TRANSFORMATION_PLANKS);
+	public static final RegistryObject<OrnamentTFPole> mining_plank_pole = makePole(TFOrnamentBuilders.MINING_PLANKS);
+	public static final RegistryObject<OrnamentTFPole> sorting_plank_pole = makePole(TFOrnamentBuilders.SORTING_PLANKS);
 	private static RegistryObject<OrnamentTFStairs> makeStairs(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
 		if (!builder.occlusion) props.noOcclusion();
@@ -132,6 +154,14 @@ public class ModBlocks {
 
 		return registerBlock(builder.name + "_fence_gate", () -> new OrnamentTFFenceGate(props, builder),
 				(item) -> registerBlockItem(item, CreativeModeTab.TAB_REDSTONE, builder, 2));
+	}
+
+	private static RegistryObject<OrnamentTFPole> makePole(TFOrnamentBuilder builder) {
+		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
+		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
+
+		return registerBlock(builder.name + "_pole", () -> new OrnamentTFPole(props, builder),
+				(item) -> registerBlockItem(item, CreativeModeTab.TAB_BUILDING_BLOCKS, builder, 6));
 	}
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
 		RegistryObject<T> reg = BLOCKS.register(name, block);
