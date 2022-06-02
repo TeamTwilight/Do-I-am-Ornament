@@ -76,6 +76,20 @@ public class ModBlocks {
 	public static final RegistryObject<OrnamentTFTrapdoor> transformation_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.TRANSFORMATION_LOG);
 	public static final RegistryObject<OrnamentTFTrapdoor> mining_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.MINING_LOG);
 	public static final RegistryObject<OrnamentTFTrapdoor> sorting_log_trapdoor = makeTrapdoor(TFOrnamentBuilders.SORTING_LOG);
+
+	public static final RegistryObject<OrnamentTFFenceGate> ironwood_fence_gate = makeFenceGate(TFOrnamentBuilders.IRONWOOD);
+	public static final RegistryObject<OrnamentTFFenceGate> fiery_fence_gate = makeFenceGate(TFOrnamentBuilders.FIERY);
+	public static final RegistryObject<OrnamentTFFenceGate> steeleaf_fence_gate = makeFenceGate(TFOrnamentBuilders.STEELEAF);
+	public static final RegistryObject<OrnamentTFFenceGate> arctic_fur_fence_gate = makeFenceGate(TFOrnamentBuilders.ARCTIC_FUR);
+	public static final RegistryObject<OrnamentTFFenceGate> carminite_fence_gate = makeFenceGate(TFOrnamentBuilders.CARMINITE);
+	public static final RegistryObject<OrnamentTFFenceGate> twilight_oak_log_fence_gate = makeFenceGate(TFOrnamentBuilders.TWILIGHT_OAK_LOG);
+	public static final RegistryObject<OrnamentTFFenceGate> canopy_log_fence_gate = makeFenceGate(TFOrnamentBuilders.CANOPY_LOG);
+	public static final RegistryObject<OrnamentTFFenceGate> mangrove_log_fence_gate = makeFenceGate(TFOrnamentBuilders.MANGROVE_LOG);
+	public static final RegistryObject<OrnamentTFFenceGate> dark_oak_log_fence_gate = makeFenceGate(TFOrnamentBuilders.DARK_OAK_LOG);
+	public static final RegistryObject<OrnamentTFFenceGate> time_log_fence_gate = makeFenceGate(TFOrnamentBuilders.TIME_LOG);
+	public static final RegistryObject<OrnamentTFFenceGate> transformation_log_fence_gate = makeFenceGate(TFOrnamentBuilders.TRANSFORMATION_LOG);
+	public static final RegistryObject<OrnamentTFFenceGate> mining_log_fence_gate = makeFenceGate(TFOrnamentBuilders.MINING_LOG);
+	public static final RegistryObject<OrnamentTFFenceGate> sorting_log_fence_gate = makeFenceGate(TFOrnamentBuilders.SORTING_LOG);
 	private static RegistryObject<OrnamentTFStairs> makeStairs(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
 		if (!builder.occlusion) props.noOcclusion();
@@ -111,6 +125,13 @@ public class ModBlocks {
 
 		return registerBlock(builder.name + "_trapdoor", () -> new OrnamentTFTrapdoor(props, builder),
 				(item) -> registerBlockItem(item, CreativeModeTab.TAB_REDSTONE, builder, 5));
+	}
+
+	private static RegistryObject<OrnamentTFFenceGate> makeFenceGate(TFOrnamentBuilder builder) {
+		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
+
+		return registerBlock(builder.name + "_fence_gate", () -> new OrnamentTFFenceGate(props, builder),
+				(item) -> registerBlockItem(item, CreativeModeTab.TAB_REDSTONE, builder, 2));
 	}
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
 		RegistryObject<T> reg = BLOCKS.register(name, block);
