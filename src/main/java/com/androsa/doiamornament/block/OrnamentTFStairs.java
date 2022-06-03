@@ -17,12 +17,14 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import twilightforest.item.TFItems;
 import twilightforest.util.TFDamageSources;
 
+import java.util.function.Supplier;
+
 public class OrnamentTFStairs extends OrnamentStair {
 
 	private final TFOrnamentBuilder tfBuilder;
 
-	public OrnamentTFStairs(Properties props, TFOrnamentBuilder tfbuilder) {
-		super(props, tfbuilder.getBuilder());
+	public OrnamentTFStairs(Supplier<BlockState> base, Properties props, TFOrnamentBuilder tfbuilder) {
+		super(base, props, tfbuilder.getBuilder());
 		this.tfBuilder = tfbuilder;
 	}
 
