@@ -3,6 +3,7 @@ package com.androsa.doiamornament;
 import com.androsa.doiamornament.block.*;
 import com.androsa.ornamental.builder.OrnamentBuilder;
 import com.androsa.ornamental.items.OrnamentBlockItem;
+import com.androsa.ornamental.items.OrnamentTallBlockItem;
 import com.androsa.ornamental.registry.PropertiesHelper;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -91,6 +92,20 @@ public class ModBlocks {
 	public static final RegistryObject<OrnamentTFFenceGate> transformation_log_fence_gate = makeFenceGate(TFOrnamentBuilders.TRANSFORMATION_LOG);
 	public static final RegistryObject<OrnamentTFFenceGate> mining_log_fence_gate = makeFenceGate(TFOrnamentBuilders.MINING_LOG);
 	public static final RegistryObject<OrnamentTFFenceGate> sorting_log_fence_gate = makeFenceGate(TFOrnamentBuilders.SORTING_LOG);
+
+	public static final RegistryObject<OrnamentTFDoor> ironwood_door = makeDoor(TFOrnamentBuilders.IRONWOOD);
+	public static final RegistryObject<OrnamentTFDoor> fiery_door = makeDoor(TFOrnamentBuilders.FIERY);
+	public static final RegistryObject<OrnamentTFDoor> steeleaf_door = makeDoor(TFOrnamentBuilders.STEELEAF);
+	public static final RegistryObject<OrnamentTFDoor> arctic_fur_door = makeDoor(TFOrnamentBuilders.ARCTIC_FUR);
+	public static final RegistryObject<OrnamentTFDoor> carminite_door = makeDoor(TFOrnamentBuilders.CARMINITE);
+	public static final RegistryObject<OrnamentTFDoor> twilight_oak_log_door = makeDoor(TFOrnamentBuilders.TWILIGHT_OAK_LOG);
+	public static final RegistryObject<OrnamentTFDoor> canopy_log_door = makeDoor(TFOrnamentBuilders.CANOPY_LOG);
+	public static final RegistryObject<OrnamentTFDoor> mangrove_log_door = makeDoor(TFOrnamentBuilders.MANGROVE_LOG);
+	public static final RegistryObject<OrnamentTFDoor> dark_oak_log_door = makeDoor(TFOrnamentBuilders.DARK_OAK_LOG);
+	public static final RegistryObject<OrnamentTFDoor> time_log_door = makeDoor(TFOrnamentBuilders.TIME_LOG);
+	public static final RegistryObject<OrnamentTFDoor> transformation_log_door = makeDoor(TFOrnamentBuilders.TRANSFORMATION_LOG);
+	public static final RegistryObject<OrnamentTFDoor> mining_log_door = makeDoor(TFOrnamentBuilders.MINING_LOG);
+	public static final RegistryObject<OrnamentTFDoor> sorting_log_door = makeDoor(TFOrnamentBuilders.SORTING_LOG);
 
 	public static final RegistryObject<OrnamentTFPole> ironwood_pole = makePole(TFOrnamentBuilders.IRONWOOD);
 	public static final RegistryObject<OrnamentTFPole> fiery_pole = makePole(TFOrnamentBuilders.FIERY);
@@ -226,6 +241,15 @@ public class ModBlocks {
 				(item) -> registerBlockItem(item, CreativeModeTab.TAB_REDSTONE, builder, 2));
 	}
 
+	private static RegistryObject<OrnamentTFDoor> makeDoor(TFOrnamentBuilder builder) {
+		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder())
+				.noOcclusion();
+		if (builder.emissive) props.emissiveRendering((state, world, pos) -> true);
+
+		return registerBlock(builder.name + "_door", () -> new OrnamentTFDoor(props, builder),
+				(item) -> registerTallBlockItem(item, CreativeModeTab.TAB_REDSTONE, builder, 0));
+	}
+
 	private static RegistryObject<OrnamentTFPole> makePole(TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());
 		if (!builder.occlusion) props.noOcclusion();
@@ -270,5 +294,9 @@ public class ModBlocks {
 
 	private static <T extends Block> Supplier<BlockItem> registerBlockItem(RegistryObject<T> block, CreativeModeTab group, OrnamentBuilder ornament, int fuelindex) {
 		return () -> new OrnamentBlockItem(block.get(), PropertiesHelper.createProps(ornament, group), ornament, fuelindex);
+	}
+
+	private static <T extends Block> Supplier<BlockItem> registerTallBlockItem(RegistryObject<T> block, CreativeModeTab group, OrnamentBuilder ornament, int fuelindex) {
+		return () -> new OrnamentTallBlockItem(block.get(), PropertiesHelper.createProps(ornament, group), ornament, fuelindex);
 	}
 }
