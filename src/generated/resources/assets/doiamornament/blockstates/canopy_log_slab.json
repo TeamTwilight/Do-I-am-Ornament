@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "doiamornament:block/canopy_log_slab_top"
+    },
+    "type=bottom": {
+      "model": "doiamornament:block/canopy_log_slab"
+    },
+    "type=double": {
+      "model": "twilightforest:block/canopy_log"
+    }
+  }
+}

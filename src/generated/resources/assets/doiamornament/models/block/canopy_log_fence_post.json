@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/fence_post_column",
+  "textures": {
+    "end": "twilightforest:block/canopy_log_top",
+    "side": "twilightforest:block/canopy_log"
+  }
+}

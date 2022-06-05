@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "doiamornament:block/fiery/fiery_slab"
+    },
+    "type=double": {
+      "model": "twilightforest:block/fiery_block"
+    },
+    "type=top": {
+      "model": "doiamornament:block/fiery/fiery_slab_top"
+    }
+  }
+}

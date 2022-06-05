@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "bottom": "twilightforest:block/transformation_log",
+    "top": "twilightforest:block/transformation_log"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "textures": {
+    "particle": "twilightforest:block/fiery_block",
+    "all": "twilightforest:block/fiery_block_inner",
+    "over": "twilightforest:block/fiery_pattern"
+  },
+  "elements": [
+    {
+      "from": [ 1, 7, 1 ],
+      "to": [ 15, 15, 15 ],
+      "faces": {
+        "down":  { "texture": "#all" },
+        "up":    { "texture": "#all" },
+        "north": { "texture": "#all" },
+        "south": { "texture": "#all" },
+        "west":  { "texture": "#all" },
+        "east":  { "texture": "#all" }
+      }
+    }, {
+      "from": [ 0.01, 7.99, 0.01 ],
+      "to": [ 15.99, 15.99, 15.99 ],
+      "faces": {
+        "down":  { "texture": "#over" },
+        "up":    { "texture": "#over", "cullface": "down" },
+        "north": { "texture": "#over", "cullface": "south" },
+        "south": { "texture": "#over", "cullface": "north" },
+        "west":  { "texture": "#over", "cullface": "east" },
+        "east":  { "texture": "#over", "cullface": "west" }
+      }
+    }
+  ]
+}

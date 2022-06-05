@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "doiamornament:block/arctic_fur_slab_top"
+    },
+    "type=bottom": {
+      "model": "doiamornament:block/arctic_fur_slab"
+    },
+    "type=double": {
+      "model": "twilightforest:block/arctic_fur_block"
+    }
+  }
+}

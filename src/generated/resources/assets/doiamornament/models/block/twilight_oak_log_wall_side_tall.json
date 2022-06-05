@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/wall_side_tall_column",
+  "textures": {
+    "side": "twilightforest:block/twilight_oak_log",
+    "end": "twilightforest:block/twilight_oak_log_top"
+  }
+}

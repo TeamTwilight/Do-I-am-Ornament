@@ -1,0 +1,7 @@
+{
+  "parent": "doiamornament:block/beam_cross_2_layer",
+  "textures": {
+    "all": "twilightforest:block/ironwood_pattern",
+    "over": "twilightforest:block/ironwood_block"
+  }
+}

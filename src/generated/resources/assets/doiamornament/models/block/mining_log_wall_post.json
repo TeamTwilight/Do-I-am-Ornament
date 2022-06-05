@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/wall_post_column",
+  "textures": {
+    "side": "twilightforest:block/mining_log",
+    "end": "twilightforest:block/mining_log_top"
+  }
+}

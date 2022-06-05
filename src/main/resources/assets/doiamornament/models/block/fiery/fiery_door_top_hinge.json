@@ -1,0 +1,31 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "twilightforest:block/fiery_block",
+        "all": "twilightforest:block/fiery_block_inner",
+        "over": "twilightforest:block/fiery_pattern"
+    },
+    "elements": [
+        {
+            "from": [ 1, 0, 2 ],
+            "to": [ 2, 15, 16 ],
+            "faces": {
+                "up":    { "uv": [  1,  1, 14,  2 ], "texture": "#all", "cullface": "up", "rotation": 270 },
+                "north": { "uv": [  2,  1,  1, 15 ], "texture": "#all", "cullface": "north" },
+                "south": { "uv": [  1,  1,  2, 15 ], "texture": "#all", "cullface": "south" },
+                "west":  { "uv": [ 14,  1,  1, 15 ], "texture": "#all", "cullface": "west" },
+                "east":  { "uv": [  1,  1, 14, 15 ], "texture": "#all" }
+            }
+        }, {
+            "from": [ 3, 15.99, 15.99 ],
+            "to": [ 0.01, 0, 0.01 ],
+            "faces": {
+                "down":  { "uv": [  0,  0, 16,  3 ], "texture": "#over", "cullface": "up", "rotation": 270 },
+                "north": { "uv": [  3,  0,  0, 16 ], "texture": "#over", "cullface": "north" },
+                "south": { "uv": [  0,  0,  3, 16 ], "texture": "#over", "cullface": "south" },
+                "west":  { "uv": [ 16,  0,  0, 16 ], "texture": "#over", "cullface": "west" },
+                "east":  { "uv": [  0,  0, 16, 16 ], "texture": "#over" }
+            }
+        }
+    ]
+}

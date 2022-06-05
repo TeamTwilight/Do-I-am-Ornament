@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "twilightforest:block/canopy_log",
+    "bottom": "twilightforest:block/canopy_log_top",
+    "top": "twilightforest:block/canopy_log_top"
+  }
+}

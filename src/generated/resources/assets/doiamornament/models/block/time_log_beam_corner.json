@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/beam_corner_column",
+  "textures": {
+    "side": "twilightforest:block/time_log",
+    "end": "twilightforest:block/time_log_top"
+  }
+}

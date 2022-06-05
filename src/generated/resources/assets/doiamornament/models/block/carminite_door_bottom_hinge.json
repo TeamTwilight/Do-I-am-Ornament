@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_rh",
+  "textures": {
+    "bottom": "doiamornament:block/carminite_door_bottom",
+    "top": "doiamornament:block/carminite_door_top"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "doiamornament:block/fence_gate_wall_open_2_layer",
+  "textures": {
+    "all": "twilightforest:block/ironwood_pattern",
+    "over": "twilightforest:block/ironwood_block"
+  }
+}

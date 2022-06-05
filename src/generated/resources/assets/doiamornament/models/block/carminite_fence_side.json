@@ -1,0 +1,7 @@
+{
+  "parent": "doiamornament:block/fence_side_2_layer",
+  "textures": {
+    "all": "twilightforest:block/carminite_block",
+    "over": "twilightforest:block/carminite_block_overlay"
+  }
+}

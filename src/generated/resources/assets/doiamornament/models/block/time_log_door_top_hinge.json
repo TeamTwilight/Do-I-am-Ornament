@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_rh",
+  "textures": {
+    "bottom": "twilightforest:block/time_log",
+    "top": "twilightforest:block/time_log"
+  }
+}

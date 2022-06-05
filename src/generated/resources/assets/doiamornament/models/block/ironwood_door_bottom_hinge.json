@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_rh",
+  "textures": {
+    "bottom": "doiamornament:block/ironwood_door_bottom",
+    "top": "doiamornament:block/ironwood_door_top"
+  }
+}

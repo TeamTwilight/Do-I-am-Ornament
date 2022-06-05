@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_rh",
+  "textures": {
+    "bottom": "twilightforest:block/mangrove_log",
+    "top": "twilightforest:block/mangrove_log"
+  }
+}

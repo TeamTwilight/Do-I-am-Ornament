@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/slab_vertical_column",
+  "textures": {
+    "side": "twilightforest:block/transformation_log",
+    "end": "twilightforest:block/transformation_log_top"
+  }
+}

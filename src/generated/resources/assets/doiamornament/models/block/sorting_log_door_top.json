@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top",
+  "textures": {
+    "bottom": "twilightforest:block/sorting_log",
+    "top": "twilightforest:block/sorting_log"
+  }
+}

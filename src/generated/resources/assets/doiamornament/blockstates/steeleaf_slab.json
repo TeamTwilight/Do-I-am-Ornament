@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "doiamornament:block/steeleaf_slab_top"
+    },
+    "type=bottom": {
+      "model": "doiamornament:block/steeleaf_slab"
+    },
+    "type=double": {
+      "model": "twilightforest:block/steeleaf_block"
+    }
+  }
+}

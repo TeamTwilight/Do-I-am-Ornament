@@ -1,0 +1,6 @@
+{
+  "parent": "ornamental:block/util/beam_cross",
+  "textures": {
+    "texture": "twilightforest:block/wood/planks_mine_0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "ornamental:block/util/pole_corner",
+  "textures": {
+    "texture": "twilightforest:block/wood/planks_mangrove_0"
+  }
+}
