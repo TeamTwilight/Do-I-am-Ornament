@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/pole_inventory",
+  "textures": {
+    "end": "twilightforest:block/sorting_log_top",
+    "side": "twilightforest:block/sorting_log"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/wall_inventory_column",
+  "textures": {
+    "end": "twilightforest:block/mining_log_top",
+    "side": "twilightforest:block/mining_log"
+  }
+}

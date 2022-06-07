@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "twilightforest:block/arctic_fur_block"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/beam_inventory",
+  "textures": {
+    "end": "twilightforest:block/steeleaf_block",
+    "side": "twilightforest:block/steeleaf_block"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/beam_inventory",
+  "textures": {
+    "end": "twilightforest:block/wood/planks_mangrove_0",
+    "side": "twilightforest:block/wood/planks_mangrove_0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "doiamornament:item/twilight_oak_log_door"
+  }
+}

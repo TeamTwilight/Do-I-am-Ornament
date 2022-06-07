@@ -1,6 +1,7 @@
 package com.androsa.doiamornament;
 
 import com.androsa.doiamornament.data.BlockStateGenerator;
+import com.androsa.doiamornament.data.ItemModelGenerator;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -25,5 +26,6 @@ public class DoIAmOrnamentMod {
     private void gatherData(GatherDataEvent event) {
     	if (event.includeClient()) {
     		event.getGenerator().addProvider(new BlockStateGenerator(event.getGenerator(), event.getExistingFileHelper()));
+            event.getGenerator().addProvider(new ItemModelGenerator(event.getGenerator(), event.getExistingFileHelper()));
 		}
 	}

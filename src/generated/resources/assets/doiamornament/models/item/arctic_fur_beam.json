@@ -1,0 +1,7 @@
+{
+  "parent": "ornamental:block/util/beam_inventory",
+  "textures": {
+    "end": "twilightforest:block/arctic_fur_block",
+    "side": "twilightforest:block/arctic_fur_block"
+  }
+}
