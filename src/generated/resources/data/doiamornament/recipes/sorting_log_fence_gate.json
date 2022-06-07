@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/#/",
+    "/#/"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:sorting_log"
+    },
+    "/": {
+      "item": "doiamornament:sorting_log_slab"
+    }
+  },
+  "result": {
+    "item": "doiamornament:sorting_log_fence_gate"
+  }
+}

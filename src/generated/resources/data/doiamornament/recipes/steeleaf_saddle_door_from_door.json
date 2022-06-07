@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "doiamornament:steeleaf_door"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:steeleaf_saddle_door",
+    "count": 2
+  }
+}

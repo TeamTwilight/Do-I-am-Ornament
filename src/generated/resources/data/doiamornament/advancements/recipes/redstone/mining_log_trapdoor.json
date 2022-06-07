@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:mining_log_trapdoor"
+    ]
+  },
+  "criteria": {
+    "has_mining_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:mining_log_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:mining_log_trapdoor"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mining_log",
+      "has_the_recipe"
+    ]
+  ]
+}

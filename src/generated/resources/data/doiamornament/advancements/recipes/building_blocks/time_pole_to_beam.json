@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:time_pole_to_beam"
+    ]
+  },
+  "criteria": {
+    "has_time": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:time_pole"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:time_pole_to_beam"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_time",
+      "has_the_recipe"
+    ]
+  ]
+}

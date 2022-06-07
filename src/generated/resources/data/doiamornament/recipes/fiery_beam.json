@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "doiamornament:fiery_slab"
+    }
+  },
+  "result": {
+    "item": "doiamornament:fiery_beam",
+    "count": 6
+  }
+}

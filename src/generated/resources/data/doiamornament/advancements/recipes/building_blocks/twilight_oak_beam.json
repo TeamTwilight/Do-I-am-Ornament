@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:twilight_oak_beam"
+    ]
+  },
+  "criteria": {
+    "has_twilight_oak": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twilightforest:twilight_oak_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:twilight_oak_beam"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_twilight_oak",
+      "has_the_recipe"
+    ]
+  ]
+}

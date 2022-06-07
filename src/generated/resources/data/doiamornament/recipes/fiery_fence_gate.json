@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/#/",
+    "/#/"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:fiery_block"
+    },
+    "/": {
+      "item": "twilightforest:fiery_ingot"
+    }
+  },
+  "result": {
+    "item": "doiamornament:fiery_fence_gate"
+  }
+}

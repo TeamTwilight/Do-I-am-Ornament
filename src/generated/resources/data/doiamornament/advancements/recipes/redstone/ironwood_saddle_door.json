@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:ironwood_saddle_door"
+    ]
+  },
+  "criteria": {
+    "has_ironwood": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:ironwood_trapdoor"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:ironwood_saddle_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ironwood",
+      "has_the_recipe"
+    ]
+  ]
+}

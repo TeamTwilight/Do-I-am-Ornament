@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:canopy_log_fence_gate"
+    ]
+  },
+  "criteria": {
+    "has_canopy_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twilightforest:canopy_log"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:canopy_log_fence_gate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_canopy_log",
+      "has_the_recipe"
+    ]
+  ]
+}

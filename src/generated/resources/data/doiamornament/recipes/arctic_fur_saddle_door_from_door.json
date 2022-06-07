@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "doiamornament:arctic_fur_door"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:arctic_fur_saddle_door",
+    "count": 2
+  }
+}

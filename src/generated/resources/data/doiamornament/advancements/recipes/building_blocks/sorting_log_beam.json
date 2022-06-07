@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:sorting_log_beam"
+    ]
+  },
+  "criteria": {
+    "has_sorting_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:sorting_log_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:sorting_log_beam"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sorting_log",
+      "has_the_recipe"
+    ]
+  ]
+}

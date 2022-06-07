@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "twilightforest:canopy_door"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:canopy_saddle_door",
+    "count": 2
+  }
+}

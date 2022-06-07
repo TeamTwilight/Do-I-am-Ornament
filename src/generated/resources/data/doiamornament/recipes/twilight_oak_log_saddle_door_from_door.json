@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "doiamornament:twilight_oak_log_door"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:twilight_oak_log_saddle_door",
+    "count": 2
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "twilightforest:dark_door"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:dark_saddle_door",
+    "count": 2
+  }
+}

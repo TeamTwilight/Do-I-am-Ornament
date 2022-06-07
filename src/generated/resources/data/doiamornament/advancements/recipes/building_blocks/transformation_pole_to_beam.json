@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:transformation_pole_to_beam"
+    ]
+  },
+  "criteria": {
+    "has_transformation": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:transformation_pole"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:transformation_pole_to_beam"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_transformation",
+      "has_the_recipe"
+    ]
+  ]
+}

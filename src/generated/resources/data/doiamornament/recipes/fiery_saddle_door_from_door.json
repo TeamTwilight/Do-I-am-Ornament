@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "doiamornament:fiery_door"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:fiery_saddle_door",
+    "count": 2
+  }
+}

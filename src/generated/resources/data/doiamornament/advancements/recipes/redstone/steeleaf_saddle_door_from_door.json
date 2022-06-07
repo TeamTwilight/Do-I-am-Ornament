@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:steeleaf_saddle_door_from_door"
+    ]
+  },
+  "criteria": {
+    "has_steeleaf": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:steeleaf_door"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:steeleaf_saddle_door_from_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steeleaf",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "doiamornament:arctic_fur_pole"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:arctic_fur_beam"
+  }
+}

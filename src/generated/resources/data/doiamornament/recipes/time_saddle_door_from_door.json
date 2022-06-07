@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "twilightforest:time_door"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:time_saddle_door",
+    "count": 2
+  }
+}

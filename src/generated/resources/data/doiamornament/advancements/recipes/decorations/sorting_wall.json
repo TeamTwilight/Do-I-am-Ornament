@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:sorting_wall"
+    ]
+  },
+  "criteria": {
+    "has_sorting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twilightforest:sorting_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:sorting_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sorting",
+      "has_the_recipe"
+    ]
+  ]
+}

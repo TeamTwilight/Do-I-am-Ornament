@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "doiamornament:twilight_oak_log_trapdoor"
+    }
+  },
+  "result": {
+    "item": "doiamornament:twilight_oak_log_saddle_door",
+    "count": 2
+  }
+}

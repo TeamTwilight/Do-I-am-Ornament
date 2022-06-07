@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "doiamornament:canopy_log_pole"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:canopy_log_beam"
+  }
+}

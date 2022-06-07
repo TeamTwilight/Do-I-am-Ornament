@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:mangrove_beam"
+    ]
+  },
+  "criteria": {
+    "has_mangrove": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twilightforest:mangrove_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:mangrove_beam"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mangrove",
+      "has_the_recipe"
+    ]
+  ]
+}

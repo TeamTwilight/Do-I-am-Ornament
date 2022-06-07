@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:sorting_saddle_door"
+    ]
+  },
+  "criteria": {
+    "has_sorting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twilightforest:sorting_trapdoor"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:sorting_saddle_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sorting",
+      "has_the_recipe"
+    ]
+  ]
+}

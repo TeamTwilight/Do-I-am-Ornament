@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:fiery_ingot"
+    }
+  },
+  "result": {
+    "item": "doiamornament:fiery_door"
+  }
+}

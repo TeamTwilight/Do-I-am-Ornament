@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:dark_log_saddle_door_from_door"
+    ]
+  },
+  "criteria": {
+    "has_dark_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:dark_log_door"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:dark_log_saddle_door_from_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_log",
+      "has_the_recipe"
+    ]
+  ]
+}

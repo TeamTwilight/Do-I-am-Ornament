@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:mining_wall"
+    ]
+  },
+  "criteria": {
+    "has_mining": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twilightforest:mining_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:mining_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mining",
+      "has_the_recipe"
+    ]
+  ]
+}

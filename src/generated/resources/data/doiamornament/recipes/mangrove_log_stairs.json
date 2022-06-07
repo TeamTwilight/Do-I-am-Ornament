@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:mangrove_log"
+    }
+  },
+  "result": {
+    "item": "doiamornament:mangrove_log_stairs",
+    "count": 8
+  }
+}

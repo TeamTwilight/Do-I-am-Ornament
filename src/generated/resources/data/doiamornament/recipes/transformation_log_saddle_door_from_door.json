@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "doiamornament:transformation_log_door"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:transformation_log_saddle_door",
+    "count": 2
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "doiamornament:mangrove_log_slab"
+    }
+  },
+  "result": {
+    "item": "doiamornament:mangrove_log_door"
+  }
+}

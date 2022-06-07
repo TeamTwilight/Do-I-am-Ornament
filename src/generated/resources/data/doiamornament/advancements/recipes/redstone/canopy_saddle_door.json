@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:canopy_saddle_door"
+    ]
+  },
+  "criteria": {
+    "has_canopy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twilightforest:canopy_trapdoor"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:canopy_saddle_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_canopy",
+      "has_the_recipe"
+    ]
+  ]
+}

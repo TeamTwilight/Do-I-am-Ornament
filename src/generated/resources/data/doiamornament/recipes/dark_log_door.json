@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "doiamornament:dark_log_slab"
+    }
+  },
+  "result": {
+    "item": "doiamornament:dark_log_door"
+  }
+}

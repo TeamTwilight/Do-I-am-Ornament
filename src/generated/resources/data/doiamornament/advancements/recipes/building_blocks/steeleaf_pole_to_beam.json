@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:steeleaf_pole_to_beam"
+    ]
+  },
+  "criteria": {
+    "has_steeleaf": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:steeleaf_pole"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:steeleaf_pole_to_beam"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steeleaf",
+      "has_the_recipe"
+    ]
+  ]
+}

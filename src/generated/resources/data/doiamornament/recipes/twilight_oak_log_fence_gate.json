@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/#/",
+    "/#/"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:twilight_oak_log"
+    },
+    "/": {
+      "item": "doiamornament:twilight_oak_log_slab"
+    }
+  },
+  "result": {
+    "item": "doiamornament:twilight_oak_log_fence_gate"
+  }
+}

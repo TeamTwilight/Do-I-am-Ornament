@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:carminite_saddle_door_from_door"
+    ]
+  },
+  "criteria": {
+    "has_carminite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:carminite_door"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:carminite_saddle_door_from_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_carminite",
+      "has_the_recipe"
+    ]
+  ]
+}

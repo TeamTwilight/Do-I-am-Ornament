@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "doiamornament:twilight_oak_beam"
+    }
+  ],
+  "result": {
+    "item": "doiamornament:twilight_oak_pole"
+  }
+}

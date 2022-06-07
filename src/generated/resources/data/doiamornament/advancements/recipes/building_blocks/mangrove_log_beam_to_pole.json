@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:mangrove_log_beam_to_pole"
+    ]
+  },
+  "criteria": {
+    "has_mangrove_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:mangrove_log_beam"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:mangrove_log_beam_to_pole"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mangrove_log",
+      "has_the_recipe"
+    ]
+  ]
+}

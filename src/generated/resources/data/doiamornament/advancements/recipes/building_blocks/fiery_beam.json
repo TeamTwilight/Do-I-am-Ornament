@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "doiamornament:fiery_beam"
+    ]
+  },
+  "criteria": {
+    "has_fiery": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:fiery_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "doiamornament:fiery_beam"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_fiery",
+      "has_the_recipe"
+    ]
+  ]
+}
