@@ -1,14 +1,14 @@
 {
   "textures": {
     "particle": "twilightforest:block/fiery_block",
-    "all": "twilightforest:block/fiery_block_inner",
+    "all": "doiamornament:block/fiery_trapdoor",
     "over": "twilightforest:block/fiery_pattern"
   },
   "ambientocculsion": false,
   "elements": [
     {
       "from": [ 15.99, 15.99, 15.99 ],
-      "to": [ -0.01, 13, -0.01 ],
+      "to": [ 0.01, 13, 0.01 ],
       "shade": false,
       "faces": {
         "down":  { "texture": "#over" },
@@ -19,12 +19,12 @@
         "east":  { "texture": "#over" }
       }
     }, {
-      "from": [ 1, 14, 2 ],
+      "from": [ 1, 14, 1 ],
       "to": [ 15, 15, 16 ],
       "shade": false,
       "faces": {
-        "down":  { "uv": [ 1,  1, 15, 15 ], "texture": "#all" },
-        "up":    { "uv": [ 1,  1, 15, 15 ], "texture": "#all" },
+        "down":  { "uv": [ 1,  0, 15, 15 ], "texture": "#all" },
+        "up":    { "uv": [ 1,  0, 15, 15 ], "texture": "#all" },
         "north": { "uv": [ 1, 15, 15, 13 ], "texture": "#all" },
         "south": { "uv": [ 1, 15, 15, 13 ], "texture": "#all" },
         "west":  { "uv": [ 1, 15, 15, 13 ], "texture": "#all" },
