@@ -5,6 +5,7 @@
     "all": "twilightforest:block/fiery_block_inner",
     "over": "twilightforest:block/fiery_pattern"
   },
+  "ambientocclusion": false,
   "elements": [
     {
       "from": [ 1, 9, 1 ],

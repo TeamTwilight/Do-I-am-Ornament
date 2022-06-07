@@ -5,7 +5,7 @@
     "all": "doiamornament:block/fiery_trapdoor",
     "over": "twilightforest:block/fiery_pattern"
   },
-  "ambientocculsion": false,
+  "ambientocclusion": false,
   "elements": [
     {
       "from": [ 15.99, 3, 15.99 ],
