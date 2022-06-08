@@ -41,6 +41,7 @@ public class DoIAmOrnamentMod {
             event.getGenerator().addProvider(new RecipeGenerator(event.getGenerator()));
             event.getGenerator().addProvider(blocktags);
             event.getGenerator().addProvider(new ItemTagGenerator(event.getGenerator(), blocktags, event.getExistingFileHelper()));
+            event.getGenerator().addProvider(new LootTableGenerator(event.getGenerator()));
         }
 	}
 }
