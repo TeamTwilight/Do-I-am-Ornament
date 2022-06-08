@@ -164,14 +164,14 @@ public class ModBlocks {
 	public static final RegistryObject<OrnamentTFWall> transformation_log_wall = makeWall(TFOrnamentBuilders.TRANSFORMATION_LOG);
 	public static final RegistryObject<OrnamentTFWall> mining_log_wall = makeWall(TFOrnamentBuilders.MINING_LOG);
 	public static final RegistryObject<OrnamentTFWall> sorting_log_wall = makeWall(TFOrnamentBuilders.SORTING_LOG);
-	public static final RegistryObject<OrnamentTFWall> twilight_oak_planks_wall = makeWall(TFOrnamentBuilders.TWILIGHT_OAK_PLANKS);
-	public static final RegistryObject<OrnamentTFWall> canopy_planks_wall = makeWall(TFOrnamentBuilders.CANOPY_PLANKS);
-	public static final RegistryObject<OrnamentTFWall> mangrove_planks_wall = makeWall(TFOrnamentBuilders.MANGROVE_PLANKS);
-	public static final RegistryObject<OrnamentTFWall> dark_oak_planks_wall = makeWall(TFOrnamentBuilders.DARK_OAK_PLANKS);
-	public static final RegistryObject<OrnamentTFWall> time_planks_wall = makeWall(TFOrnamentBuilders.TIME_PLANKS);
-	public static final RegistryObject<OrnamentTFWall> transformation_planks_wall = makeWall(TFOrnamentBuilders.TRANSFORMATION_PLANKS);
-	public static final RegistryObject<OrnamentTFWall> mining_planks_wall = makeWall(TFOrnamentBuilders.MINING_PLANKS);
-	public static final RegistryObject<OrnamentTFWall> sorting_planks_wall = makeWall(TFOrnamentBuilders.SORTING_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> twilight_oak_plank_wall = makeWall(TFOrnamentBuilders.TWILIGHT_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> canopy_plank_wall = makeWall(TFOrnamentBuilders.CANOPY_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> mangrove_plank_wall = makeWall(TFOrnamentBuilders.MANGROVE_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> dark_oak_plank_wall = makeWall(TFOrnamentBuilders.DARK_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> time_plank_wall = makeWall(TFOrnamentBuilders.TIME_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> transformation_plank_wall = makeWall(TFOrnamentBuilders.TRANSFORMATION_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> mining_plank_wall = makeWall(TFOrnamentBuilders.MINING_PLANKS);
+	public static final RegistryObject<OrnamentTFWall> sorting_plank_wall = makeWall(TFOrnamentBuilders.SORTING_PLANKS);
 
 	public static final RegistryObject<OrnamentTFSaddleDoor> ironwood_saddle_door = makeSaddleDoor(TFOrnamentBuilders.IRONWOOD);
 	public static final RegistryObject<OrnamentTFSaddleDoor> fiery_saddle_door = makeSaddleDoor(TFOrnamentBuilders.FIERY);
@@ -186,14 +186,14 @@ public class ModBlocks {
 	public static final RegistryObject<OrnamentTFSaddleDoor> transformation_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TRANSFORMATION_LOG);
 	public static final RegistryObject<OrnamentTFSaddleDoor> mining_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.MINING_LOG);
 	public static final RegistryObject<OrnamentTFSaddleDoor> sorting_log_saddle_door = makeSaddleDoor(TFOrnamentBuilders.SORTING_LOG);
-	public static final RegistryObject<OrnamentTFSaddleDoor> twilight_oak_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TWILIGHT_OAK_PLANKS);
-	public static final RegistryObject<OrnamentTFSaddleDoor> canopy_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.CANOPY_PLANKS);
-	public static final RegistryObject<OrnamentTFSaddleDoor> mangrove_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.MANGROVE_PLANKS);
-	public static final RegistryObject<OrnamentTFSaddleDoor> dark_oak_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.DARK_OAK_PLANKS);
-	public static final RegistryObject<OrnamentTFSaddleDoor> time_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TIME_PLANKS);
-	public static final RegistryObject<OrnamentTFSaddleDoor> transformation_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TRANSFORMATION_PLANKS);
-	public static final RegistryObject<OrnamentTFSaddleDoor> mining_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.MINING_PLANKS);
-	public static final RegistryObject<OrnamentTFSaddleDoor> sorting_planks_saddle_door = makeSaddleDoor(TFOrnamentBuilders.SORTING_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> twilight_oak_plank_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TWILIGHT_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> canopy_plank_saddle_door = makeSaddleDoor(TFOrnamentBuilders.CANOPY_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> mangrove_plank_saddle_door = makeSaddleDoor(TFOrnamentBuilders.MANGROVE_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> dark_oak_plank_saddle_door = makeSaddleDoor(TFOrnamentBuilders.DARK_OAK_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> time_plank_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TIME_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> transformation_plank_saddle_door = makeSaddleDoor(TFOrnamentBuilders.TRANSFORMATION_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> mining_plank_saddle_door = makeSaddleDoor(TFOrnamentBuilders.MINING_PLANKS);
+	public static final RegistryObject<OrnamentTFSaddleDoor> sorting_plank_saddle_door = makeSaddleDoor(TFOrnamentBuilders.SORTING_PLANKS);
 
 	private static RegistryObject<OrnamentTFStairs> makeStairs(RegistryObject<? extends Block> base, TFOrnamentBuilder builder) {
 		BlockBehaviour.Properties props = PropertiesHelper.createProps(builder.getBuilder());

@@ -95,14 +95,14 @@ public class ClientHandler {
         renderType(ModBlocks.transformation_log_saddle_door);
         renderType(ModBlocks.mining_log_saddle_door);
         renderType(ModBlocks.sorting_log_saddle_door);
-        renderType(ModBlocks.twilight_oak_planks_saddle_door);
-        renderType(ModBlocks.canopy_planks_saddle_door);
-        renderType(ModBlocks.mangrove_planks_saddle_door);
-        renderType(ModBlocks.dark_oak_planks_saddle_door);
-        renderType(ModBlocks.time_planks_saddle_door);
-        renderType(ModBlocks.transformation_planks_saddle_door);
-        renderType(ModBlocks.mining_planks_saddle_door);
-        renderType(ModBlocks.sorting_planks_saddle_door);
+        renderType(ModBlocks.twilight_oak_plank_saddle_door);
+        renderType(ModBlocks.canopy_plank_saddle_door);
+        renderType(ModBlocks.mangrove_plank_saddle_door);
+        renderType(ModBlocks.dark_oak_plank_saddle_door);
+        renderType(ModBlocks.time_plank_saddle_door);
+        renderType(ModBlocks.transformation_plank_saddle_door);
+        renderType(ModBlocks.mining_plank_saddle_door);
+        renderType(ModBlocks.sorting_plank_saddle_door);
     }
 
     private static void renderType(RegistryObject<? extends Block> block) {

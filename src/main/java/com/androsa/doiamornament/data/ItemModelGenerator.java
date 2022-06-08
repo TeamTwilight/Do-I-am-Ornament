@@ -166,14 +166,14 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItemWallColumn(ModBlocks.transformation_log_wall, "transformation_log", "transformation_log_top");
         blockItemWallColumn(ModBlocks.mining_log_wall, "mining_log", "mining_log_top");
         blockItemWallColumn(ModBlocks.sorting_log_wall, "sorting_log", "sorting_log_top");
-        blockItemWall(ModBlocks.twilight_oak_planks_wall, "wood/planks_twilight_oak_0");
-        blockItemWall(ModBlocks.canopy_planks_wall, "wood/planks_canopy_0");
-        blockItemWall(ModBlocks.mangrove_planks_wall, "wood/planks_mangrove_0");
-        blockItemWall(ModBlocks.dark_oak_planks_wall, "wood/planks_darkwood_0");
-        blockItemWall(ModBlocks.time_planks_wall, "wood/planks_time_0");
-        blockItemWall(ModBlocks.transformation_planks_wall, "wood/planks_trans_0");
-        blockItemWall(ModBlocks.mining_planks_wall, "wood/planks_mine_0");
-        blockItemWall(ModBlocks.sorting_planks_wall, "wood/planks_sort_0");
+        blockItemWall(ModBlocks.twilight_oak_plank_wall, "wood/planks_twilight_oak_0");
+        blockItemWall(ModBlocks.canopy_plank_wall, "wood/planks_canopy_0");
+        blockItemWall(ModBlocks.mangrove_plank_wall, "wood/planks_mangrove_0");
+        blockItemWall(ModBlocks.dark_oak_plank_wall, "wood/planks_darkwood_0");
+        blockItemWall(ModBlocks.time_plank_wall, "wood/planks_time_0");
+        blockItemWall(ModBlocks.transformation_plank_wall, "wood/planks_trans_0");
+        blockItemWall(ModBlocks.mining_plank_wall, "wood/planks_mine_0");
+        blockItemWall(ModBlocks.sorting_plank_wall, "wood/planks_sort_0");
 
         blockItemSaddleDoor(ModBlocks.ironwood_saddle_door, "ironwood");
         blockItemSaddleDoorTF(ModBlocks.fiery_saddle_door, "fiery_block");
@@ -188,14 +188,14 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItemSaddleDoorTF(ModBlocks.transformation_log_saddle_door, "transformation_log");
         blockItemSaddleDoorTF(ModBlocks.mining_log_saddle_door, "mining_log");
         blockItemSaddleDoorTF(ModBlocks.sorting_log_saddle_door, "sorting_log");
-        blockItemSaddleDoorTF(ModBlocks.twilight_oak_planks_saddle_door, "wood/trapdoor/twilight_oak_trapdoor");
-        blockItemSaddleDoorTF(ModBlocks.canopy_planks_saddle_door, "wood/trapdoor/canopy_trapdoor");
-        blockItemSaddleDoorTF(ModBlocks.mangrove_planks_saddle_door, "wood/trapdoor/mangrove_trapdoor");
-        blockItemSaddleDoorTF(ModBlocks.dark_oak_planks_saddle_door, "wood/trapdoor/darkwood_trapdoor");
-        blockItemSaddleDoorTF(ModBlocks.time_planks_saddle_door, "wood/trapdoor/time_trapdoor");
-        blockItemSaddleDoorTF(ModBlocks.transformation_planks_saddle_door, "wood/trapdoor/trans_trapdoor");
-        blockItemSaddleDoorTF(ModBlocks.mining_planks_saddle_door, "wood/trapdoor/mine_trapdoor");
-        blockItemSaddleDoorTF(ModBlocks.sorting_planks_saddle_door, "wood/trapdoor/sort_trapdoor");
+        blockItemSaddleDoorTF(ModBlocks.twilight_oak_plank_saddle_door, "wood/trapdoor/twilight_oak_trapdoor");
+        blockItemSaddleDoorTF(ModBlocks.canopy_plank_saddle_door, "wood/trapdoor/canopy_trapdoor");
+        blockItemSaddleDoorTF(ModBlocks.mangrove_plank_saddle_door, "wood/trapdoor/mangrove_trapdoor");
+        blockItemSaddleDoorTF(ModBlocks.dark_oak_plank_saddle_door, "wood/trapdoor/darkwood_trapdoor");
+        blockItemSaddleDoorTF(ModBlocks.time_plank_saddle_door, "wood/trapdoor/time_trapdoor");
+        blockItemSaddleDoorTF(ModBlocks.transformation_plank_saddle_door, "wood/trapdoor/trans_trapdoor");
+        blockItemSaddleDoorTF(ModBlocks.mining_plank_saddle_door, "wood/trapdoor/mine_trapdoor");
+        blockItemSaddleDoorTF(ModBlocks.sorting_plank_saddle_door, "wood/trapdoor/sort_trapdoor");
     }
 
     public void blockItemFiery(Supplier<? extends Block> block) {

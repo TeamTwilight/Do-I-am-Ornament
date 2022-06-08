@@ -181,14 +181,14 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
         wall(consumer, ModBlocks.transformation_log_wall, TFBlocks.TRANSFORMATION_LOG.get());
         wall(consumer, ModBlocks.mining_log_wall, TFBlocks.MINING_LOG.get());
         wall(consumer, ModBlocks.sorting_log_wall, TFBlocks.SORTING_LOG.get());
-        wall(consumer, ModBlocks.twilight_oak_planks_wall, TFBlocks.TWILIGHT_OAK_PLANKS.get());
-        wall(consumer, ModBlocks.canopy_planks_wall, TFBlocks.CANOPY_PLANKS.get());
-        wall(consumer, ModBlocks.mangrove_planks_wall, TFBlocks.MANGROVE_PLANKS.get());
-        wall(consumer, ModBlocks.dark_oak_planks_wall, TFBlocks.DARK_PLANKS.get());
-        wall(consumer, ModBlocks.time_planks_wall, TFBlocks.TIME_PLANKS.get());
-        wall(consumer, ModBlocks.transformation_planks_wall, TFBlocks.TRANSFORMATION_PLANKS.get());
-        wall(consumer, ModBlocks.mining_planks_wall, TFBlocks.MINING_PLANKS.get());
-        wall(consumer, ModBlocks.sorting_planks_wall, TFBlocks.SORTING_PLANKS.get());
+        wall(consumer, ModBlocks.twilight_oak_plank_wall, TFBlocks.TWILIGHT_OAK_PLANKS.get());
+        wall(consumer, ModBlocks.canopy_plank_wall, TFBlocks.CANOPY_PLANKS.get());
+        wall(consumer, ModBlocks.mangrove_plank_wall, TFBlocks.MANGROVE_PLANKS.get());
+        wall(consumer, ModBlocks.dark_oak_plank_wall, TFBlocks.DARK_PLANKS.get());
+        wall(consumer, ModBlocks.time_plank_wall, TFBlocks.TIME_PLANKS.get());
+        wall(consumer, ModBlocks.transformation_plank_wall, TFBlocks.TRANSFORMATION_PLANKS.get());
+        wall(consumer, ModBlocks.mining_plank_wall, TFBlocks.MINING_PLANKS.get());
+        wall(consumer, ModBlocks.sorting_plank_wall, TFBlocks.SORTING_PLANKS.get());
 
         saddleDoor(consumer, ModBlocks.ironwood_saddle_door, ModBlocks.ironwood_trapdoor);
         saddleDoor(consumer, ModBlocks.fiery_saddle_door, ModBlocks.fiery_trapdoor);
@@ -203,14 +203,14 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
         saddleDoor(consumer, ModBlocks.transformation_log_saddle_door, ModBlocks.transformation_log_trapdoor);
         saddleDoor(consumer, ModBlocks.mining_log_saddle_door, ModBlocks.mining_log_trapdoor);
         saddleDoor(consumer, ModBlocks.sorting_log_saddle_door, ModBlocks.sorting_log_trapdoor);
-        saddleDoor(consumer, ModBlocks.twilight_oak_planks_saddle_door, TFBlocks.TWILIGHT_OAK_TRAPDOOR.get());
-        saddleDoor(consumer, ModBlocks.canopy_planks_saddle_door, TFBlocks.CANOPY_TRAPDOOR.get());
-        saddleDoor(consumer, ModBlocks.mangrove_planks_saddle_door, TFBlocks.MANGROVE_TRAPDOOR.get());
-        saddleDoor(consumer, ModBlocks.dark_oak_planks_saddle_door, TFBlocks.DARK_TRAPDOOR.get());
-        saddleDoor(consumer, ModBlocks.time_planks_saddle_door, TFBlocks.TIME_TRAPDOOR.get());
-        saddleDoor(consumer, ModBlocks.transformation_planks_saddle_door, TFBlocks.TRANSFORMATION_TRAPDOOR.get());
-        saddleDoor(consumer, ModBlocks.mining_planks_saddle_door, TFBlocks.MINING_TRAPDOOR.get());
-        saddleDoor(consumer, ModBlocks.sorting_planks_saddle_door, TFBlocks.SORTING_TRAPDOOR.get());
+        saddleDoor(consumer, ModBlocks.twilight_oak_plank_saddle_door, TFBlocks.TWILIGHT_OAK_TRAPDOOR.get());
+        saddleDoor(consumer, ModBlocks.canopy_plank_saddle_door, TFBlocks.CANOPY_TRAPDOOR.get());
+        saddleDoor(consumer, ModBlocks.mangrove_plank_saddle_door, TFBlocks.MANGROVE_TRAPDOOR.get());
+        saddleDoor(consumer, ModBlocks.dark_oak_plank_saddle_door, TFBlocks.DARK_TRAPDOOR.get());
+        saddleDoor(consumer, ModBlocks.time_plank_saddle_door, TFBlocks.TIME_TRAPDOOR.get());
+        saddleDoor(consumer, ModBlocks.transformation_plank_saddle_door, TFBlocks.TRANSFORMATION_TRAPDOOR.get());
+        saddleDoor(consumer, ModBlocks.mining_plank_saddle_door, TFBlocks.MINING_TRAPDOOR.get());
+        saddleDoor(consumer, ModBlocks.sorting_plank_saddle_door, TFBlocks.SORTING_TRAPDOOR.get());
 
         saddleDoorFromDoor(consumer, ModBlocks.ironwood_saddle_door, ModBlocks.ironwood_door);
         saddleDoorFromDoor(consumer, ModBlocks.fiery_saddle_door, ModBlocks.fiery_door);
@@ -225,13 +225,13 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
         saddleDoorFromDoor(consumer, ModBlocks.transformation_log_saddle_door, ModBlocks.transformation_log_door);
         saddleDoorFromDoor(consumer, ModBlocks.mining_log_saddle_door, ModBlocks.mining_log_door);
         saddleDoorFromDoor(consumer, ModBlocks.sorting_log_saddle_door, ModBlocks.sorting_log_door);
-        saddleDoorFromDoor(consumer, ModBlocks.twilight_oak_planks_saddle_door, TFBlocks.TWILIGHT_OAK_DOOR.get());
-        saddleDoorFromDoor(consumer, ModBlocks.canopy_planks_saddle_door, TFBlocks.CANOPY_DOOR.get());
-        saddleDoorFromDoor(consumer, ModBlocks.mangrove_planks_saddle_door, TFBlocks.MANGROVE_DOOR.get());
-        saddleDoorFromDoor(consumer, ModBlocks.dark_oak_planks_saddle_door, TFBlocks.DARK_DOOR.get());
-        saddleDoorFromDoor(consumer, ModBlocks.time_planks_saddle_door, TFBlocks.TIME_DOOR.get());
-        saddleDoorFromDoor(consumer, ModBlocks.transformation_planks_saddle_door, TFBlocks.TRANSFORMATION_DOOR.get());
-        saddleDoorFromDoor(consumer, ModBlocks.mining_planks_saddle_door, TFBlocks.MINING_DOOR.get());
-        saddleDoorFromDoor(consumer, ModBlocks.sorting_planks_saddle_door, TFBlocks.SORTING_DOOR.get());
+        saddleDoorFromDoor(consumer, ModBlocks.twilight_oak_plank_saddle_door, TFBlocks.TWILIGHT_OAK_DOOR.get());
+        saddleDoorFromDoor(consumer, ModBlocks.canopy_plank_saddle_door, TFBlocks.CANOPY_DOOR.get());
+        saddleDoorFromDoor(consumer, ModBlocks.mangrove_plank_saddle_door, TFBlocks.MANGROVE_DOOR.get());
+        saddleDoorFromDoor(consumer, ModBlocks.dark_oak_plank_saddle_door, TFBlocks.DARK_DOOR.get());
+        saddleDoorFromDoor(consumer, ModBlocks.time_plank_saddle_door, TFBlocks.TIME_DOOR.get());
+        saddleDoorFromDoor(consumer, ModBlocks.transformation_plank_saddle_door, TFBlocks.TRANSFORMATION_DOOR.get());
+        saddleDoorFromDoor(consumer, ModBlocks.mining_plank_saddle_door, TFBlocks.MINING_DOOR.get());
+        saddleDoorFromDoor(consumer, ModBlocks.sorting_plank_saddle_door, TFBlocks.SORTING_DOOR.get());
     }
 }
