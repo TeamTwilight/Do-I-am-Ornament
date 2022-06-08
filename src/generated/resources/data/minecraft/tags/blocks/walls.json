@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:ironwood_wall",
+    "doiamornament:fiery_wall",
+    "doiamornament:steeleaf_wall",
+    "doiamornament:arctic_fur_wall",
+    "doiamornament:carminite_wall",
+    "doiamornament:twilight_oak_log_wall",
+    "doiamornament:canopy_log_wall",
+    "doiamornament:mangrove_log_wall",
+    "doiamornament:dark_log_wall",
+    "doiamornament:time_log_wall",
+    "doiamornament:transformation_log_wall",
+    "doiamornament:mining_log_wall",
+    "doiamornament:sorting_log_wall",
+    "doiamornament:twilight_oak_wall",
+    "doiamornament:canopy_wall",
+    "doiamornament:mangrove_wall",
+    "doiamornament:dark_wall",
+    "doiamornament:time_wall",
+    "doiamornament:transformation_wall",
+    "doiamornament:mining_wall",
+    "doiamornament:sorting_wall"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:twilight_oak_log_stairs",
+    "doiamornament:canopy_log_stairs",
+    "doiamornament:mangrove_log_stairs",
+    "doiamornament:dark_log_stairs",
+    "doiamornament:time_log_stairs",
+    "doiamornament:transformation_log_stairs",
+    "doiamornament:mining_log_stairs",
+    "doiamornament:sorting_log_stairs"
+  ]
+}

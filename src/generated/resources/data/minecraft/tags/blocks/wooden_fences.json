@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:twilight_oak_log_fence",
+    "doiamornament:canopy_log_fence",
+    "doiamornament:mangrove_log_fence",
+    "doiamornament:dark_log_fence",
+    "doiamornament:time_log_fence",
+    "doiamornament:transformation_log_fence",
+    "doiamornament:mining_log_fence",
+    "doiamornament:sorting_log_fence"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:steeleaf_stairs",
+    "doiamornament:steeleaf_slab",
+    "doiamornament:steeleaf_fence",
+    "doiamornament:steeleaf_trapdoor",
+    "doiamornament:steeleaf_fence_gate",
+    "doiamornament:steeleaf_door",
+    "doiamornament:steeleaf_pole",
+    "doiamornament:steeleaf_beam",
+    "doiamornament:steeleaf_wall",
+    "doiamornament:steeleaf_saddle_door",
+    "doiamornament:arctic_fur_stairs",
+    "doiamornament:arctic_fur_slab",
+    "doiamornament:arctic_fur_fence",
+    "doiamornament:arctic_fur_trapdoor",
+    "doiamornament:arctic_fur_fence_gate",
+    "doiamornament:arctic_fur_door",
+    "doiamornament:arctic_fur_pole",
+    "doiamornament:arctic_fur_beam",
+    "doiamornament:arctic_fur_wall",
+    "doiamornament:arctic_fur_saddle_door"
+  ]
+}

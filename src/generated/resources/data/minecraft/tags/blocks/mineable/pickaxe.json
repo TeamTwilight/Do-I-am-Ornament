@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:fiery_stairs",
+    "doiamornament:fiery_slab",
+    "doiamornament:fiery_fence",
+    "doiamornament:fiery_trapdoor",
+    "doiamornament:fiery_fence_gate",
+    "doiamornament:fiery_door",
+    "doiamornament:fiery_pole",
+    "doiamornament:fiery_beam",
+    "doiamornament:fiery_wall",
+    "doiamornament:fiery_saddle_door"
+  ]
+}

@@ -1,6 +1,7 @@
 package com.androsa.doiamornament;
 
 import com.androsa.doiamornament.data.BlockStateGenerator;
+import com.androsa.doiamornament.data.BlockTagGenerator;
 import com.androsa.doiamornament.data.ItemModelGenerator;
 import com.androsa.doiamornament.data.RecipeGenerator;
 import net.minecraftforge.api.distmarker.Dist;
@@ -39,6 +40,7 @@ public class DoIAmOrnamentMod {
 		}
         if (event.includeServer()) {
             event.getGenerator().addProvider(new RecipeGenerator(event.getGenerator()));
+            event.getGenerator().addProvider(new BlockTagGenerator(event.getGenerator(), event.getExistingFileHelper()));
         }
 	}
 }

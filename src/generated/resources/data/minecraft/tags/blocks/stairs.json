@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:ironwood_stairs",
+    "doiamornament:fiery_stairs",
+    "doiamornament:steeleaf_stairs",
+    "doiamornament:arctic_fur_stairs",
+    "doiamornament:carminite_stairs"
+  ]
+}

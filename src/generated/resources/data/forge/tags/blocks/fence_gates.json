@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:ironwood_fence_gate",
+    "doiamornament:fiery_fence_gate",
+    "doiamornament:steeleaf_fence_gate",
+    "doiamornament:arctic_fur_fence_gate",
+    "doiamornament:carminite_fence_gate"
+  ]
+}
