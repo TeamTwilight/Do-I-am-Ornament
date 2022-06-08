@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:twilight_oak_log_trapdoor",
+    "doiamornament:canopy_log_trapdoor",
+    "doiamornament:mangrove_log_trapdoor",
+    "doiamornament:dark_log_trapdoor",
+    "doiamornament:time_log_trapdoor",
+    "doiamornament:transformation_log_trapdoor",
+    "doiamornament:mining_log_trapdoor",
+    "doiamornament:sorting_log_trapdoor"
+  ]
+}

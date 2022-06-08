@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:twilight_oak_log_slab",
+    "doiamornament:canopy_log_slab",
+    "doiamornament:mangrove_log_slab",
+    "doiamornament:dark_log_slab",
+    "doiamornament:time_log_slab",
+    "doiamornament:transformation_log_slab",
+    "doiamornament:mining_log_slab",
+    "doiamornament:sorting_log_slab"
+  ]
+}

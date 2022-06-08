@@ -1202,6 +1202,10 @@ a6f26cc8dfba9014155400deebb0f09a7415cd92 data/doiamornament/recipes/twilight_oak
 e89ab7f5ff6bb5e7a9bad9a1c8d2d6b705b4f5cd data/forge/tags/blocks/fence_gates/wooden.json
 c1779059b5dae7b0ff2c3bb27e24c3b65c0eea1d data/forge/tags/blocks/fences.json
 b3d103661de843393127c27dc16de8b86259e5ff data/forge/tags/blocks/fences/wooden.json
+785b77c92ea08fb4f5ce462e262abffebc6f0fff data/forge/tags/items/fence_gates.json
+e89ab7f5ff6bb5e7a9bad9a1c8d2d6b705b4f5cd data/forge/tags/items/fence_gates/wooden.json
+c1779059b5dae7b0ff2c3bb27e24c3b65c0eea1d data/forge/tags/items/fences.json
+b3d103661de843393127c27dc16de8b86259e5ff data/forge/tags/items/fences/wooden.json
 977cddccc39ad34b37e1c0072b15c21f984876cb data/minecraft/tags/blocks/beacon_base_blocks.json
 8c9fb0aa8482e6031b7b4c735ba415fdbaa633d1 data/minecraft/tags/blocks/doors.json
 785b77c92ea08fb4f5ce462e262abffebc6f0fff data/minecraft/tags/blocks/fence_gates.json
@@ -1218,3 +1222,14 @@ b3d103661de843393127c27dc16de8b86259e5ff data/minecraft/tags/blocks/wooden_fence
 fbcd6256b6c3528ceaad20d593ba86261160061b data/minecraft/tags/blocks/wooden_slabs.json
 e167d68fa8392138f50c2c82f07e5e2a7ba0d5fb data/minecraft/tags/blocks/wooden_stairs.json
 f2150115cd12daff4369de1ffe156686b960a0bb data/minecraft/tags/blocks/wooden_trapdoors.json
+8c9fb0aa8482e6031b7b4c735ba415fdbaa633d1 data/minecraft/tags/items/doors.json
+c1779059b5dae7b0ff2c3bb27e24c3b65c0eea1d data/minecraft/tags/items/fences.json
+6d9e1ccd3ab60848fe443f80fe8e7a04df11247c data/minecraft/tags/items/slabs.json
+977cddccc39ad34b37e1c0072b15c21f984876cb data/minecraft/tags/items/stairs.json
+afb073e8bfea6ca772d0118b1995e094e49e9a03 data/minecraft/tags/items/trapdoors.json
+e9a8407c7cfd23259d5af8b689d3c1b5ed5aa214 data/minecraft/tags/items/walls.json
+adfdeda96136822904b74e6134b86269ad1e12c3 data/minecraft/tags/items/wooden_doors.json
+b3d103661de843393127c27dc16de8b86259e5ff data/minecraft/tags/items/wooden_fences.json
+fbcd6256b6c3528ceaad20d593ba86261160061b data/minecraft/tags/items/wooden_slabs.json
+e167d68fa8392138f50c2c82f07e5e2a7ba0d5fb data/minecraft/tags/items/wooden_stairs.json
+f2150115cd12daff4369de1ffe156686b960a0bb data/minecraft/tags/items/wooden_trapdoors.json

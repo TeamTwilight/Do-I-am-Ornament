@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "doiamornament:ironwood_door",
+    "doiamornament:fiery_door",
+    "doiamornament:steeleaf_door",
+    "doiamornament:arctic_fur_door",
+    "doiamornament:carminite_door"
+  ]
+}

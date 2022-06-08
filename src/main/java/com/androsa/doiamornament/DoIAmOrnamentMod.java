@@ -1,9 +1,7 @@
 package com.androsa.doiamornament;
 
-import com.androsa.doiamornament.data.BlockStateGenerator;
-import com.androsa.doiamornament.data.BlockTagGenerator;
-import com.androsa.doiamornament.data.ItemModelGenerator;
-import com.androsa.doiamornament.data.RecipeGenerator;
+import com.androsa.doiamornament.data.*;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -34,13 +32,15 @@ public class DoIAmOrnamentMod {
 	}
 
     private void gatherData(GatherDataEvent event) {
+        BlockTagsProvider blocktags = new BlockTagGenerator(event.getGenerator(), event.getExistingFileHelper());
     	if (event.includeClient()) {
     		event.getGenerator().addProvider(new BlockStateGenerator(event.getGenerator(), event.getExistingFileHelper()));
             event.getGenerator().addProvider(new ItemModelGenerator(event.getGenerator(), event.getExistingFileHelper()));
 		}
         if (event.includeServer()) {
             event.getGenerator().addProvider(new RecipeGenerator(event.getGenerator()));
-            event.getGenerator().addProvider(new BlockTagGenerator(event.getGenerator(), event.getExistingFileHelper()));
+            event.getGenerator().addProvider(blocktags);
+            event.getGenerator().addProvider(new ItemTagGenerator(event.getGenerator(), blocktags, event.getExistingFileHelper()));
         }
 	}
 }
