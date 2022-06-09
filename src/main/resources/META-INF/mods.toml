@@ -29,4 +29,17 @@ All your favourite blocks from Twilight Forest now in all arrays of decorative b
     versionRange="[1.18.2,)"
     ordering="NONE"
     side="BOTH"
-# TODO: Required dependency for Twilight Forest
+# Twilight Forest
+[[dependencies.doiamornament]]
+    modId="twilightforest"
+    mandatory=true
+    versionRange="[4.1.1052,)"
+    ordering="NONE"
+    side="BOTH"
+# Ornamental
+[[dependencies.doiamornament]]
+    modId="ornamental"
+    mandatory=true
+    versionRange="[4.8.1,)"
+    ordering="NONE"
+    side="BOTH"
