@@ -1,4 +1,5 @@
 {
+  "parent": "block/block",
   "textures": {
     "particle": "twilightforest:block/fiery_block",
     "all": "twilightforest:block/fiery_block_inner",
