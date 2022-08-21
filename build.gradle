@@ -73,15 +73,15 @@ repositories {
         url "https://modmaven.dev/"
     }
 
-    flatDir {
-        dirs "libs"
+    maven {
+        url 'https://maven.tamaized.com/releases/'
     }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${project.mc_version}-${project.forge_version}"
 
-    implementation fg.deobf("com.androsa.ornamental:ornamental-${mc_version}:${ornamental_version}")
+    implementation fg.deobf("androsa:ornamental:${ornamental_version}")
     implementation fg.deobf("teamtwilight:twilightforest:${tf_version}:universal")
 }
 
