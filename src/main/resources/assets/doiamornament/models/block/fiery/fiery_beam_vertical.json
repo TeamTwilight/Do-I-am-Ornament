@@ -1,0 +1,35 @@
+{
+  "parent": "block/block",
+  "ambientocclusion": false,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "twilightforest:block/fiery_block",
+    "all": "twilightforest:block/fiery_block_inner",
+    "over": "twilightforest:block/fiery_pattern"
+  },
+  "elements": [
+    {
+      "from": [ 1, 1, 1 ],
+      "to": [ 15, 8, 7 ],
+      "shade": false,
+      "faces": {
+        "down":  { "texture": "#all", "emissivity": 15 },
+        "north": { "texture": "#all", "emissivity": 15 },
+        "south": { "texture": "#all", "emissivity": 15 },
+        "west":  { "texture": "#all", "emissivity": 15 },
+        "east":  { "texture": "#all", "emissivity": 15 }
+      }
+    }, {
+      "from": [ 15.99, 8, 8 ],
+      "to": [ 0.01, 0.01, 0.01 ],
+      "shade": false,
+      "faces": {
+        "up":    { "texture": "#over", "emissivity": 15 },
+        "north": { "texture": "#over", "emissivity": 15, "cullface": "south" },
+        "south": { "texture": "#over", "emissivity": 15 },
+        "west":  { "texture": "#over", "emissivity": 15, "cullface": "east" },
+        "east":  { "texture": "#over", "emissivity": 15, "cullface": "west" }
+      }
+    }
+  ]
+}

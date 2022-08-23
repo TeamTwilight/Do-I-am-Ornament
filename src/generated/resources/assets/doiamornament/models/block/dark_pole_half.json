@@ -1,6 +1,0 @@
-{
-  "parent": "ornamental:block/util/slab_vertical",
-  "textures": {
-    "texture": "twilightforest:block/wood/planks_darkwood_0"
-  }
-}

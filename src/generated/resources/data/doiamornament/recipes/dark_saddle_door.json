@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:dark_trapdoor"
     }
   },
+  "pattern": [
+    "#",
+    "#"
+  ],
   "result": {
-    "item": "doiamornament:dark_saddle_door",
-    "count": 2
+    "count": 2,
+    "item": "doiamornament:dark_saddle_door"
   }
 }

@@ -1,6 +1,8 @@
 {
   "parent": "ornamental:block/util/saddle_door_inventory",
   "textures": {
-    "texture": "twilightforest:block/wood/trapdoor/mangrove_trapdoor"
+    "bottom": "twilightforest:block/wood/trapdoor/mangrove_trapdoor",
+    "side": "twilightforest:block/wood/trapdoor/mangrove_trapdoor",
+    "top": "twilightforest:block/wood/trapdoor/mangrove_trapdoor"
   }
 }

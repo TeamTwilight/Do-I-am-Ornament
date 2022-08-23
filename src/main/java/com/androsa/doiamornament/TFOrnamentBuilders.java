@@ -18,7 +18,8 @@ public class TFOrnamentBuilders {
 			new OrnamentBuilder("fiery")
 					.properties(Material.METAL, MaterialColor.TERRACOTTA_BLACK)
 					.sound(SoundType.METAL)
-					.hardnessAndResistance(5.0F, 6.0F))
+					.hardnessAndResistance(5.0F, 6.0F)
+					.requiresTool())
 			.noOcclusion()
 			.emissiveRender()
 			.shadeBrightness(1.0F)
@@ -27,9 +28,8 @@ public class TFOrnamentBuilders {
 	public static final TFOrnamentBuilder STEELEAF = new TFOrnamentBuilder(
 			new OrnamentBuilder("steeleaf")
 					.properties(Material.LEAVES)
-					.sound(SoundType.GRASS)
+					.sound(SoundType.MOSS)
 					.hardnessAndResistance(5.0F, 6.0F)
-					.fall(0.75F)
 					.canOpen());
 
 	public static final TFOrnamentBuilder ARCTIC_FUR = new TFOrnamentBuilder(

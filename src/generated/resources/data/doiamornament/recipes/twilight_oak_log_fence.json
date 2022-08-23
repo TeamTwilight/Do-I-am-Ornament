@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#/#",
-    "#/#"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:twilight_oak_log"
@@ -12,8 +8,12 @@
       "item": "doiamornament:twilight_oak_log_slab"
     }
   },
+  "pattern": [
+    "#/#",
+    "#/#"
+  ],
   "result": {
-    "item": "doiamornament:twilight_oak_log_fence",
-    "count": 3
+    "count": 3,
+    "item": "doiamornament:twilight_oak_log_fence"
   }
 }

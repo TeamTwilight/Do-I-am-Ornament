@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/wall_inventory",
+  "parent": "ornamental:block/util/wall_inventory",
   "textures": {
-    "wall": "twilightforest:block/carminite_block"
+    "bottom": "twilightforest:block/carminite_block",
+    "side": "twilightforest:block/carminite_block",
+    "top": "twilightforest:block/carminite_block"
   }
 }

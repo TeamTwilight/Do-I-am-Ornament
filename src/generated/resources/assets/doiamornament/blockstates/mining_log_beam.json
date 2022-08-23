@@ -1,140 +1,443 @@
 {
-  "variants": {
-    "axis=x,type=topleft_corner": {
-      "model": "doiamornament:block/mining_log_beam_corner"
+  "multipart": [
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_whole",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "false",
+        "top_left": "true",
+        "top_right": "false"
+      }
     },
-    "axis=z,type=topleft_corner": {
-      "model": "doiamornament:block/mining_log_beam_corner",
-      "y": 270,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_whole",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "false",
+        "top_left": "true",
+        "top_right": "false"
+      }
     },
-    "axis=x,type=topright_corner": {
-      "model": "doiamornament:block/mining_log_beam_corner",
-      "y": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_whole",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_right": "false",
+        "top_left": "false",
+        "top_right": "true"
+      }
     },
-    "axis=z,type=topright_corner": {
-      "model": "doiamornament:block/mining_log_beam_corner",
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_whole",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "axis": "z",
+        "bottom_right": "false",
+        "top_left": "false",
+        "top_right": "true"
+      }
     },
-    "axis=x,type=bottomleft_corner": {
-      "model": "doiamornament:block/mining_log_beam_corner",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_whole"
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "true",
+        "bottom_right": "false",
+        "top_left": "false"
+      }
     },
-    "axis=z,type=bottomleft_corner": {
-      "model": "doiamornament:block/mining_log_beam_corner",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_whole",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "true",
+        "bottom_right": "false",
+        "top_left": "false"
+      }
     },
-    "axis=x,type=bottomright_corner": {
-      "model": "doiamornament:block/mining_log_beam_corner",
-      "x": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_whole",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "false",
+        "bottom_right": "true",
+        "top_right": "false"
+      }
     },
-    "axis=z,type=bottomright_corner": {
-      "model": "doiamornament:block/mining_log_beam_corner",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_whole",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "false",
+        "bottom_right": "true",
+        "top_right": "false"
+      }
     },
-    "axis=x,type=top_half": {
-      "model": "doiamornament:block/mining_log_slab_top"
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_horizontal",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "false",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "axis=z,type=top_half": {
-      "model": "doiamornament:block/mining_log_slab_top"
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_horizontal",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "false",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "axis=x,type=left_half": {
-      "model": "doiamornament:block/mining_log_pole_half"
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_horizontal",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_right": "false",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "axis=z,type=left_half": {
-      "model": "doiamornament:block/mining_log_pole_half",
-      "y": 270,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_horizontal",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "axis": "z",
+        "bottom_right": "false",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "axis=x,type=right_half": {
-      "model": "doiamornament:block/mining_log_pole_half",
-      "y": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_horizontal"
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "false"
+      }
     },
-    "axis=z,type=right_half": {
-      "model": "doiamornament:block/mining_log_pole_half",
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_horizontal",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "false"
+      }
     },
-    "axis=x,type=bottom_half": {
-      "model": "doiamornament:block/mining_log_slab"
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_horizontal",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_right": "false"
+      }
     },
-    "axis=z,type=bottom_half": {
-      "model": "doiamornament:block/mining_log_slab"
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_horizontal",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_right": "false"
+      }
     },
-    "axis=x,type=topleft_bottomright": {
-      "model": "doiamornament:block/mining_log_beam_cross"
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_vertical",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "true",
+        "top_left": "true",
+        "top_right": "false"
+      }
     },
-    "axis=z,type=topleft_bottomright": {
-      "model": "doiamornament:block/mining_log_beam_cross",
-      "y": 270,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_vertical",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "true",
+        "top_left": "true",
+        "top_right": "false"
+      }
     },
-    "axis=x,type=topright_bottomleft": {
-      "model": "doiamornament:block/mining_log_beam_cross",
-      "y": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_vertical",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_right": "true",
+        "top_left": "false",
+        "top_right": "true"
+      }
     },
-    "axis=z,type=topright_bottomleft": {
-      "model": "doiamornament:block/mining_log_beam_cross",
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_vertical",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "axis": "z",
+        "bottom_right": "true",
+        "top_left": "false",
+        "top_right": "true"
+      }
     },
-    "axis=x,type=topleft_fill": {
-      "model": "doiamornament:block/mining_log_stairs",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_vertical"
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "true",
+        "bottom_right": "false",
+        "top_left": "true"
+      }
     },
-    "axis=z,type=topleft_fill": {
-      "model": "doiamornament:block/mining_log_stairs",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_vertical",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "true",
+        "bottom_right": "false",
+        "top_left": "true"
+      }
     },
-    "axis=x,type=topright_fill": {
-      "model": "doiamornament:block/mining_log_stairs",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_vertical",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "false",
+        "bottom_right": "true",
+        "top_right": "true"
+      }
     },
-    "axis=z,type=topright_fill": {
-      "model": "doiamornament:block/mining_log_stairs",
-      "x": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_vertical",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "false",
+        "bottom_right": "true",
+        "top_right": "true"
+      }
     },
-    "axis=x,type=bottomleft_fill": {
-      "model": "doiamornament:block/mining_log_stairs",
-      "y": 270,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_corner",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "true",
+        "bottom_right": "false",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "axis=z,type=bottomleft_fill": {
-      "model": "doiamornament:block/mining_log_stairs",
-      "y": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_corner",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "true",
+        "bottom_right": "false",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "axis=x,type=bottomright_fill": {
-      "model": "doiamornament:block/mining_log_stairs",
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_corner",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "false",
+        "bottom_right": "true",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "axis=z,type=bottomright_fill": {
-      "model": "doiamornament:block/mining_log_stairs"
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_corner",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "false",
+        "bottom_right": "true",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "axis=x,type=full": {
-      "model": "twilightforest:block/mining_log"
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_corner",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "false",
+        "top_right": "true"
+      }
     },
-    "axis=z,type=full": {
-      "model": "twilightforest:block/mining_log"
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_corner",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "false",
+        "top_right": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_corner"
+      },
+      "when": {
+        "axis": "x",
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "true",
+        "top_right": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "doiamornament:block/mining_log_beam_corner",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "axis": "z",
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "true",
+        "top_right": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "twilightforest:block/mining_log"
+      },
+      "when": {
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "true",
+        "top_right": "true"
+      }
     }
-  }
+  ]
 }

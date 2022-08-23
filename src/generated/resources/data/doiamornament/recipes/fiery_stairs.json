@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:fiery_block"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "doiamornament:fiery_stairs",
-    "count": 8
+    "count": 8,
+    "item": "doiamornament:fiery_stairs"
   }
 }

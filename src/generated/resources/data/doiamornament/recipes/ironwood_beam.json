@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
   "key": {
     "#": {
       "item": "doiamornament:ironwood_slab"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "doiamornament:ironwood_beam",
-    "count": 6
+    "count": 6,
+    "item": "doiamornament:ironwood_beam"
   }
 }

@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/template_wall_side_tall",
+  "parent": "ornamental:block/util/wall_side_tall",
   "textures": {
-    "wall": "twilightforest:block/wood/planks_sort_0"
+    "bottom": "twilightforest:block/wood/planks_sort_0",
+    "side": "twilightforest:block/wood/planks_sort_0",
+    "top": "twilightforest:block/wood/planks_sort_0"
   }
 }

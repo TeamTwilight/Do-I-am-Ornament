@@ -1,0 +1,20 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "side": "twilightforest:block/fiery_block"
+  },
+  "elements": [
+    {
+      "from": [ 4, 0, 4 ],
+      "to": [ 12, 16, 12 ],
+      "faces": {
+        "down":  { "texture": "#side", "emissivity": 15, "cullface": "down" },
+        "up":    { "texture": "#side", "emissivity": 15, "cullface": "up" },
+        "north": { "texture": "side", "emissivity": 15 },
+        "south": { "texture": "side", "emissivity": 15 },
+        "west":  { "texture": "side", "emissivity": 15 },
+        "east":  { "texture": "side", "emissivity": 15 }
+      }
+    }
+  ]
+}

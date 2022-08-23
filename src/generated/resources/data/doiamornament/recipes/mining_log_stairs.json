@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:mining_log"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "doiamornament:mining_log_stairs",
-    "count": 8
+    "count": 8,
+    "item": "doiamornament:mining_log_stairs"
   }
 }

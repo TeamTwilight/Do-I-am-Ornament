@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:fiery_block"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "doiamornament:fiery_slab",
-    "count": 6
+    "count": 6,
+    "item": "doiamornament:fiery_slab"
   }
 }

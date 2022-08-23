@@ -1,7 +1,0 @@
-{
-  "parent": "doiamornament:block/stairs_straight_side_2_layer",
-  "textures": {
-    "all": "twilightforest:block/ironwood_pattern",
-    "over": "twilightforest:block/ironwood_block"
-  }
-}

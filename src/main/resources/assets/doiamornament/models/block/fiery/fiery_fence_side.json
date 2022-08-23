@@ -1,51 +1,52 @@
 {
+  "render_type": "minecraft:cutout",
+  "ambientocclusion": false,
   "textures": {
     "particle": "twilightforest:block/fiery_block",
     "all": "twilightforest:block/fiery_block_inner",
     "over": "twilightforest:block/fiery_pattern"
   },
-  "ambientocclusion": false,
   "elements": [{
     "from": [ 9, 15, 6 ],
     "to"  : [ 7, 12, 0 ],
     "shade": false,
     "faces": {
-      "down" : { "texture": "#over"                      },
-      "up"   : { "texture": "#over"                      },
-      "north": { "texture": "#over", "cullface": "north" },
-      "west" : { "texture": "#over"                      },
-      "east" : { "texture": "#over"                      }
+      "down" : { "texture": "#over", "emissivity": 15                      },
+      "up"   : { "texture": "#over", "emissivity": 15                      },
+      "north": { "texture": "#over", "emissivity": 15, "cullface": "north" },
+      "west" : { "texture": "#over", "emissivity": 15                      },
+      "east" : { "texture": "#over", "emissivity": 15                      }
     }
   }, {
     "from": [ 7, 13, 0 ],
     "to"  : [ 9, 14, 7 ],
     "shade": false,
     "faces": {
-      "down" : { "uv": [ 7, 1, 9, 7 ], "texture": "#all" },
-      "up"   : { "uv": [ 7, 1, 9, 7 ], "texture": "#all" },
-      "west" : { "uv": [ 7, 8, 7, 9 ], "texture": "#all" },
-      "east" : { "uv": [ 7, 8, 7, 9 ], "texture": "#all" }
+      "down" : { "uv": [ 7, 1, 9, 7 ], "texture": "#all", "emissivity": 15 },
+      "up"   : { "uv": [ 7, 1, 9, 7 ], "texture": "#all", "emissivity": 15 },
+      "west" : { "uv": [ 7, 8, 7, 9 ], "texture": "#all", "emissivity": 15 },
+      "east" : { "uv": [ 7, 8, 7, 9 ], "texture": "#all", "emissivity": 15 }
     }
   }, {
     "from": [ 9, 9, 6 ],
     "to"  : [ 7, 6, 0 ],
     "shade": false,
     "faces": {
-      "down" : { "texture": "#over"                      },
-      "up"   : { "texture": "#over"                      },
-      "north": { "texture": "#over", "cullface": "north" },
-      "west" : { "texture": "#over"                      },
-      "east" : { "texture": "#over"                      }
+      "down" : { "texture": "#over", "emissivity": 15                      },
+      "up"   : { "texture": "#over", "emissivity": 15                      },
+      "north": { "texture": "#over", "emissivity": 15, "cullface": "north" },
+      "west" : { "texture": "#over", "emissivity": 15                      },
+      "east" : { "texture": "#over", "emissivity": 15                      }
     }
   }, {
     "from": [ 7, 7, 0 ],
     "to"  : [ 9, 8, 7 ],
     "shade": false,
     "faces": {
-      "down" : { "uv": [ 7, 1, 9, 7 ], "texture": "#all" },
-      "up"   : { "uv": [ 7, 1, 9, 7 ], "texture": "#all" },
-      "west" : { "uv": [ 7, 8, 7, 9 ], "texture": "#all" },
-      "east" : { "uv": [ 7, 8, 7, 9 ], "texture": "#all" }
+      "down" : { "uv": [ 7, 1, 9, 7 ], "texture": "#all", "emissivity": 15 },
+      "up"   : { "uv": [ 7, 1, 9, 7 ], "texture": "#all", "emissivity": 15 },
+      "west" : { "uv": [ 7, 8, 7, 9 ], "texture": "#all", "emissivity": 15 },
+      "east" : { "uv": [ 7, 8, 7, 9 ], "texture": "#all", "emissivity": 15 }
     }
   }]
 }

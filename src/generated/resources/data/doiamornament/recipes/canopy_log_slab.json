@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:canopy_log"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "doiamornament:canopy_log_slab",
-    "count": 6
+    "count": 6,
+    "item": "doiamornament:canopy_log_slab"
   }
 }

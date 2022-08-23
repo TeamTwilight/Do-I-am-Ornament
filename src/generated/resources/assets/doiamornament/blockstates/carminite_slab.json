@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "doiamornament:block/carminite_slab_top"
-    },
     "type=bottom": {
       "model": "doiamornament:block/carminite_slab"
     },
     "type=double": {
       "model": "twilightforest:block/carminite_block"
+    },
+    "type=top": {
+      "model": "doiamornament:block/carminite_slab_top"
     }
   }
 }

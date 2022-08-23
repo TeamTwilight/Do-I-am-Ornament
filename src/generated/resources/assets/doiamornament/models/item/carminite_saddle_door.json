@@ -1,6 +1,8 @@
 {
   "parent": "ornamental:block/util/saddle_door_inventory",
   "textures": {
-    "texture": "doiamornament:block/carminite_trapdoor"
+    "bottom": "doiamornament:block/carminite_trapdoor",
+    "side": "doiamornament:block/carminite_trapdoor",
+    "top": "doiamornament:block/carminite_trapdoor"
   }
 }

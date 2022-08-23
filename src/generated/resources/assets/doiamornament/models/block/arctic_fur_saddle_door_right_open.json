@@ -1,0 +1,9 @@
+{
+  "parent": "ornamental:block/util/saddle_door_right_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "doiamornament:block/arctic_fur_trapdoor",
+    "side": "doiamornament:block/arctic_fur_trapdoor",
+    "top": "doiamornament:block/arctic_fur_trapdoor"
+  }
+}

@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "doiamornament:block/sorting_log_slab_top"
-    },
     "type=bottom": {
       "model": "doiamornament:block/sorting_log_slab"
     },
     "type=double": {
       "model": "twilightforest:block/sorting_log"
+    },
+    "type=top": {
+      "model": "doiamornament:block/sorting_log_slab_top"
     }
   }
 }

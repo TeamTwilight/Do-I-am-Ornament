@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#",
-    "#"
-  ],
   "key": {
     "#": {
       "item": "doiamornament:carminite_slab"
     }
   },
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
   "result": {
-    "item": "doiamornament:carminite_pole",
-    "count": 6
+    "count": 6,
+    "item": "doiamornament:carminite_pole"
   }
 }

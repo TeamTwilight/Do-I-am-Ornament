@@ -1,0 +1,9 @@
+{
+  "parent": "ornamental:block/util/saddle_door_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "doiamornament:block/steeleaf_trapdoor",
+    "side": "doiamornament:block/steeleaf_trapdoor",
+    "top": "doiamornament:block/steeleaf_trapdoor"
+  }
+}

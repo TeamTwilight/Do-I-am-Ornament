@@ -1,6 +1,0 @@
-{
-  "parent": "ornamental:block/util/stairs_straight_side",
-  "textures": {
-    "texture": "twilightforest:block/wood/planks_sort_0"
-  }
-}

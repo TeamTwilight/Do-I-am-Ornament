@@ -40,6 +40,6 @@ All your favourite blocks from Twilight Forest now in all arrays of decorative b
 [[dependencies.doiamornament]]
     modId="ornamental"
     mandatory=true
-    versionRange="[4.9.8,)"
+    versionRange="[1.19.1-4.9.8,)"
     ordering="NONE"
     side="BOTH"

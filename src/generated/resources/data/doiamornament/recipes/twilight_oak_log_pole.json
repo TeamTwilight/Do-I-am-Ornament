@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#",
-    "#"
-  ],
   "key": {
     "#": {
       "item": "doiamornament:twilight_oak_log_slab"
     }
   },
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
   "result": {
-    "item": "doiamornament:twilight_oak_log_pole",
-    "count": 6
+    "count": 6,
+    "item": "doiamornament:twilight_oak_log_pole"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "doiamornament:block/pole_vertical_2_layer",
+  "textures": {
+    "all": "twilightforest:block/ironwood_pattern",
+    "over": "twilightforest:block/ironwood_block"
+  }
+}

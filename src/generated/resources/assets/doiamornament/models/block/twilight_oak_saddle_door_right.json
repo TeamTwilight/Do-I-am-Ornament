@@ -1,0 +1,9 @@
+{
+  "parent": "ornamental:block/util/saddle_door_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "twilightforest:block/wood/trapdoor/twilight_oak_trapdoor",
+    "side": "twilightforest:block/wood/trapdoor/twilight_oak_trapdoor",
+    "top": "twilightforest:block/wood/trapdoor/twilight_oak_trapdoor"
+  }
+}

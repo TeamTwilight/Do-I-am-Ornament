@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "/#/",
-    "/#/"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:dark_log"
@@ -12,6 +8,10 @@
       "item": "doiamornament:dark_log_slab"
     }
   },
+  "pattern": [
+    "/#/",
+    "/#/"
+  ],
   "result": {
     "item": "doiamornament:dark_log_fence_gate"
   }

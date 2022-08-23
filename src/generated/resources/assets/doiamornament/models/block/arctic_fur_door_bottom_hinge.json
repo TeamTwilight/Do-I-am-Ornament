@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_rh",
-  "textures": {
-    "bottom": "doiamornament:block/arctic_fur_door_bottom",
-    "top": "doiamornament:block/arctic_fur_door_top"
-  }
-}

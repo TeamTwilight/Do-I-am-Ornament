@@ -1,0 +1,8 @@
+{
+  "parent": "ornamental:block/util/door_top_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "side": "doiamornament:block/arctic_fur_door_top",
+    "top": "doiamornament:block/arctic_fur_door_top"
+  }
+}

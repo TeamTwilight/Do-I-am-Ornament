@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/wall_inventory",
+  "parent": "ornamental:block/util/wall_inventory",
   "textures": {
-    "wall": "twilightforest:block/arctic_fur_block"
+    "bottom": "twilightforest:block/arctic_fur_block",
+    "side": "twilightforest:block/arctic_fur_block",
+    "top": "twilightforest:block/arctic_fur_block"
   }
 }

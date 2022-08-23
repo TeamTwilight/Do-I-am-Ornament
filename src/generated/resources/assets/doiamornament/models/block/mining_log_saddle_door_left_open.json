@@ -1,0 +1,9 @@
+{
+  "parent": "ornamental:block/util/saddle_door_left_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "twilightforest:block/mining_log",
+    "side": "twilightforest:block/mining_log",
+    "top": "twilightforest:block/mining_log"
+  }
+}

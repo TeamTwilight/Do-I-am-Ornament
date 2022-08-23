@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#/#",
-    "#/#"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:mining_log"
@@ -12,8 +8,12 @@
       "item": "doiamornament:mining_log_slab"
     }
   },
+  "pattern": [
+    "#/#",
+    "#/#"
+  ],
   "result": {
-    "item": "doiamornament:mining_log_fence",
-    "count": 3
+    "count": 3,
+    "item": "doiamornament:mining_log_fence"
   }
 }

@@ -4,11 +4,15 @@ import com.androsa.doiamornament.DoIAmOrnamentMod;
 import com.androsa.doiamornament.ModBlocks;
 import com.androsa.ornamental.data.provider.OrnamentalItemModelProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
+import net.minecraftforge.client.model.generators.loaders.ItemLayersModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import twilightforest.TwilightForestMod;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public class ItemModelGenerator extends OrnamentalItemModelProvider {
@@ -54,18 +58,17 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItem(ModBlocks.sorting_log_slab);
 
         blockItemFence(ModBlocks.ironwood_fence, "ironwood_block");
-        blockItemFence(ModBlocks.fiery_fence, "fiery_block");
         blockItemFence(ModBlocks.steeleaf_fence, "steeleaf_block");
         blockItemFence(ModBlocks.arctic_fur_fence, "arctic_fur_block");
         blockItemFence(ModBlocks.carminite_fence, "carminite_block");
-        blockItemFenceColumn(ModBlocks.twilight_oak_log_fence, "twilight_oak_log", "twilight_oak_log_top");
-        blockItemFenceColumn(ModBlocks.canopy_log_fence, "canopy_log", "canopy_log_top");
-        blockItemFenceColumn(ModBlocks.mangrove_log_fence, "mangrove_log", "mangrove_log_top");
-        blockItemFenceColumn(ModBlocks.dark_oak_log_fence, "dark_log", "dark_log_top");
-        blockItemFenceColumn(ModBlocks.time_log_fence, "time_log", "time_log_top");
-        blockItemFenceColumn(ModBlocks.transformation_log_fence, "transformation_log", "transformation_log_top");
-        blockItemFenceColumn(ModBlocks.mining_log_fence, "mining_log", "mining_log_top");
-        blockItemFenceColumn(ModBlocks.sorting_log_fence, "sorting_log", "sorting_log_top");
+        blockItemFence(ModBlocks.twilight_oak_log_fence, "twilight_oak_log", "twilight_oak_log_top");
+        blockItemFence(ModBlocks.canopy_log_fence, "canopy_log", "canopy_log_top");
+        blockItemFence(ModBlocks.mangrove_log_fence, "mangrove_log", "mangrove_log_top");
+        blockItemFence(ModBlocks.dark_oak_log_fence, "dark_log", "dark_log_top");
+        blockItemFence(ModBlocks.time_log_fence, "time_log", "time_log_top");
+        blockItemFence(ModBlocks.transformation_log_fence, "transformation_log", "transformation_log_top");
+        blockItemFence(ModBlocks.mining_log_fence, "mining_log", "mining_log_top");
+        blockItemFence(ModBlocks.sorting_log_fence, "sorting_log", "sorting_log_top");
 
         blockItemTrapdoor(ModBlocks.ironwood_trapdoor);
         blockItemTrapdoorFiery(ModBlocks.fiery_trapdoor);
@@ -96,7 +99,7 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItem(ModBlocks.sorting_log_fence_gate);
 
         blockItemModel(ModBlocks.ironwood_door);
-        blockItemModel(ModBlocks.fiery_door);
+        blockItemDoorFiery(ModBlocks.fiery_door, modLoc("item/fiery_door"));
         blockItemModel(ModBlocks.steeleaf_door);
         blockItemModel(ModBlocks.arctic_fur_door);
         blockItemModel(ModBlocks.carminite_door);
@@ -110,7 +113,6 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItemModel(ModBlocks.sorting_log_door);
 
         blockItemPole(ModBlocks.ironwood_pole, "ironwood_block");
-        blockItemPole(ModBlocks.fiery_pole, "fiery_block");
         blockItemPole(ModBlocks.steeleaf_pole, "steeleaf_block");
         blockItemPole(ModBlocks.arctic_fur_pole, "arctic_fur_block");
         blockItemPole(ModBlocks.carminite_pole, "carminite_block");
@@ -132,7 +134,6 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItemPole(ModBlocks.sorting_plank_pole, "wood/planks_sort_0");
 
         blockItemBeam(ModBlocks.ironwood_beam, "ironwood_block");
-        blockItemBeam(ModBlocks.fiery_beam, "fiery_block");
         blockItemBeam(ModBlocks.steeleaf_beam, "steeleaf_block");
         blockItemBeam(ModBlocks.arctic_fur_beam, "arctic_fur_block");
         blockItemBeam(ModBlocks.carminite_beam, "carminite_block");
@@ -154,18 +155,17 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItemBeam(ModBlocks.sorting_plank_beam, "wood/planks_sort_0");
 
         blockItemWall(ModBlocks.ironwood_wall, "ironwood_block");
-        blockItemWall(ModBlocks.fiery_wall, "fiery_block");
         blockItemWall(ModBlocks.steeleaf_wall, "steeleaf_block");
         blockItemWall(ModBlocks.arctic_fur_wall, "arctic_fur_block");
         blockItemWall(ModBlocks.carminite_wall, "carminite_block");
-        blockItemWallColumn(ModBlocks.twilight_oak_log_wall, "twilight_oak_log", "twilight_oak_log_top");
-        blockItemWallColumn(ModBlocks.canopy_log_wall, "canopy_log", "canopy_log_top");
-        blockItemWallColumn(ModBlocks.mangrove_log_wall, "mangrove_log", "mangrove_log_top");
-        blockItemWallColumn(ModBlocks.dark_oak_log_wall, "dark_log", "dark_log_top");
-        blockItemWallColumn(ModBlocks.time_log_wall, "time_log", "time_log_top");
-        blockItemWallColumn(ModBlocks.transformation_log_wall, "transformation_log", "transformation_log_top");
-        blockItemWallColumn(ModBlocks.mining_log_wall, "mining_log", "mining_log_top");
-        blockItemWallColumn(ModBlocks.sorting_log_wall, "sorting_log", "sorting_log_top");
+        blockItemWall(ModBlocks.twilight_oak_log_wall, "twilight_oak_log", "twilight_oak_log_top");
+        blockItemWall(ModBlocks.canopy_log_wall, "canopy_log", "canopy_log_top");
+        blockItemWall(ModBlocks.mangrove_log_wall, "mangrove_log", "mangrove_log_top");
+        blockItemWall(ModBlocks.dark_oak_log_wall, "dark_log", "dark_log_top");
+        blockItemWall(ModBlocks.time_log_wall, "time_log", "time_log_top");
+        blockItemWall(ModBlocks.transformation_log_wall, "transformation_log", "transformation_log_top");
+        blockItemWall(ModBlocks.mining_log_wall, "mining_log", "mining_log_top");
+        blockItemWall(ModBlocks.sorting_log_wall, "sorting_log", "sorting_log_top");
         blockItemWall(ModBlocks.twilight_oak_plank_wall, "wood/planks_twilight_oak_0");
         blockItemWall(ModBlocks.canopy_plank_wall, "wood/planks_canopy_0");
         blockItemWall(ModBlocks.mangrove_plank_wall, "wood/planks_mangrove_0");
@@ -176,7 +176,6 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItemWall(ModBlocks.sorting_plank_wall, "wood/planks_sort_0");
 
         blockItemSaddleDoor(ModBlocks.ironwood_saddle_door, "ironwood");
-        blockItemSaddleDoorTF(ModBlocks.fiery_saddle_door, "fiery_block");
         blockItemSaddleDoor(ModBlocks.steeleaf_saddle_door, "steeleaf");
         blockItemSaddleDoor(ModBlocks.arctic_fur_saddle_door, "arctic_fur");
         blockItemSaddleDoor(ModBlocks.carminite_saddle_door, "carminite");
@@ -205,20 +204,26 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
 
     @Override
     public void blockItemFence(Supplier<? extends Block> block, String name) {
-        this.withExistingParent(this.blockName(block), this.mcLoc("block/fence_inventory"))
-                .texture("texture", TwilightForestMod.prefix("block/" + name));
+        this.blockItemFence(block, name, name);
+    }
+
+    @Override
+    public void blockItemFence(Supplier<? extends Block> block, String side, String top) {
+        ResourceLocation toptex = TwilightForestMod.prefix("block/" + top);
+        this.blockItemFence(block, TwilightForestMod.prefix("block/" + side), toptex, toptex);
+    }
+
+    public void blockItemDoorFiery(Supplier<? extends Block> block, ResourceLocation... textures) {
+        ItemModelBuilder builder = existingParent(block, mcLoc("item/generated"));
+        for (int i = 0; i < textures.length; i++) {
+            builder = builder.texture("layer" + i, textures[i]);
+        }
+        builder.customLoader(ItemLayersModelBuilder::begin).emissive(0).end();
     }
 
     public void blockItemTrapdoorFiery(Supplier<? extends Block> block) {
         String name = this.blockName(block);
         this.withExistingParent(name, this.modLoc("block/fiery/" + name + "_bottom"));
-    }
-
-    @Override
-    public void blockItemFenceColumn(Supplier<? extends Block> block, String side, String top) {
-        this.withExistingParent(this.blockName(block), this.ornamentLoc("block/util/fence_inventory_column"))
-                .texture("end", TwilightForestMod.prefix("block/" + top))
-                .texture("side", TwilightForestMod.prefix("block/" + side));
     }
 
     @Override
@@ -228,9 +233,8 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
 
     @Override
     public void blockItemPole(Supplier<? extends Block> block, String end, String side) {
-        this.withExistingParent(this.blockName(block), this.ornamentLoc("block/util/pole_inventory"))
-                .texture("end", TwilightForestMod.prefix("block/" + end))
-                .texture("side", TwilightForestMod.prefix("block/" + side));
+        ResourceLocation toptex = TwilightForestMod.prefix("block/" + end);
+        this.blockItemPole(block, toptex, toptex, TwilightForestMod.prefix("block/" + side), Optional.empty());
     }
 
     @Override
@@ -240,26 +244,23 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
 
     @Override
     public void blockItemBeam(Supplier<? extends Block> block, String end, String side) {
-        this.withExistingParent(this.blockName(block), this.ornamentLoc("block/util/beam_inventory"))
-                .texture("end", TwilightForestMod.prefix("block/" + end))
-                .texture("side", TwilightForestMod.prefix("block/" + side));
+        ResourceLocation toptex = TwilightForestMod.prefix("block/" + end);
+        this.blockItemBeam(block, toptex, toptex, TwilightForestMod.prefix("block/" + side));
     }
 
     @Override
     public void blockItemWall(Supplier<? extends Block> block, String name) {
-        this.withExistingParent(this.blockName(block), this.mcLoc("block/wall_inventory"))
-                .texture("wall", TwilightForestMod.prefix("block/" + name));
+        this.blockItemWall(block, name, name);
     }
 
     @Override
-    public void blockItemWallColumn(Supplier<? extends Block> block, String side, String top) {
-        this.withExistingParent(this.blockName(block), this.ornamentLoc("block/util/wall_inventory_column"))
-                .texture("end", TwilightForestMod.prefix("block/" + top))
-                .texture("side", TwilightForestMod.prefix("block/" + side));
+    public void blockItemWall(Supplier<? extends Block> block, String side, String top) {
+        ResourceLocation toptex = TwilightForestMod.prefix("block/" + top);
+        this.blockItemWall(block, TwilightForestMod.prefix("block/" + side), toptex, toptex);
     }
 
     public void blockItemSaddleDoorTF(Supplier<? extends Block> block, String name) {
-        this.withExistingParent(this.blockName(block), this.ornamentLoc("block/util/saddle_door_inventory"))
-                .texture("texture", TwilightForestMod.prefix("block/" + name));
+        ResourceLocation tex = TwilightForestMod.prefix("block/" + name);
+        this.blockItemSaddleDoor(block, tex, tex, tex);
     }
 }

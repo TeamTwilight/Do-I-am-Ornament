@@ -1,69 +1,203 @@
 {
-  "variants": {
-    "type=topleft_corner": {
-      "model": "doiamornament:block/dark_log_pole_corner"
+  "multipart": [
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_whole"
+      },
+      "when": {
+        "bottom_left": "false",
+        "top_left": "true",
+        "top_right": "false"
+      }
     },
-    "type=topright_corner": {
-      "model": "doiamornament:block/dark_log_pole_corner",
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_whole",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "bottom_right": "false",
+        "top_left": "false",
+        "top_right": "true"
+      }
     },
-    "type=bottomleft_corner": {
-      "model": "doiamornament:block/dark_log_pole_corner",
-      "y": 270,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_whole",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "bottom_left": "false",
+        "bottom_right": "true",
+        "top_right": "false"
+      }
     },
-    "type=bottomright_corner": {
-      "model": "doiamornament:block/dark_log_pole_corner",
-      "y": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_whole",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "bottom_left": "true",
+        "bottom_right": "false",
+        "top_left": "false"
+      }
     },
-    "type=top_half": {
-      "model": "doiamornament:block/dark_log_pole_half"
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_horizontal"
+      },
+      "when": {
+        "bottom_left": "false",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "type=left_half": {
-      "model": "doiamornament:block/dark_log_pole_half",
-      "y": 270,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_horizontal",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "bottom_right": "true",
+        "top_left": "false",
+        "top_right": "true"
+      }
     },
-    "type=right_half": {
-      "model": "doiamornament:block/dark_log_pole_half",
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_horizontal",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_right": "false"
+      }
     },
-    "type=bottom_half": {
-      "model": "doiamornament:block/dark_log_pole_half",
-      "y": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_horizontal",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "bottom_left": "true",
+        "bottom_right": "false",
+        "top_left": "true"
+      }
     },
-    "type=topleft_bottomright": {
-      "model": "doiamornament:block/dark_log_pole_cross"
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_vertical"
+      },
+      "when": {
+        "bottom_left": "true",
+        "top_left": "true",
+        "top_right": "false"
+      }
     },
-    "type=topright_bottomleft": {
-      "model": "doiamornament:block/dark_log_pole_cross",
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_vertical",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "bottom_right": "false",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "type=topleft_fill": {
-      "model": "doiamornament:block/dark_log_pole_fill"
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_vertical",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "bottom_left": "false",
+        "bottom_right": "true",
+        "top_right": "true"
+      }
     },
-    "type=topright_fill": {
-      "model": "doiamornament:block/dark_log_pole_fill",
-      "y": 90,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_vertical",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "false"
+      }
     },
-    "type=bottomleft_fill": {
-      "model": "doiamornament:block/dark_log_pole_fill",
-      "y": 270,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_corner"
+      },
+      "when": {
+        "bottom_left": "true",
+        "bottom_right": "false",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "type=bottomright_fill": {
-      "model": "doiamornament:block/dark_log_pole_fill",
-      "y": 180,
-      "uvlock": true
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_corner",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "bottom_left": "false",
+        "bottom_right": "true",
+        "top_left": "true",
+        "top_right": "true"
+      }
     },
-    "type=full": {
-      "model": "twilightforest:block/dark_log"
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_corner",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "false",
+        "top_right": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "doiamornament:block/dark_log_pole_corner",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "true",
+        "top_right": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "twilightforest:block/dark_log"
+      },
+      "when": {
+        "bottom_left": "true",
+        "bottom_right": "true",
+        "top_left": "true",
+        "top_right": "true"
+      }
     }
-  }
+  ]
 }

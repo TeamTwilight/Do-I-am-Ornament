@@ -1,33 +1,52 @@
 {
   "parent": "block/block",
+  "ambientocclusion": false,
+  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "twilightforest:block/fiery_block",
     "all": "twilightforest:block/fiery_block_inner",
     "over": "twilightforest:block/fiery_pattern"
   },
-  "ambientocclusion": false,
   "elements": [
     {
-      "from": [ 1, 9, 1 ],
-      "to": [ 15, 15, 7 ],
+      "from": [ 1, 1, 1 ],
+      "to": [ 15, 7, 7 ],
+      "shade": false,
       "faces": {
-        "down":  { "texture": "#all" },
-        "up":    { "texture": "#all", "cullface": "up" },
-        "north": { "texture": "#all", "cullface": "north" },
-        "south": { "texture": "#all" },
-        "west":  { "texture": "#all", "cullface": "west" },
-        "east":  { "texture": "#all", "cullface": "east" }
+        "down":  { "texture": "#all", "emissivity": 15 },
+        "north": { "texture": "#all", "emissivity": 15 },
+        "west":  { "texture": "#all", "emissivity": 15 },
+        "east":  { "texture": "#all", "emissivity": 15 }
       }
     }, {
-      "from": [ 15.99, 15.99, 8 ],
-      "to": [ 0.01, 8, 0.01 ],
+      "from": [ 1, 7, 1 ],
+      "to": [ 15, 8, 7 ],
+      "shade": false,
       "faces": {
-        "down":  { "texture": "#over" },
-        "up":    { "texture": "#over", "cullface": "up" },
-        "north": { "texture": "#over", "cullface": "north" },
-        "south": { "texture": "#over" },
-        "west":  { "texture": "#over", "cullface": "west" },
-        "east":  { "texture": "#over", "cullface": "east" }
+        "north": { "texture": "#all", "emissivity": 15 },
+        "south": { "texture": "#all", "emissivity": 15 },
+        "west":  { "texture": "#all", "emissivity": 15 },
+        "east":  { "texture": "#all", "emissivity": 15 }
+      }
+    }, {
+      "from": [ 1, 1, 7 ],
+      "to": [ 15, 7, 8 ],
+      "shade": false,
+      "faces": {
+        "down":  { "texture": "#all", "emissivity": 15 },
+        "up": { "texture": "#all", "emissivity": 15 },
+        "west":  { "texture": "#all", "emissivity": 15 },
+        "east":  { "texture": "#all", "emissivity": 15 }
+      }
+    },{
+      "from": [ 15.99, 8, 8 ],
+      "to": [ 0.01, 0.01, 0.01 ],
+      "shade": false,
+      "faces": {
+        "up":    { "texture": "#over", "emissivity": 15 },
+        "south": { "texture": "#over", "emissivity": 15 },
+        "west":  { "texture": "#over", "emissivity": 15, "cullface": "east" },
+        "east":  { "texture": "#over", "emissivity": 15, "cullface": "west" }
       }
     }
   ]

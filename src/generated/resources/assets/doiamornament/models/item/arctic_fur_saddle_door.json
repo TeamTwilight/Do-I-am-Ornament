@@ -1,6 +1,8 @@
 {
   "parent": "ornamental:block/util/saddle_door_inventory",
   "textures": {
-    "texture": "doiamornament:block/arctic_fur_trapdoor"
+    "bottom": "doiamornament:block/arctic_fur_trapdoor",
+    "side": "doiamornament:block/arctic_fur_trapdoor",
+    "top": "doiamornament:block/arctic_fur_trapdoor"
   }
 }

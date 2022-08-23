@@ -1,0 +1,9 @@
+{
+  "parent": "ornamental:block/util/saddle_door_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "doiamornament:block/carminite_trapdoor",
+    "side": "doiamornament:block/carminite_trapdoor",
+    "top": "doiamornament:block/carminite_trapdoor"
+  }
+}

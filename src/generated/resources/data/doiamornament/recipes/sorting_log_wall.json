@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:sorting_log"
     }
   },
+  "pattern": [
+    "###",
+    "###"
+  ],
   "result": {
     "item": "doiamornament:sorting_log_wall"
   }

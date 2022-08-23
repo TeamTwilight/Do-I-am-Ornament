@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#",
-    "#"
-  ],
   "key": {
     "#": {
       "item": "doiamornament:mangrove_log_slab"
     }
   },
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
   "result": {
-    "item": "doiamornament:mangrove_log_pole",
-    "count": 6
+    "count": 6,
+    "item": "doiamornament:mangrove_log_pole"
   }
 }

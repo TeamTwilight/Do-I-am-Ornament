@@ -1,5 +1,6 @@
 {
     "ambientocclusion": false,
+    "render_type": "minecraft:cutout",
     "textures": {
         "particle": "twilightforest:block/fiery_block",
         "all": "doiamornament:block/fiery_block_inner",
@@ -9,21 +10,23 @@
         {
             "from": [ 6, 1, 0 ],
             "to": [ 10, 13, 8 ],
+            "shade": false,
             "faces": {
-                "down":  { "texture": "#all", "cullface": "down" },
-                "up":    { "texture": "#all" },
-                "west":  { "texture": "#all" },
-                "east":  { "texture": "#all" }
+                "down":  { "texture": "#all", "emissivity": 15, "cullface": "down" },
+                "up":    { "texture": "#all", "emissivity": 15 },
+                "west":  { "texture": "#all", "emissivity": 15 },
+                "east":  { "texture": "#all", "emissivity": 15 }
             },
             "__comment": "wall"
         }, {
             "from": [ 11, 14, 8 ],
             "to": [ 5, 0.01, 0 ],
+            "shade": false,
             "faces": {
-                "down":  { "texture": "#over", "cullface": "down" },
-                "up":    { "texture": "#over" },
-                "west":  { "texture": "#over" },
-                "east":  { "texture": "#over" }
+                "down":  { "texture": "#over", "emissivity": 15, "cullface": "down" },
+                "up":    { "texture": "#over", "emissivity": 15 },
+                "west":  { "texture": "#over", "emissivity": 15 },
+                "east":  { "texture": "#over", "emissivity": 15 }
             },
             "__comment": "wall"
         }

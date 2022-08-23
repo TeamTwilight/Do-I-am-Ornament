@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "/#/",
-    "/#/"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:arctic_fur_block"
@@ -12,6 +8,10 @@
       "item": "twilightforest:arctic_fur"
     }
   },
+  "pattern": [
+    "/#/",
+    "/#/"
+  ],
   "result": {
     "item": "doiamornament:arctic_fur_fence_gate"
   }

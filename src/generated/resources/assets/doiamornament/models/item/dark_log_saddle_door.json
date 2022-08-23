@@ -1,6 +1,8 @@
 {
   "parent": "ornamental:block/util/saddle_door_inventory",
   "textures": {
-    "texture": "twilightforest:block/dark_log"
+    "bottom": "twilightforest:block/dark_log",
+    "side": "twilightforest:block/dark_log",
+    "top": "twilightforest:block/dark_log"
   }
 }

@@ -1,6 +1,8 @@
 {
   "parent": "ornamental:block/util/beam_corner",
   "textures": {
-    "texture": "twilightforest:block/arctic_fur_block"
+    "bottom": "twilightforest:block/arctic_fur_block",
+    "side": "twilightforest:block/arctic_fur_block",
+    "top": "twilightforest:block/arctic_fur_block"
   }
 }

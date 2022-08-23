@@ -81,38 +81,50 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.texture("over", overlay);
 	}
 
+	public BlockModelBuilder poleWhole2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
+		return withExistingParent(name, DIAC_MODELS + "pole_whole_2_layer")
+				.texture("all", base)
+				.texture("over", overlay);
+	}
+
+	public BlockModelBuilder poleHorizontal2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
+		return withExistingParent(name, DIAC_MODELS + "pole_horizontal_2_layer")
+				.texture("all", base)
+				.texture("over", overlay);
+	}
+
+	public BlockModelBuilder poleVertical2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
+		return withExistingParent(name, DIAC_MODELS + "pole_vertical_2_layer")
+				.texture("all", base)
+				.texture("over", overlay);
+	}
+
 	public BlockModelBuilder poleCorner2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
 		return withExistingParent(name, DIAC_MODELS + "pole_corner_2_layer")
 				.texture("all", base)
 				.texture("over", overlay);
 	}
 
-	public BlockModelBuilder slabVertical2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "pole_corner_2_layer")
+	public BlockModelBuilder beamWhole2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
+		return withExistingParent(name, DIAC_MODELS + "beam_whole_2_layer")
 				.texture("all", base)
 				.texture("over", overlay);
 	}
 
-	public BlockModelBuilder poleCross2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "pole_cross_2_layer")
+	public BlockModelBuilder beamHorizontal2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
+		return withExistingParent(name, DIAC_MODELS + "beam_horizontal_2_layer")
 				.texture("all", base)
 				.texture("over", overlay);
 	}
 
-	public BlockModelBuilder stairsStraightSide2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "stairs_straight_side_2_layer")
+	public BlockModelBuilder beamVertical2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
+		return withExistingParent(name, DIAC_MODELS + "beam_vertical_2_layer")
 				.texture("all", base)
 				.texture("over", overlay);
 	}
 
 	public BlockModelBuilder beamCorner2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
 		return withExistingParent(name, DIAC_MODELS + "beam_corner_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
-	}
-
-	public BlockModelBuilder beamCross2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "beam_cross_2_layer")
 				.texture("all", base)
 				.texture("over", overlay);
 	}

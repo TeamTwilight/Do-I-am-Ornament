@@ -1,5 +1,6 @@
 {
     "ambientocclusion": false,
+    "render_type": "minecraft:cutout",
     "textures": {
         "particle": "twilightforest:block/fiery_block",
         "all": "doiamornament:block/fiery_door_bottom",
@@ -9,22 +10,24 @@
         {
             "from": [ 1, 1, 1 ],
             "to": [ 2, 16, 16 ],
+            "shade": false,
             "faces": {
-                "down":  { "uv": [  1, 14, 15, 15 ], "texture": "#all", "cullface": "down", "rotation": 90 },
-                "north": { "uv": [  2,  1,  1, 15 ], "texture": "#all", "cullface": "north" },
-                "south": { "uv": [  1,  1,  2, 15 ], "texture": "#all", "cullface": "south" },
-                "west":  { "uv": [ 15,  0,  0, 15 ], "texture": "#all", "cullface": "west" },
-                "east":  { "uv": [  0,  0, 15, 15 ], "texture": "#all" }
+                "down":  { "uv": [  1, 14, 15, 15 ], "texture": "#all", "emissivity": 15, "cullface": "down", "rotation": 90 },
+                "north": { "uv": [  2,  1,  1, 15 ], "texture": "#all", "emissivity": 15, "cullface": "north" },
+                "south": { "uv": [  1,  1,  2, 15 ], "texture": "#all", "emissivity": 15, "cullface": "south" },
+                "west":  { "uv": [ 15,  0,  0, 15 ], "texture": "#all", "emissivity": 15, "cullface": "west" },
+                "east":  { "uv": [  0,  0, 15, 15 ], "texture": "#all", "emissivity": 15 }
             }
         }, {
             "from": [ 3, 16, 15.99 ],
             "to": [ 0.01, 0.01, 0.01 ],
+            "shade": false,
             "faces": {
-                "up":    { "uv": [  0, 13, 16, 16 ], "texture": "#over", "cullface": "down", "rotation": 90 },
-                "north": { "uv": [  3,  0,  0, 16 ], "texture": "#over", "cullface": "north" },
-                "south": { "uv": [  0,  0,  3, 16 ], "texture": "#over", "cullface": "south" },
-                "west":  { "uv": [ 16,  0,  0, 16 ], "texture": "#over", "cullface": "west" },
-                "east":  { "uv": [  0,  0, 16, 16 ], "texture": "#over" }
+                "up":    { "uv": [  0, 13, 16, 16 ], "texture": "#over", "emissivity": 15, "cullface": "down", "rotation": 90 },
+                "north": { "uv": [  3,  0,  0, 16 ], "texture": "#over", "emissivity": 15, "cullface": "north" },
+                "south": { "uv": [  0,  0,  3, 16 ], "texture": "#over", "emissivity": 15, "cullface": "south" },
+                "west":  { "uv": [ 16,  0,  0, 16 ], "texture": "#over", "emissivity": 15, "cullface": "west" },
+                "east":  { "uv": [  0,  0, 16, 16 ], "texture": "#over", "emissivity": 15 }
             }
         }
     ]

@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:mangrove_slab"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "doiamornament:mangrove_beam",
-    "count": 6
+    "count": 6,
+    "item": "doiamornament:mangrove_beam"
   }
 }

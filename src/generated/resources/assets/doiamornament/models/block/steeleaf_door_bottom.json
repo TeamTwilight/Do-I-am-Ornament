@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom",
-  "textures": {
-    "bottom": "doiamornament:block/steeleaf_door_bottom",
-    "top": "doiamornament:block/steeleaf_door_top"
-  }
-}

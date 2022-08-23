@@ -1,7 +1,0 @@
-{
-  "parent": "ornamental:block/util/beam_cross_column",
-  "textures": {
-    "side": "twilightforest:block/sorting_log",
-    "end": "twilightforest:block/sorting_log_top"
-  }
-}

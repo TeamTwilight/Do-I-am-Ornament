@@ -1,0 +1,9 @@
+{
+  "parent": "ornamental:block/util/saddle_door_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "twilightforest:block/time_log",
+    "side": "twilightforest:block/time_log",
+    "top": "twilightforest:block/time_log"
+  }
+}

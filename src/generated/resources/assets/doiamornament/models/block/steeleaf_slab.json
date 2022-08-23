@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "side": "twilightforest:block/steeleaf_block",
     "bottom": "twilightforest:block/steeleaf_block",
+    "side": "twilightforest:block/steeleaf_block",
     "top": "twilightforest:block/steeleaf_block"
   }
 }

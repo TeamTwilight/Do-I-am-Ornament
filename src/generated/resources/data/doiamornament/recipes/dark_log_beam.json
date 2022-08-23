@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
   "key": {
     "#": {
       "item": "doiamornament:dark_log_slab"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "doiamornament:dark_log_beam",
-    "count": 6
+    "count": 6,
+    "item": "doiamornament:dark_log_beam"
   }
 }

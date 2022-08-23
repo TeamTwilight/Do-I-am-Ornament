@@ -1,0 +1,9 @@
+{
+  "parent": "ornamental:block/util/saddle_door_right_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "twilightforest:block/canopy_log",
+    "side": "twilightforest:block/canopy_log",
+    "top": "twilightforest:block/canopy_log"
+  }
+}

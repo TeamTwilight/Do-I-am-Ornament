@@ -1,6 +1,0 @@
-{
-  "parent": "ornamental:block/util/pole_cross",
-  "textures": {
-    "texture": "twilightforest:block/arctic_fur_block"
-  }
-}

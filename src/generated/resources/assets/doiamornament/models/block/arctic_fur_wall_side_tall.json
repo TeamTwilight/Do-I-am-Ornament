@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/template_wall_side_tall",
+  "parent": "ornamental:block/util/wall_side_tall",
   "textures": {
-    "wall": "twilightforest:block/arctic_fur_block"
+    "bottom": "twilightforest:block/arctic_fur_block",
+    "side": "twilightforest:block/arctic_fur_block",
+    "top": "twilightforest:block/arctic_fur_block"
   }
 }

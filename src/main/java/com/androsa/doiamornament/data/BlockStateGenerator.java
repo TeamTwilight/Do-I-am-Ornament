@@ -5,24 +5,16 @@ import com.androsa.doiamornament.ModBlocks;
 import com.androsa.ornamental.blocks.OrnamentBeam;
 import com.androsa.ornamental.blocks.OrnamentPole;
 import com.androsa.ornamental.blocks.OrnamentSaddleDoor;
-import com.androsa.ornamental.blocks.PoleType;
 import com.androsa.ornamental.data.provider.OrnamentalBlockStateProvider;
-import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.properties.WallSide;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import twilightforest.TwilightForestMod;
 
 import javax.annotation.Nonnull;
-import java.util.Map;
-import java.util.function.Supplier;
 
 public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 
@@ -54,6 +46,7 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 		stairsTwoLayer(ModBlocks.ironwood_stairs, "ironwood", "ironwood_pattern", "ironwood_block");
+		stairsFiery(ModBlocks.fiery_stairs);
 		stairsBasic(ModBlocks.steeleaf_stairs, "steeleaf_block");
 		stairsBasic(ModBlocks.arctic_fur_stairs, "arctic_fur_block");
 		stairsTwoLayer(ModBlocks.carminite_stairs, "carminite", "carminite_block", "carminite_block_overlay");
@@ -67,6 +60,7 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		stairsColumn(ModBlocks.sorting_log_stairs, "sorting_log", "sorting_log_top");
 
 		slabTwoLayer(ModBlocks.ironwood_slab, "ironwood_block", "ironwood_pattern", "ironwood_block");
+		slabFiery(ModBlocks.fiery_slab, "fiery_block");
 		slabBasic(ModBlocks.steeleaf_slab, "steeleaf_block");
 		slabBasic(ModBlocks.arctic_fur_slab, "arctic_fur_block");
 		slabTwoLayer(ModBlocks.carminite_slab, "carminite_block", "carminite_block", "carminite_block_overlay");
@@ -80,6 +74,7 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		slabColumn(ModBlocks.sorting_log_slab, "sorting_log", "sorting_log", "sorting_log_top");
 
 		fenceTwoLayer(ModBlocks.ironwood_fence, "ironwood_pattern", "ironwood_block");
+		fenceFiery(ModBlocks.fiery_fence);
 		fenceBasic(ModBlocks.steeleaf_fence, "steeleaf_block");
 		fenceBasic(ModBlocks.arctic_fur_fence, "arctic_fur_block");
 		fenceTwoLayer(ModBlocks.carminite_fence, "carminite_block", "carminite_block_overlay");
@@ -93,6 +88,7 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		fenceColumn(ModBlocks.sorting_log_fence, "sorting_log", "sorting_log_top");
 
 		trapdoorBasic(ModBlocks.ironwood_trapdoor, "ironwood");
+		trapdoorFiery(ModBlocks.fiery_trapdoor);
 		trapdoorBasic(ModBlocks.steeleaf_trapdoor, "steeleaf");
 		trapdoorBasic(ModBlocks.arctic_fur_trapdoor, "arctic_fur");
 		trapdoorBasic(ModBlocks.carminite_trapdoor, "carminite");
@@ -106,6 +102,7 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		trapdoorTF(ModBlocks.sorting_log_trapdoor, "sorting_log");
 
 		fenceGateTwoLayer(ModBlocks.ironwood_fence_gate, "ironwood_pattern", "ironwood_block");
+		fenceGateFiery(ModBlocks.fiery_fence_gate);
 		fenceGateBasic(ModBlocks.steeleaf_fence_gate, "steeleaf_block");
 		fenceGateBasic(ModBlocks.arctic_fur_fence_gate, "arctic_fur_block");
 		fenceGateTwoLayer(ModBlocks.carminite_fence_gate, "carminite_block", "carminite_block_overlay");
@@ -132,6 +129,7 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		doorTF(ModBlocks.sorting_log_door, "sorting_log");
 
 		poleTwoLayer(ModBlocks.ironwood_pole, "ironwood_pattern", "ironwood_block", "ironwood_block");
+		poleFiery(ModBlocks.fiery_pole, "fiery_block");
 		poleBasic(ModBlocks.steeleaf_pole, "steeleaf_block", "steeleaf_block");
 		poleBasic(ModBlocks.arctic_fur_pole, "arctic_fur_block", "arctic_fur_block");
 		poleTwoLayer(ModBlocks.carminite_pole, "carminite_block", "carminite_block_overlay", "carminite_block");
@@ -143,37 +141,39 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		poleColumn(ModBlocks.transformation_log_pole, "transformation_log");
 		poleColumn(ModBlocks.mining_log_pole, "mining_log");
 		poleColumn(ModBlocks.sorting_log_pole, "sorting_log");
-		poleBasic(ModBlocks.twilight_oak_plank_pole, "wood/planks_twilight_oak_0", "twilight_oak_planks");
-		poleBasic(ModBlocks.canopy_plank_pole, "wood/planks_canopy_0", "canopy_planks");
-		poleBasic(ModBlocks.mangrove_plank_pole, "wood/planks_mangrove_0", "mangrove_planks");
-		poleBasic(ModBlocks.dark_oak_plank_pole, "wood/planks_darkwood_0", "dark_planks");
-		poleBasic(ModBlocks.time_plank_pole, "wood/planks_time_0", "time_planks");
-		poleBasic(ModBlocks.transformation_plank_pole, "wood/planks_trans_0", "transformation_planks");
-		poleBasic(ModBlocks.mining_plank_pole, "wood/planks_mine_0", "mining_planks");
-		poleBasic(ModBlocks.sorting_plank_pole, "wood/planks_sort_0", "sorting_planks");
+		poleBasic(ModBlocks.twilight_oak_plank_pole, "wood/planks_twilight_oak_0", "wood/planks/twilight_oak/twilight_oak_planks");
+		poleBasic(ModBlocks.canopy_plank_pole, "wood/planks_canopy_0", "wood/planks/canopy/canopy_planks");
+		poleBasic(ModBlocks.mangrove_plank_pole, "wood/planks_mangrove_0", "wood/planks/mangrove/mangrove_planks");
+		poleBasic(ModBlocks.dark_oak_plank_pole, "wood/planks_darkwood_0", "wood/planks/darkwood/dark_planks");
+		poleBasic(ModBlocks.time_plank_pole, "wood/planks_time_0", "wood/planks/time/time_planks");
+		poleBasic(ModBlocks.transformation_plank_pole, "wood/planks_trans_0", "wood/planks/trans/transformation_planks");
+		poleBasic(ModBlocks.mining_plank_pole, "wood/planks_mine_0", "wood/planks/mine/mining_planks");
+		poleBasic(ModBlocks.sorting_plank_pole, "wood/planks_sort_0", "wood/planks/sort/sorting_planks");
 
-		beamTwoLayer(ModBlocks.ironwood_beam, "ironwood", "ironwood_block", "ironwood_pattern", "ironwood_block", false, false);
-		beamBasic(ModBlocks.steeleaf_beam, "steeleaf", "steeleaf_block", false, false);
-		beamBasic(ModBlocks.arctic_fur_beam, "arctic_fur", "arctic_fur_block", false, false);
-		beamTwoLayer(ModBlocks.carminite_beam, "carminite", "carminite_block", "carminite_block", "carminite_block_overlay", false, false);
-		beamColumn(ModBlocks.twilight_oak_log_beam, "twilight_oak_log", "twilight_oak_log", false, false);
-		beamColumn(ModBlocks.canopy_log_beam, "canopy_log", "canopy_log", false, false);
-		beamColumn(ModBlocks.mangrove_log_beam, "mangrove_log", "mangrove_log", false, false);
-		beamColumn(ModBlocks.dark_oak_log_beam, "dark_log", "dark_log", false, false);
-		beamColumn(ModBlocks.time_log_beam, "time_log", "time_log", false, false);
-		beamColumn(ModBlocks.transformation_log_beam, "transformation_log", "transformation_log", false, false);
-		beamColumn(ModBlocks.mining_log_beam, "mining_log", "mining_log", false, false);
-		beamColumn(ModBlocks.sorting_log_beam, "sorting_log", "sorting_log", false, false);
-		beamBasic(ModBlocks.twilight_oak_plank_beam, "twilight_oak", "wood/planks_twilight_oak_0", "twilight_oak_planks", true, true);
-		beamBasic(ModBlocks.canopy_plank_beam, "canopy", "wood/planks_canopy_0", "canopy_planks", true, true);
-		beamBasic(ModBlocks.mangrove_plank_beam, "mangrove", "wood/planks_mangrove_0", "mangrove_planks", true, true);
-		beamBasic(ModBlocks.dark_oak_plank_beam, "dark", "wood/planks_darkwood_0", "dark_planks", true, true);
-		beamBasic(ModBlocks.time_plank_beam, "time", "wood/planks_time_0", "time_planks", true, true);
-		beamBasic(ModBlocks.transformation_plank_beam, "transformation", "wood/planks_trans_0", "transformation_planks", true, true);
-		beamBasic(ModBlocks.mining_plank_beam, "mining", "wood/planks_mine_0", "mining_planks", true, true);
-		beamBasic(ModBlocks.sorting_plank_beam, "sorting", "wood/planks_sort_0", "sorting_planks", true, true);
+		beamTwoLayer(ModBlocks.ironwood_beam, "ironwood_block", "ironwood_pattern", "ironwood_block");
+		beamFiery(ModBlocks.fiery_beam, "fiery_block");
+		beamBasic(ModBlocks.steeleaf_beam, "steeleaf_block", "steeleaf_block");
+		beamBasic(ModBlocks.arctic_fur_beam, "arctic_fur_block", "arctic_fur_block");
+		beamTwoLayer(ModBlocks.carminite_beam, "carminite_block", "carminite_block", "carminite_block_overlay");
+		beamColumn(ModBlocks.twilight_oak_log_beam, "twilight_oak_log");
+		beamColumn(ModBlocks.canopy_log_beam, "canopy_log");
+		beamColumn(ModBlocks.mangrove_log_beam, "mangrove_log");
+		beamColumn(ModBlocks.dark_oak_log_beam, "dark_log");
+		beamColumn(ModBlocks.time_log_beam, "time_log");
+		beamColumn(ModBlocks.transformation_log_beam, "transformation_log");
+		beamColumn(ModBlocks.mining_log_beam, "mining_log");
+		beamColumn(ModBlocks.sorting_log_beam, "sorting_log");
+		beamBasic(ModBlocks.twilight_oak_plank_beam, "wood/planks_twilight_oak_0", "wood/planks/twilight_oak/twilight_oak_planks");
+		beamBasic(ModBlocks.canopy_plank_beam, "wood/planks_canopy_0", "wood/planks/canopy/canopy_planks");
+		beamBasic(ModBlocks.mangrove_plank_beam, "wood/planks_mangrove_0", "wood/planks/mangrove/mangrove_planks");
+		beamBasic(ModBlocks.dark_oak_plank_beam, "wood/planks_darkwood_0", "wood/planks/darkwood/dark_planks");
+		beamBasic(ModBlocks.time_plank_beam, "wood/planks_time_0", "wood/planks/time/time_planks");
+		beamBasic(ModBlocks.transformation_plank_beam, "wood/planks_trans_0", "wood/planks/trans/transformation_planks");
+		beamBasic(ModBlocks.mining_plank_beam, "wood/planks_mine_0", "wood/planks/mine/mining_planks");
+		beamBasic(ModBlocks.sorting_plank_beam, "wood/planks_sort_0", "wood/planks/sort/sorting_planks");
 
 		wallTwoLayer(ModBlocks.ironwood_wall, "ironwood_pattern", "ironwood_block");
+		wallFiery(ModBlocks.fiery_wall);
 		wallBasic(ModBlocks.steeleaf_wall, "steeleaf_block");
 		wallBasic(ModBlocks.arctic_fur_wall, "arctic_fur_block");
 		wallTwoLayer(ModBlocks.carminite_wall, "carminite_block", "carminite_block_overlay");
@@ -217,16 +217,16 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 	}
 
 	@Override
-	public void stairsBasic(Supplier<? extends StairBlock> block, String name) {
-		this.stairsBlock(block.get(), this.tfLoc(name));
+	public void stairsBasic(RegistryObject<? extends StairBlock> block, String name) {
+		this.stairsBasic(block, this.tfLoc(name), SOLID);
 	}
 
 	@Override
-	public void stairsColumn(Supplier<? extends StairBlock> block, String side, String end) {
-		this.stairsBlock(block.get(), this.tfLoc(side), this.tfLoc(end), this.tfLoc(end));
+	public void stairsColumn(RegistryObject<? extends StairBlock> block, String side, String end) {
+		this.stairs(block, this.tfLoc(side), this.tfLoc(end), this.tfLoc(end), SOLID);
 	}
 
-	private void stairsTwoLayer(Supplier<? extends StairBlock> block, String baseName, String base, String over) {
+	private void stairsTwoLayer(RegistryObject<? extends StairBlock> block, String baseName, String base, String over) {
 		String basename = baseName + "_stairs";
 		ModelFile stairs = models().stairs2Layer(basename, tfLoc(base), tfLoc(over));
 		ModelFile stairsInner = models().stairsInner2Layer(basename + "_inner", tfLoc(base), tfLoc(over));
@@ -234,231 +234,168 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		stairsBlock(block.get(), stairs, stairsInner, stairsOuter);
 	}
 
+	public void stairsFiery(RegistryObject<? extends StairBlock> block) {
+		String name = block.getId().getPath();
+		ModelFile stairs = models().getExistingFile(modLoc("block/fiery/" + name));
+		ModelFile stairsInner = models().getExistingFile(modLoc("block/fiery/" + name + "_inner"));
+		ModelFile stairsOuter = models().getExistingFile(modLoc("block/fiery/" + name + "_outer"));
+		stairsBlock(block.get(), stairs, stairsInner, stairsOuter);
+	}
+
 	@Override
-	public void slabBasic(Supplier<? extends SlabBlock> block, String name) {
+	public void slabBasic(RegistryObject<? extends SlabBlock> block, String name) {
 		this.slabBlock(block.get(), this.tfLoc(name), this.tfLoc(name));
 	}
 
 	@Override
-	public void slabColumn(Supplier<? extends SlabBlock> block, String blockname, String side, String end) {
-		slabBlock(block.get(), this.tfLoc(blockname), this.tfLoc(side), this.tfLoc(end), this.tfLoc(end));
+	public void slabColumn(RegistryObject<? extends SlabBlock> block, String blockname, String side, String end) {
+		this.slabBlock(block.get(), this.tfLoc(blockname), this.tfLoc(side), this.tfLoc(end), this.tfLoc(end));
 	}
 
 	public void slabTwoLayer(RegistryObject<? extends SlabBlock> block, String doubleslab, String base, String over) {
-		ModelFile bottom = models().slab2Layer(block.getId().toString(), tfLoc(base), tfLoc(over));
-		ModelFile top = models().slabTop2Layer(block.getId().toString() + "_top", tfLoc(base), tfLoc(over));
+		ModelFile bottom = models().slab2Layer(block.getId().getPath(), tfLoc(base), tfLoc(over));
+		ModelFile top = models().slabTop2Layer(block.getId().getPath() + "_top", tfLoc(base), tfLoc(over));
 		ModelFile full = models().getExistingFile(tfLoc(doubleslab));
-		slabBlock(block.get(), bottom, top, full);
+		this.slabBlock(block.get(), bottom, top, full);
+	}
+
+	public void slabFiery(RegistryObject<? extends SlabBlock> block, String doubleslab) {
+		String name = block.getId().getPath();
+		ModelFile bottom = models().getExistingFile(modLoc("block/fiery/" + name));
+		ModelFile top = models().getExistingFile(modLoc("block/fiery/" + name + "_top"));
+		ModelFile full = models().getExistingFile(tfLoc(doubleslab));
+		this.slabBlock(block.get(), bottom, top, full);
 	}
 
 	@Override
-	public void fenceBasic(Supplier<? extends FenceBlock> block, String name) {
-		this.fenceBlock(block.get(), this.tfLoc(name));
+	public void fenceBasic(RegistryObject<? extends FenceBlock> block, String name) {
+		this.fenceBasic(block, this.tfLoc(name), SOLID);
 	}
 
+	@Override
 	public void fenceColumn(RegistryObject<? extends FenceBlock> block, String side, String top) {
-		String baseName = block.getId().toString();
-		this.fourWayBlock(block.get(), this.models().fencePostColumn(baseName + "_post", tfLoc(side), tfLoc(top)), this.models().fenceSide(baseName + "_side", this.tfLoc(side)));
+		String baseName = block.getId().getPath();
+		this.fourWayBlock(block.get(), this.models().fencePost(baseName + "_post", tfLoc(side), tfLoc(top), tfLoc(top)), this.models().fenceSide(baseName + "_side", this.tfLoc(side)));
 	}
 
 	public void fenceTwoLayer(RegistryObject<? extends FenceBlock> block, String base, String over) {
-		String baseName = block.getId().toString();
+		String baseName = block.getId().getPath();
 		ModelFile post = this.models().fencePost2Layer(baseName + "_post", tfLoc(base), tfLoc(over));
 		ModelFile side = this.models().fenceSide2Layer(baseName + "_side", tfLoc(base), tfLoc(over));
 		this.fourWayBlock(block.get(), post, side);
 	}
 
-	public void trapdoorTF(Supplier<? extends TrapDoorBlock> block, String name) {
-		this.trapdoorBlock(block.get(), this.tfLoc(name), true);
+	public void fenceFiery(RegistryObject<? extends FenceBlock> block) {
+		String name = block.getId().getPath();
+		ModelFile post = this.models().getExistingFile(modLoc("block/fiery/" + name + "_post"));
+		ModelFile side = this.models().getExistingFile(modLoc("block/fiery/" + name + "_side"));
+		this.fourWayBlock(block.get(), post, side);
+	}
+
+	public void trapdoorTF(RegistryObject<? extends TrapDoorBlock> block, String name) {
+		this.trapdoorBlockWithRenderType(block.get(), this.tfLoc(name), true, CUTOUT);
+	}
+
+	public void trapdoorFiery(RegistryObject<? extends TrapDoorBlock> block) {
+		String name = block.getId().getPath();
+		ModelFile bottom = this.models().getExistingFile(modLoc("block/fiery/" + name + "_bottom"));
+		ModelFile top = this.models().getExistingFile(modLoc("block/fiery/" + name + "_top"));
+		ModelFile open = this.models().getExistingFile(modLoc("block/fiery/" + name + "_open"));
+		this.trapdoorBlock(block.get(), bottom, top, open, true);
 	}
 
 	@Override
-	public void fenceGateBasic(Supplier<? extends FenceGateBlock> block, String name) {
-		this.fenceGateBlock(block.get(), this.tfLoc(name));
+	public void fenceGateBasic(RegistryObject<? extends FenceGateBlock> block, String name) {
+		this.fenceGateBasic(block, this.tfLoc(name), SOLID);
 	}
 
+	@Override
 	public void fenceGateColumn(RegistryObject<? extends FenceGateBlock> block, String side, String top) {
-		ModelFile gate = this.models().fenceGateColumn(block.getId().toString(), tfLoc(side), tfLoc(top));
-		ModelFile gateOpen = this.models().fenceGateOpenColumn(block.getId().toString() + "_open", tfLoc(side), tfLoc(top));
-		ModelFile gateWall = this.models().fenceGateWallColumn(block.getId().toString() + "_wall", tfLoc(side), tfLoc(top));
-		ModelFile gateWallOpen = this.models().fenceGateWallOpenColumn(block.getId().toString() + "_wall_open", tfLoc(side), tfLoc(top));
-		this.fenceGateBlock(block.get(), gate, gateOpen, gateWall, gateWallOpen);
+		this.fenceGate(block, tfLoc(side), tfLoc(top), tfLoc(top), SOLID);
 	}
 
 	public void fenceGateTwoLayer(RegistryObject<? extends FenceGateBlock> block, String base, String over) {
-		ModelFile gate = this.models().fenceGate2Layer(block.getId().toString(), tfLoc(base), tfLoc(over));
-		ModelFile gateOpen = this.models().fenceGateOpen2Layer(block.getId().toString() + "_open", tfLoc(base), tfLoc(over));
-		ModelFile gateWall = this.models().fenceGateWall2Layer(block.getId().toString() + "_wall", tfLoc(base), tfLoc(over));
-		ModelFile gateWallOpen = this.models().fenceGateWallOpen2Layer(block.getId().toString() + "_wall_open", tfLoc(base), tfLoc(over));
+		ModelFile gate = this.models().fenceGate2Layer(block.getId().getPath(), tfLoc(base), tfLoc(over));
+		ModelFile gateOpen = this.models().fenceGateOpen2Layer(block.getId().getPath() + "_open", tfLoc(base), tfLoc(over));
+		ModelFile gateWall = this.models().fenceGateWall2Layer(block.getId().getPath() + "_wall", tfLoc(base), tfLoc(over));
+		ModelFile gateWallOpen = this.models().fenceGateWallOpen2Layer(block.getId().getPath() + "_wall_open", tfLoc(base), tfLoc(over));
 		this.fenceGateBlock(block.get(), gate, gateOpen, gateWall, gateWallOpen);
 	}
 
-	public void doorTF(Supplier<? extends DoorBlock> block, String name) {
-		this.doorBlock(block.get(), this.tfLoc(name), this.tfLoc(name));
+	public void fenceGateFiery(RegistryObject<? extends FenceGateBlock> block) {
+		String name = block.getId().getPath();
+		ModelFile gate = this.models().getExistingFile(modLoc("block/fiery/" + name));
+		ModelFile gateOpen = this.models().getExistingFile(modLoc("block/fiery/" + name + "_open"));
+		ModelFile gateWall = this.models().getExistingFile(modLoc("block/fiery/" + name + "_wall"));
+		ModelFile gateWallOpen = this.models().getExistingFile(modLoc("block/fiery/" + name + "_wall_open"));
+		this.fenceGateBlock(block.get(), gate, gateOpen, gateWall, gateWallOpen);
 	}
 
-	@Override
+	public void doorTF(RegistryObject<? extends DoorBlock> block, String name) {
+		this.door(block, tfLoc(name), tfLoc(name), tfLoc(name), tfLoc(name), CUTOUT);
+	}
+
 	public void poleBasic(RegistryObject<? extends OrnamentPole> block, String name, String fullblock) {
-		ModelFile corner = this.models().poleCorner(block.getId().toString() + "_corner", this.tfLoc(name));
-		ModelFile half = this.models().slabVertical(block.getId().toString() + "_half", this.tfLoc(name));
-		ModelFile cross = this.models().poleCross(block.getId().toString() + "_cross", this.tfLoc(name));
-		ModelFile fill = this.models().stairsStraightSide(block.getId().toString() + "_fill", this.tfLoc(name));
-		ModelFile full = this.models().getExistingFile(this.tfLoc(fullblock));
-		this.poleBlock(block, corner, half, cross, fill, full);
+		this.pole(block, tfLoc(fullblock), tfLoc(name), tfLoc(name), tfLoc(name), SOLID);
 	}
 
-	@Override
 	public void poleColumn(RegistryObject<? extends OrnamentPole> block, String name) {
-		ModelFile corner = this.models().poleCornerColumn(block.getId().toString() + "_corner", this.tfLoc(name), this.tfLoc(name + "_top"));
-		ModelFile half = this.models().slabVerticalColumn(block.getId().toString() + "_half", this.tfLoc(name), this.tfLoc(name + "_top"));
-		ModelFile cross = this.models().poleCrossColumn(block.getId().toString() + "_cross", this.tfLoc(name), this.tfLoc(name + "_top"));
-		ModelFile fill = this.models().stairsStraightSideColumn(block.getId().toString() + "_fill", this.tfLoc(name), this.tfLoc(name + "_top"));
-		ModelFile full = this.models().getExistingFile(this.tfLoc(name));
-		this.poleBlock(block, corner, half, cross, fill, full);
+		this.pole(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), tfLoc(name), SOLID);
 	}
 
 	public void poleTwoLayer(RegistryObject<? extends OrnamentPole> block, String base, String over, String fullblock) {
-		ModelFile corner = this.models().poleCorner2Layer(block.getId().toString() + "_corner", this.tfLoc(base), this.tfLoc(over));
-		ModelFile half = this.models().slabVertical2Layer(block.getId().toString() + "_half", this.tfLoc(base), this.tfLoc(over));
-		ModelFile cross = this.models().poleCross2Layer(block.getId().toString() + "_cross", this.tfLoc(base), this.tfLoc(over));
-		ModelFile fill = this.models().stairsStraightSide2Layer(block.getId().toString() + "_fill", this.tfLoc(base), this.tfLoc(over));
-		ModelFile full = this.models().getExistingFile(this.tfLoc(fullblock));
-		this.poleBlock(block, corner, half, cross, fill, full);
+		ModelFile whole = this.models().poleWhole2Layer(block.getId().getPath() + "_whole", tfLoc(base), tfLoc(over));
+		ModelFile horizon = this.models().poleHorizontal2Layer(block.getId().getPath() + "_horizontal", tfLoc(base), tfLoc(over));
+		ModelFile vertical = this.models().poleVertical2Layer(block.getId().getPath() + "_vertical", tfLoc(base), tfLoc(over));
+		ModelFile corner = this.models().poleCorner2Layer(block.getId().getPath() + "_corner", tfLoc(base), tfLoc(over));
+		ModelFile full = this.models().getExistingFile(tfLoc(fullblock));
+		this.poleBlock(block, whole, horizon, vertical, corner, full);
 	}
 
-	@Override
-	public void beamBasic(RegistryObject<? extends OrnamentBeam> block, String base, String name, String fullblock, boolean tfstairs, boolean tfslab) {
-		String namebottom = base + "_slab";
-		String nametop = namebottom + "_top";
-		String namehalf = base + "_pole_half";
-		String stairs = base + "_stairs";
-		ModelFile corner = this.models().beamCorner(block.getId().toString() + "_corner", this.tfLoc(name));
-		ModelFile top = tfslab ? null : this.models().getExistingFile(this.locOrnament(nametop));
-		ModelFile bottom = this.models().getExistingFile(tfslab ? this.tfLoc(namebottom) : this.locOrnament(namebottom));
-		ModelFile side = this.models().getExistingFile(this.locOrnament(namehalf));
-		ModelFile cross = this.models().beamCross(block.getId().toString() + "_cross", this.tfLoc(name));
-		ModelFile fill = this.models().getExistingFile(tfstairs ? this.tfLoc(stairs) : this.locOrnament(stairs));
-		ModelFile full = this.models().getExistingFile(this.tfLoc(fullblock));
-
-		if (tfslab) {
-			this.beamBlockTF(block, corner, bottom, side, cross, fill, full);
-		} else {
-			this.beamBlock(block, corner, top, bottom, side, cross, fill, full);
-		}
+	public void poleFiery(RegistryObject<? extends OrnamentPole> block, String fullblock) {
+		String name = block.getId().getPath();
+		ModelFile whole = this.models().getExistingFile(modLoc("block/fiery/" + name + "_whole"));
+		ModelFile horizon = this.models().getExistingFile(modLoc("block/fiery/" + name + "_horizontal"));
+		ModelFile vertical = this.models().getExistingFile(modLoc("block/fiery/" + name + "_vertical"));
+		ModelFile corner = this.models().getExistingFile(modLoc("block/fiery/" + name + "_corner"));
+		ModelFile full = this.models().getExistingFile(tfLoc(fullblock));
+		this.poleBlock(block, whole, horizon, vertical, corner, full);
 	}
 
-	@Override
-	public void beamColumn(RegistryObject<? extends OrnamentBeam> block, String base, String name, boolean tfstairs, boolean tfslab) {
-		String namebottom = base + "_slab";
-		String nametop = namebottom + "_top";
-		String namehalf = base + "_pole_half";
-		String stairs = base + "_stairs";
-		ModelFile corner = this.models().beamCornerColumn(block.getId().toString() + "_corner", this.tfLoc(name), this.tfLoc(name + "_top"));
-		ModelFile top = tfslab ? null : this.models().getExistingFile(this.locOrnament(nametop));
-		ModelFile bottom = this.models().getExistingFile(tfslab ? this.tfLoc(namebottom) : this.locOrnament(namebottom));
-		ModelFile side = this.models().getExistingFile(tfslab ? this.tfLoc(namebottom) : this.locOrnament(namehalf));
-		ModelFile cross = this.models().beamCrossColumn(block.getId().toString() + "_cross", this.tfLoc(name), this.tfLoc(name + "_top"));
-		ModelFile fill = this.models().getExistingFile(tfstairs ? this.tfLoc(stairs) : this.locOrnament(stairs));
+	public void beamBasic(RegistryObject<? extends OrnamentBeam> block, String name, String fullblock) {
+		this.beam(block, tfLoc(fullblock), tfLoc(name), tfLoc(name), tfLoc(name), SOLID);
+	}
+
+	public void beamColumn(RegistryObject<? extends OrnamentBeam> block, String name) {
+		this.beam(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), tfLoc(name), SOLID);
+	}
+
+	public void beamTwoLayer(RegistryObject<? extends OrnamentBeam> block, String name, String under, String overlay) {
+		ModelFile whole = this.models().beamWhole2Layer(block.getId().getPath() + "_whole", tfLoc(under), tfLoc(overlay));
+		ModelFile horizon = this.models().beamHorizontal2Layer(block.getId().getPath() + "_horizontal", tfLoc(under), tfLoc(overlay));
+		ModelFile vertical = this.models().beamVertical2Layer(block.getId().getPath() + "_verticalal", tfLoc(under), tfLoc(overlay));
+		ModelFile corner = this.models().beamCorner2Layer(block.getId().getPath() + "_corner", tfLoc(under), tfLoc(overlay));
 		ModelFile full = this.models().getExistingFile(this.tfLoc(name));
-
-		if (tfslab) {
-			this.beamBlockTF(block, corner, bottom, side, cross, fill, full);
-		} else {
-			this.beamBlock(block, corner, top, bottom, side, cross, fill, full);
-		}
+		this.beamBlock(block, whole, horizon, vertical, corner, full);
 	}
 
-	public void beamTwoLayer(RegistryObject<? extends OrnamentBeam> block, String base, String name, String under, String overlay, boolean tfstairs, boolean tfslab) {
-		String namebottom = base + "_slab";
-		String nametop = namebottom + "_top";
-		String namehalf = base + "_pole_half";
-		String stairs = base + "_stairs";
-		ModelFile corner = this.models().beamCorner2Layer(block.getId().toString() + "_corner", this.tfLoc(under), this.tfLoc(overlay));
-		ModelFile top = tfslab ? null : this.models().getExistingFile(this.locOrnament(nametop));
-		ModelFile bottom = this.models().getExistingFile(tfslab ? this.tfLoc(namebottom) : this.locOrnament(namebottom));
-		ModelFile side = this.models().getExistingFile(tfslab ? this.tfLoc(namebottom) : this.locOrnament(namehalf));
-		ModelFile cross = this.models().beamCross2Layer(block.getId().toString() + "_cross", this.tfLoc(under), this.tfLoc(overlay));
-		ModelFile fill = this.models().getExistingFile(tfstairs ? this.tfLoc(stairs) : this.locOrnament(stairs));
-		ModelFile full = this.models().getExistingFile(this.tfLoc(name));
-
-		if (tfslab) {
-			this.beamBlockTF(block, corner, bottom, side, cross, fill, full);
-		} else {
-			this.beamBlock(block, corner, top, bottom, side, cross, fill, full);
-		}
-	}
-
-	public void beamBlockTF(Supplier<? extends OrnamentBeam> block, ModelFile corner, ModelFile bottomslab, ModelFile halfpole, ModelFile cross, ModelFile fill, ModelFile full) {
-		this.getVariantBuilder(block.get()).forAllStatesExcept((state) -> {
-			PoleType type = state.getValue(OrnamentBeam.TYPE);
-			Direction.Axis axis = state.getValue(OrnamentBeam.HORIZONTAL_AXIS);
-			PoleType.Shape shape = type.getShape();
-			ModelFile model;
-
-			switch(shape) {
-				case HALF:
-					if (type == PoleType.B_HALF || type == PoleType.T_HALF) {
-						model = bottomslab;
-					} else {
-						model = halfpole;
-					}
-					break;
-				case CROSS:
-					model = cross;
-					break;
-				case FILL:
-					model = fill;
-					break;
-				case BLOCK:
-					model = full;
-					break;
-				default:
-					model = corner;
-			}
-
-			short xRot;
-			if (type != PoleType.BL_CORNER && type != PoleType.BR_CORNER && type != PoleType.T_HALF && type != PoleType.TL_FILL && type != PoleType.TR_FILL) {
-				xRot = 0;
-			} else {
-				xRot = 180;
-			}
-
-			int yRot;
-			if (type != PoleType.TL_CORNER && type != PoleType.BR_CORNER && type != PoleType.L_HALF && type != PoleType.TL_BR) {
-				if (type != PoleType.TR_CORNER && type != PoleType.BL_CORNER && type != PoleType.R_HALF && type != PoleType.TR_BL) {
-					if (type != PoleType.TL_FILL && type != PoleType.BL_FILL) {
-						yRot = 0;
-					} else {
-						yRot = 180;
-					}
-				} else {
-					yRot = 90;
-				}
-			} else {
-				yRot = 270;
-			}
-
-			if (type != PoleType.T_HALF && type != PoleType.B_HALF && type != PoleType.FULL) {
-				yRot = axis == Direction.Axis.X ? yRot + 90 : yRot;
-			}
-
-			yRot = yRot == 360 ? 0 : yRot;
-			boolean uvlock = yRot != 0 || xRot != 0;
-			return ConfiguredModel.builder().modelFile(model).rotationY(yRot).rotationX(xRot).uvLock(uvlock).build();
-		}, OrnamentBeam.WATERLOGGED);
+	public void beamFiery(RegistryObject<? extends OrnamentBeam> block, String fullblock) {
+		String name = block.getId().getPath();
+		ModelFile whole = this.models().getExistingFile(modLoc("block/fiery/" + name + "_whole"));
+		ModelFile horizon = this.models().getExistingFile(modLoc("block/fiery/" + name + "_horizontal"));
+		ModelFile vertical = this.models().getExistingFile(modLoc("block/fiery/" + name + "_vertical"));
+		ModelFile corner = this.models().getExistingFile(modLoc("block/fiery/" + name + "_corner"));
+		ModelFile full = this.models().getExistingFile(tfLoc(fullblock));
+		this.beamBlock(block, whole, horizon, vertical, corner, full);
 	}
 
 	@Override
-	public void wallBasic(Supplier<? extends WallBlock> block, String name) {
-		this.wallBlock(block.get(), tfLoc(name));
+	public void wallBasic(RegistryObject<? extends WallBlock> block, String name) {
+		this.wallBasic(block, tfLoc(name), SOLID);
 	}
 
 	public void wallColumn(RegistryObject<? extends WallBlock> block, String name) {
-		String basename = block.getId().toString();
-		ModelFile wallpost = this.models().wallPostColumn(basename + "_post", this.tfLoc(name), this.tfLoc(name + "_top"));
-		ModelFile wallside = this.models().wallSideColumn(basename + "_side", this.tfLoc(name), this.tfLoc(name + "_top"));
-		ModelFile walltall = this.models().wallSideTallColumn(basename + "_side_tall", this.tfLoc(name), this.tfLoc(name + "_top"));
-		this.wallBlock(block.get(), wallpost, wallside, walltall);
+		this.wall(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), SOLID);
 	}
 
 	public void wallTwoLayer(RegistryObject<? extends WallBlock> block, String under, String overlay) {
@@ -466,28 +403,18 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		ModelFile post = models().wallPost2Layer(baseName + "_post", tfLoc(under), tfLoc(overlay));
 		ModelFile side = models().wallSide2Layer(baseName + "_side", tfLoc(under), tfLoc(overlay));
 		ModelFile sideTall = models().wallSideTall2Layer(baseName + "_side_tall", tfLoc(under), tfLoc(overlay));
-
-		MultiPartBlockStateBuilder builder = getMultipartBuilder(block.get())
-				.part().modelFile(post).addModel()
-				.condition(WallBlock.UP, true).end();
-		WALL_PROPS.entrySet().stream()
-				.filter(e -> e.getKey().getAxis().isHorizontal())
-				.forEach(e -> {
-					wallSidePart(builder, side, e, WallSide.LOW);
-					wallSidePart(builder, sideTall, e, WallSide.TALL);
-				});
+		this.wallBlock(block.get(), post, side, sideTall);
 	}
 
-	private void wallSidePart(MultiPartBlockStateBuilder builder, ModelFile model, Map.Entry<Direction, Property<WallSide>> entry, WallSide height) {
-		builder.part()
-				.modelFile(model)
-				.rotationY((((int) entry.getKey().toYRot()) + 180) % 360)
-				.uvLock(true)
-				.addModel()
-				.condition(entry.getValue(), height);
+	public void wallFiery(RegistryObject<? extends WallBlock> block) {
+		String name = block.getId().getPath();
+		ModelFile post = models().getExistingFile(modLoc("block/fiery/" + name + "_post"));
+		ModelFile side = models().getExistingFile(modLoc("block/fiery/" + name + "_side"));
+		ModelFile sideTall = models().getExistingFile(modLoc("block/fiery/" + name + "_side_tall"));
+		this.wallBlock(block.get(), post, side, sideTall);
 	}
 
 	public void saddleDoorTF(RegistryObject<? extends OrnamentSaddleDoor> block, String name) {
-		this.saddleDoorBlock(block, this.tfLoc(name));
+		this.saddleDoor(block, tfLoc(name), tfLoc(name), tfLoc(name), CUTOUT);
 	}
 }

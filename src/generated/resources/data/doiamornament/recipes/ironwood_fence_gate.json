@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "/#/",
-    "/#/"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:ironwood_block"
@@ -12,6 +8,10 @@
       "item": "twilightforest:ironwood_ingot"
     }
   },
+  "pattern": [
+    "/#/",
+    "/#/"
+  ],
   "result": {
     "item": "doiamornament:ironwood_fence_gate"
   }

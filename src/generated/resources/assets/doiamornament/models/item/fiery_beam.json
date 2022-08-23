@@ -1,7 +1,0 @@
-{
-  "parent": "ornamental:block/util/beam_inventory",
-  "textures": {
-    "end": "twilightforest:block/fiery_block",
-    "side": "twilightforest:block/fiery_block"
-  }
-}

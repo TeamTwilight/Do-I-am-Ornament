@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#/#",
-    "#/#"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:carminite_block"
@@ -12,8 +8,12 @@
       "item": "twilightforest:carminite"
     }
   },
+  "pattern": [
+    "#/#",
+    "#/#"
+  ],
   "result": {
-    "item": "doiamornament:carminite_fence",
-    "count": 3
+    "count": 3,
+    "item": "doiamornament:carminite_fence"
   }
 }

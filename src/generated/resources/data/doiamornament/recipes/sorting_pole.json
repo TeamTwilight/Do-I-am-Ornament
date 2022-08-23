@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#",
-    "#"
-  ],
   "key": {
     "#": {
       "item": "twilightforest:sorting_slab"
     }
   },
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
   "result": {
-    "item": "doiamornament:sorting_pole",
-    "count": 6
+    "count": 6,
+    "item": "doiamornament:sorting_pole"
   }
 }

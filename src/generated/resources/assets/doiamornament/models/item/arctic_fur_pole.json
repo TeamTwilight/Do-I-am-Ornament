@@ -1,7 +1,8 @@
 {
   "parent": "ornamental:block/util/pole_inventory",
   "textures": {
-    "end": "twilightforest:block/arctic_fur_block",
-    "side": "twilightforest:block/arctic_fur_block"
+    "bottom": "twilightforest:block/arctic_fur_block",
+    "side": "twilightforest:block/arctic_fur_block",
+    "top": "twilightforest:block/arctic_fur_block"
   }
 }

@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###"
-  ],
   "key": {
     "#": {
       "item": "doiamornament:canopy_log_slab"
     }
   },
+  "pattern": [
+    "###",
+    "###"
+  ],
   "result": {
     "item": "doiamornament:canopy_log_trapdoor"
   }

@@ -1,0 +1,8 @@
+{
+  "parent": "ornamental:block/util/door_bottom_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "twilightforest:block/mangrove_log",
+    "side": "twilightforest:block/mangrove_log"
+  }
+}

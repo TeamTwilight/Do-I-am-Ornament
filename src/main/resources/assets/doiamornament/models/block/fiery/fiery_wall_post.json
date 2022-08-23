@@ -1,5 +1,6 @@
 {
     "ambientocclusion": false,
+    "render_type": "minecraft:cutout",
     "textures": {
         "particle": "twilightforest:block/fiery_block",
         "all": "twilightforest:block/fiery_block_inner",
@@ -9,25 +10,27 @@
         {
             "from": [ 5, 1, 5 ],
             "to": [ 11, 15, 11 ],
+            "shade": false,
             "faces": {
-                "down":  { "texture": "#all", "cullface": "down" },
-                "up":    { "texture": "#all", "cullface": "up" },
-                "north": { "texture": "#all" },
-                "south": { "texture": "#all" },
-                "west":  { "texture": "#all" },
-                "east":  { "texture": "#all" }
+                "down":  { "texture": "#all", "emissivity": 15, "cullface": "down" },
+                "up":    { "texture": "#all", "emissivity": 15, "cullface": "up" },
+                "north": { "texture": "#all", "emissivity": 15 },
+                "south": { "texture": "#all", "emissivity": 15 },
+                "west":  { "texture": "#all", "emissivity": 15 },
+                "east":  { "texture": "#all", "emissivity": 15 }
             },
             "__comment": "Center post"
         }, {
             "from": [ 12, 15.99, 12 ],
             "to": [ 4, 0.01, 4 ],
+            "shade": false,
             "faces": {
-                "down":  { "texture": "#over", "cullface": "down" },
-                "up":    { "texture": "#over", "cullface": "up" },
-                "north": { "texture": "#over" },
-                "south": { "texture": "#over" },
-                "west":  { "texture": "#over" },
-                "east":  { "texture": "#over" }
+                "down":  { "texture": "#over", "emissivity": 15, "cullface": "down" },
+                "up":    { "texture": "#over", "emissivity": 15, "cullface": "up" },
+                "north": { "texture": "#over", "emissivity": 15 },
+                "south": { "texture": "#over", "emissivity": 15 },
+                "west":  { "texture": "#over", "emissivity": 15 },
+                "east":  { "texture": "#over", "emissivity": 15 }
             },
             "__comment": "Center post"
         }

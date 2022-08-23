@@ -5,8 +5,8 @@ import com.androsa.doiamornament.ModBlocks;
 import com.androsa.ornamental.data.provider.OrnamentalRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
-import twilightforest.block.TFBlocks;
-import twilightforest.item.TFItems;
+import twilightforest.init.TFBlocks;
+import twilightforest.init.TFItems;
 
 import java.util.function.Consumer;
 
