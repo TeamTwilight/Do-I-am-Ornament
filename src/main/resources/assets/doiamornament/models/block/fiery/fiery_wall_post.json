@@ -12,12 +12,12 @@
             "to": [ 11, 15, 11 ],
             "shade": false,
             "faces": {
-                "down":  { "texture": "#all", "emissivity": 15, "cullface": "down" },
-                "up":    { "texture": "#all", "emissivity": 15, "cullface": "up" },
-                "north": { "texture": "#all", "emissivity": 15 },
-                "south": { "texture": "#all", "emissivity": 15 },
-                "west":  { "texture": "#all", "emissivity": 15 },
-                "east":  { "texture": "#all", "emissivity": 15 }
+                "down":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
+                "up":    { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "up" },
+                "north": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "south": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "west":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "east":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
             },
             "__comment": "Center post"
         }, {
@@ -25,12 +25,12 @@
             "to": [ 4, 0.01, 4 ],
             "shade": false,
             "faces": {
-                "down":  { "texture": "#over", "emissivity": 15, "cullface": "down" },
-                "up":    { "texture": "#over", "emissivity": 15, "cullface": "up" },
-                "north": { "texture": "#over", "emissivity": 15 },
-                "south": { "texture": "#over", "emissivity": 15 },
-                "west":  { "texture": "#over", "emissivity": 15 },
-                "east":  { "texture": "#over", "emissivity": 15 }
+                "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
+                "up":    { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "up" },
+                "north": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "south": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "west":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "east":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } }
             },
             "__comment": "Center post"
         }

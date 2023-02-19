@@ -1,4 +1,4 @@
-// 1.19.2	2022-08-23T17:58:11.4478634	Do I am Ornament Item Models
+// 1.19.3	2023-02-19T11:55:40.6232779	Do I am Ornament Item Models
 807b25120ee39b3550f1277072807ff2b561ebae assets/doiamornament/models/item/arctic_fur_beam.json
 f183b630daab6b985e039c8321225ac3032d3250 assets/doiamornament/models/item/arctic_fur_door.json
 5e4a7f035928e34fb6c248111de666a0980d5ca4 assets/doiamornament/models/item/arctic_fur_fence.json
@@ -24,14 +24,13 @@ b136ed619170cff015f6defcaa87b66740c9c063 assets/doiamornament/models/item/canopy
 8153af914e59565526cec42da490c42cc3a248c7 assets/doiamornament/models/item/canopy_saddle_door.json
 766b9606e770bd7db282c12833834562b6aea039 assets/doiamornament/models/item/canopy_wall.json
 908214904b6778141eae8c24a0b3bab659ffbc40 assets/doiamornament/models/item/carminite_beam.json
-57fad66b7f188b37bb451193533357118ee0506d assets/doiamornament/models/item/carminite_door.json
+83f43b6576c16ef526157b78456fb0c73fded7ca assets/doiamornament/models/item/carminite_door.json
 9301f55f38ceb17edfd9e5255bbc13ffc8638a8b assets/doiamornament/models/item/carminite_fence.json
 498968f546b4e41ccbb62aa6d4535152def2fb31 assets/doiamornament/models/item/carminite_fence_gate.json
 222fae68dc68cf86df0ba5a3e3fd89f7c2c7172e assets/doiamornament/models/item/carminite_pole.json
-e3a9ff4b45ce469b32ea5ebed32f1f24a745bf9f assets/doiamornament/models/item/carminite_saddle_door.json
 907bb617860729b4bd4d9095ce2a0fe1279bab1e assets/doiamornament/models/item/carminite_slab.json
 30b3beb615d5a7df2282bd2dbba0e975543e9639 assets/doiamornament/models/item/carminite_stairs.json
-d6b1e7c4f46fae00cf6fa44ae5fbeaf17b74ff05 assets/doiamornament/models/item/carminite_trapdoor.json
+a4d071e8658eeacc839f76900ef0b7bba2f1cee3 assets/doiamornament/models/item/carminite_trapdoor.json
 e5b148b5d00a49171c256812ddf7dbafcf10acc1 assets/doiamornament/models/item/carminite_wall.json
 fca775f5883f0b5b3d710e10626bdac4d336bc2c assets/doiamornament/models/item/dark_beam.json
 b7816ad067f94ef9eec454a6b89428fdfcbef4df assets/doiamornament/models/item/dark_log_beam.json
@@ -47,7 +46,7 @@ eb640dece169343c128e3a98667a0cce9908ebbf assets/doiamornament/models/item/dark_l
 b3d3e41144e12916a603e96a851667431bd79b50 assets/doiamornament/models/item/dark_pole.json
 a6f771c7f888d6f69867e084cc47c42f730819a2 assets/doiamornament/models/item/dark_saddle_door.json
 09a3abb5dbbe6d328e94a5163d456d0e52fe79fb assets/doiamornament/models/item/dark_wall.json
-0d39c73e4be192a063ae6a9d96e727f5fd30ebc1 assets/doiamornament/models/item/fiery_door.json
+7e4aa6a7f2d4e4c2f9519eac758bbc4fb5063410 assets/doiamornament/models/item/fiery_door.json
 d48e1f3ee22734d78e4af9d62abed87aea7868d6 assets/doiamornament/models/item/fiery_fence_gate.json
 edb3b6bb28a36e050564055f7824e800e3b0078c assets/doiamornament/models/item/fiery_slab.json
 cc21900ca2607c13c7ebac4649ef2f4dc8aa9cff assets/doiamornament/models/item/fiery_stairs.json

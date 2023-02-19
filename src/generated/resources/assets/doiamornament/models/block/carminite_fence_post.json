@@ -1,7 +1,127 @@
 {
-  "parent": "doiamornament:block/fence_post_2_layer",
+  "parent": "minecraft:block/block",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "forge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        },
+        "east": {
+          "forge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        },
+        "north": {
+          "forge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        },
+        "south": {
+          "forge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        },
+        "up": {
+          "cullface": "up",
+          "forge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        },
+        "west": {
+          "forge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        }
+      },
+      "from": [
+        6,
+        0,
+        6
+      ],
+      "to": [
+        10,
+        16,
+        10
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "forge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#over"
+        },
+        "east": {
+          "forge_data": {
+            "block_light": 7,
+            "sky_light": 7
+          },
+          "texture": "#over"
+        },
+        "north": {
+          "forge_data": {
+            "block_light": 7,
+            "sky_light": 7
+          },
+          "texture": "#over"
+        },
+        "south": {
+          "forge_data": {
+            "block_light": 7,
+            "sky_light": 7
+          },
+          "texture": "#over"
+        },
+        "up": {
+          "cullface": "up",
+          "forge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#over"
+        },
+        "west": {
+          "forge_data": {
+            "block_light": 7,
+            "sky_light": 7
+          },
+          "texture": "#over"
+        }
+      },
+      "from": [
+        6,
+        0,
+        6
+      ],
+      "to": [
+        10,
+        16,
+        10
+      ]
+    }
+  ],
+  "render_type": "minecraft:translucent",
   "textures": {
     "all": "twilightforest:block/carminite_block",
-    "over": "twilightforest:block/carminite_block_overlay"
+    "over": "twilightforest:block/carminite_block_overlay",
+    "particle": "#all"
   }
 }

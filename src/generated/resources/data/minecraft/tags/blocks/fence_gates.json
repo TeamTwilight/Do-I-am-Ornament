@@ -12,6 +12,14 @@
     "doiamornament:time_log_fence_gate",
     "doiamornament:transformation_log_fence_gate",
     "doiamornament:mining_log_fence_gate",
+    "doiamornament:sorting_log_fence_gate",
+    "doiamornament:twilight_oak_log_fence_gate",
+    "doiamornament:canopy_log_fence_gate",
+    "doiamornament:mangrove_log_fence_gate",
+    "doiamornament:dark_log_fence_gate",
+    "doiamornament:time_log_fence_gate",
+    "doiamornament:transformation_log_fence_gate",
+    "doiamornament:mining_log_fence_gate",
     "doiamornament:sorting_log_fence_gate"
   ]
 }

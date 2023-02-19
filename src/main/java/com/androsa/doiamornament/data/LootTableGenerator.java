@@ -2,36 +2,25 @@ package com.androsa.doiamornament.data;
 
 import com.androsa.doiamornament.ModBlocks;
 import com.androsa.ornamental.data.provider.OrnamentLootTableProvider;
-import com.google.common.collect.ImmutableList;
-import com.mojang.datafixers.util.Pair;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.ValidationContext;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
 import java.util.List;
 import java.util.Map;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
+import java.util.Set;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class LootTableGenerator extends LootTableProvider {
 
-    public LootTableGenerator(DataGenerator generator) {
-        super(generator);
-    }
-
-    public String getName() {
-        return "Do I am Ornament Loot Tables";
-    }
-
-    protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables() {
-        return ImmutableList.of(Pair.of(LootTableGenerator.BlockTables::new, LootContextParamSets.BLOCK));
+    public LootTableGenerator(PackOutput output) {
+        super(output, Set.of(), List.of(new SubProviderEntry(BlockTables::new, LootContextParamSets.BLOCK)));
     }
 
     @Override
@@ -40,8 +29,12 @@ public class LootTableGenerator extends LootTableProvider {
 
     public static class BlockTables extends OrnamentLootTableProvider {
 
+        protected BlockTables() {
+            super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+        }
+
         @Override
-        protected void addTables() {
+        protected void generate() {
             this.dropSelf(ModBlocks.ironwood_stairs);
             this.dropSelf(ModBlocks.fiery_stairs);
             this.dropSelf(ModBlocks.steeleaf_stairs);

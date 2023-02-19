@@ -3,11 +3,11 @@ package com.androsa.doiamornament.data;
 import com.androsa.doiamornament.DoIAmOrnamentMod;
 import com.androsa.doiamornament.ModBlocks;
 import com.androsa.ornamental.data.provider.OrnamentalItemModelProvider;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.loaders.ItemLayersModelBuilder;
+import net.minecraftforge.client.model.generators.loaders.ItemLayerModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import twilightforest.TwilightForestMod;
@@ -17,8 +17,8 @@ import java.util.function.Supplier;
 
 public class ItemModelGenerator extends OrnamentalItemModelProvider {
 
-    public ItemModelGenerator(DataGenerator generator, ExistingFileHelper helper) {
-        super(generator, DoIAmOrnamentMod.MODID, helper);
+    public ItemModelGenerator(PackOutput output, ExistingFileHelper helper) {
+        super(output, DoIAmOrnamentMod.MODID, helper);
     }
 
     @NotNull
@@ -71,10 +71,10 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItemFence(ModBlocks.sorting_log_fence, "sorting_log", "sorting_log_top");
 
         blockItemTrapdoor(ModBlocks.ironwood_trapdoor);
-        blockItemTrapdoorFiery(ModBlocks.fiery_trapdoor);
+        blockItemTrapdoorExist(ModBlocks.fiery_trapdoor, "fiery");
         blockItemTrapdoor(ModBlocks.steeleaf_trapdoor);
         blockItemTrapdoor(ModBlocks.arctic_fur_trapdoor);
-        blockItemTrapdoor(ModBlocks.carminite_trapdoor);
+        blockItemTrapdoorExist(ModBlocks.carminite_trapdoor, "carminite");
         blockItemTrapdoor(ModBlocks.twilight_oak_log_trapdoor);
         blockItemTrapdoor(ModBlocks.canopy_log_trapdoor);
         blockItemTrapdoor(ModBlocks.mangrove_log_trapdoor);
@@ -99,10 +99,10 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItem(ModBlocks.sorting_log_fence_gate);
 
         blockItemModel(ModBlocks.ironwood_door);
-        blockItemDoorFiery(ModBlocks.fiery_door, modLoc("item/fiery_door"));
+        blockItemDoorEmissive(ModBlocks.fiery_door, 15, modLoc("item/fiery_door"));
         blockItemModel(ModBlocks.steeleaf_door);
         blockItemModel(ModBlocks.arctic_fur_door);
-        blockItemModel(ModBlocks.carminite_door);
+        blockItemDoorEmissive(ModBlocks.carminite_door, 7, modLoc("item/carminite_door"));
         blockItemModel(ModBlocks.twilight_oak_log_door);
         blockItemModel(ModBlocks.canopy_log_door);
         blockItemModel(ModBlocks.mangrove_log_door);
@@ -178,7 +178,6 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItemSaddleDoor(ModBlocks.ironwood_saddle_door, "ironwood");
         blockItemSaddleDoor(ModBlocks.steeleaf_saddle_door, "steeleaf");
         blockItemSaddleDoor(ModBlocks.arctic_fur_saddle_door, "arctic_fur");
-        blockItemSaddleDoor(ModBlocks.carminite_saddle_door, "carminite");
         blockItemSaddleDoorTF(ModBlocks.twilight_oak_log_saddle_door, "twilight_oak_log");
         blockItemSaddleDoorTF(ModBlocks.canopy_log_saddle_door, "canopy_log");
         blockItemSaddleDoorTF(ModBlocks.mangrove_log_saddle_door, "mangrove_log");
@@ -213,17 +212,17 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         this.blockItemFence(block, TwilightForestMod.prefix("block/" + side), toptex, toptex);
     }
 
-    public void blockItemDoorFiery(Supplier<? extends Block> block, ResourceLocation... textures) {
+    public void blockItemDoorEmissive(Supplier<? extends Block> block, int level, ResourceLocation... textures) {
         ItemModelBuilder builder = existingParent(block, mcLoc("item/generated"));
         for (int i = 0; i < textures.length; i++) {
             builder = builder.texture("layer" + i, textures[i]);
         }
-        builder.customLoader(ItemLayersModelBuilder::begin).emissive(0).end();
+        builder.customLoader(ItemLayerModelBuilder::begin).emissive(level, level, 0).renderType("forge:forge_entity_unsorted_translucent", 0).end();
     }
 
-    public void blockItemTrapdoorFiery(Supplier<? extends Block> block) {
+    public void blockItemTrapdoorExist(Supplier<? extends Block> block, String dir) {
         String name = this.blockName(block);
-        this.withExistingParent(name, this.modLoc("block/fiery/" + name + "_bottom"));
+        this.withExistingParent(name, this.modLoc(String.format("block/%s/%s_bottom", dir, name)));
     }
 
     @Override

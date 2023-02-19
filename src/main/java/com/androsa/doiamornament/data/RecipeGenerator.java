@@ -3,7 +3,7 @@ package com.androsa.doiamornament.data;
 import com.androsa.doiamornament.DoIAmOrnamentMod;
 import com.androsa.doiamornament.ModBlocks;
 import com.androsa.ornamental.data.provider.OrnamentalRecipeProvider;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import twilightforest.init.TFBlocks;
 import twilightforest.init.TFItems;
@@ -12,12 +12,12 @@ import java.util.function.Consumer;
 
 public class RecipeGenerator extends OrnamentalRecipeProvider {
 
-    public RecipeGenerator(DataGenerator generator) {
-        super(generator, DoIAmOrnamentMod.MODID);
+    public RecipeGenerator(PackOutput output) {
+        super(output, DoIAmOrnamentMod.MODID);
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         stairs(consumer, ModBlocks.ironwood_stairs, TFBlocks.IRONWOOD_BLOCK.get());
         stairs(consumer, ModBlocks.fiery_stairs, TFBlocks.FIERY_BLOCK.get());
         stairs(consumer, ModBlocks.steeleaf_stairs, TFBlocks.STEELEAF_BLOCK.get());

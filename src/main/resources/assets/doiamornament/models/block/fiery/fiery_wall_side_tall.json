@@ -12,21 +12,21 @@
             "to": [ 10, 15, 8 ],
             "shade": false,
             "faces": {
-                "down":  { "texture": "#all", "emissivity": 15, "cullface": "down" },
-                "up":    { "texture": "#all", "emissivity": 15, "cullface": "up"},
-                "north": { "texture": "#all", "emissivity": 15, "cullface": "north" },
-                "west":  { "texture": "#all", "emissivity": 15 },
-                "east":  { "texture": "#all", "emissivity": 15 }
+                "down":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
+                "up":    { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "up"},
+                "north": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "north" },
+                "west":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "east":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
             }
         }, {
             "from": [ 11, 15.99, 8 ],
             "to": [ 5, 0.01, 0 ],
             "shade": false,
             "faces": {
-                "down":  { "texture": "#over", "emissivity": 15, "cullface": "down" },
-                "up":    { "texture": "#over", "emissivity": 15, "cullface": "up"},
-                "west":  { "texture": "#over", "emissivity": 15 },
-                "east":  { "texture": "#over", "emissivity": 15 }
+                "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
+                "up":    { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "up"},
+                "west":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "east":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } }
             }
         }
     ]

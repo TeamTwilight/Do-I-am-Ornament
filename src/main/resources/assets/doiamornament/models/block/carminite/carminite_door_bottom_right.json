@@ -1,0 +1,21 @@
+{
+  "ambientocclusion": false,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "doiamornament:block/carminite_door_bottom",
+    "side": "doiamornament:block/carminite_door_bottom",
+    "particle": "#bottom"
+  },
+  "elements": [
+    {   "from": [ 0, 0, 0 ],
+      "to": [ 3, 16, 16 ],
+      "faces": {
+        "down":  { "uv": [  0, 13, 16, 16 ], "texture": "#bottom", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "down", "rotation": 90 },
+        "north": { "uv": [  3,  0,  0, 16 ], "texture": "#bottom", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "north" },
+        "south": { "uv": [  0,  0,  3, 16 ], "texture": "#bottom", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "south" },
+        "west":  { "uv": [ 16,  0,  0, 16 ], "texture": "#bottom", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "west" },
+        "east":  { "uv": [  0,  0, 16, 16 ], "texture": "#bottom", "forge_data": { "block_light": 7, "sky_light": 7 } }
+      }
+    }
+  ]
+}

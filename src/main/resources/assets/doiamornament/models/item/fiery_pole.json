@@ -8,12 +8,12 @@
       "from": [ 4, 0, 4 ],
       "to": [ 12, 16, 12 ],
       "faces": {
-        "down":  { "texture": "#side", "emissivity": 15, "cullface": "down" },
-        "up":    { "texture": "#side", "emissivity": 15, "cullface": "up" },
-        "north": { "texture": "side", "emissivity": 15 },
-        "south": { "texture": "side", "emissivity": 15 },
-        "west":  { "texture": "side", "emissivity": 15 },
-        "east":  { "texture": "side", "emissivity": 15 }
+        "down":  { "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
+        "up":    { "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "up" },
+        "north": { "texture": "side", "forge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "texture": "side", "forge_data": { "block_light": 15, "sky_light": 15 } },
+        "west":  { "texture": "side", "forge_data": { "block_light": 15, "sky_light": 15 } },
+        "east":  { "texture": "side", "forge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }
   ]

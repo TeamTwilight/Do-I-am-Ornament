@@ -2,7 +2,9 @@ package com.androsa.doiamornament.data;
 
 import com.androsa.doiamornament.DoIAmOrnamentMod;
 import com.androsa.ornamental.data.provider.OrnamentalBlockModelProvider;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.client.renderer.block.model.ItemTransforms;
+import net.minecraft.core.Direction;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -11,139 +13,716 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 
 	private static final String DIAC_MODELS = "doiamornament:block/";
 
-	public BlockModelGenerator(DataGenerator generator, ExistingFileHelper helper) {
-		super(generator, DoIAmOrnamentMod.MODID, helper);
+	public BlockModelGenerator(PackOutput output, ExistingFileHelper helper) {
+		super(output, DoIAmOrnamentMod.MODID, helper);
 	}
 
-	public BlockModelBuilder stairs2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "stairs_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder stairs2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.transforms()
+				    .transform(ItemTransforms.TransformType.GUI).rotation(30.0F, 135.0F, 0.0F).translation(0.0F, 0.0F, 0.0F).scale(0.625F, 0.625F, 0.625F).end()
+				    .transform(ItemTransforms.TransformType.HEAD).rotation(0.0F, -90.0F, 0.0F).translation(0.0F, 0.0F, 0.0F).scale(1.0F, 1.0F, 1.0F).end()
+				    .transform(ItemTransforms.TransformType.THIRD_PERSON_LEFT_HAND).rotation(75.0F, -135.0F, 0.0F).translation(0.0F, 2.50F, 0.0F).scale(0.375F, 0.375F, 0.375F).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end()
+				.element().from(8.0F, 8.0F, 0.0F).to(16.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(8.0F, 8.0F, 0.0F).to(16.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder stairsInner2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "inner_stairs_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder stairsInner2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return getBuilder(name)
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end()
+				.element().from(8.0F, 8.0F, 0.0F).to(16.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(8.0F, 8.0F, 0.0F).to(16.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end()
+				.element().from(0.0F, 8.0F, 8.0F).to(8.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 8.0F, 8.0F).to(8.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder stairsOuter2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "outer_stairs_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder stairsOuter2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end()
+				.element().from(8.0F, 8.0F, 8.0F).to(16.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(8.0F, 8.0F, 8.0F).to(16.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder slab2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "slab_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder slab2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder slabTop2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "slab_top_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder slabTop2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 8.0F, 0.0F).to(16.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 8.0F, 0.0F).to(16.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder fencePost2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "fence_post_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder fencePost2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(6.0F, 0.0F, 6.0F).to(10.0F, 16.0F, 10.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(6.0F, 0.0F, 6.0F).to(10.0F, 16.0F, 10.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder fenceSide2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "fence_side_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder fenceSide2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(7.0F, 12.0F, 0.0F).to(9.0F, 15.0F, 6.0F)
+				    .face(Direction.DOWN).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).cullface(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(7.0F, 12.0F, 0.0F).to(9.0F, 15.0F, 6.0F)
+				    .face(Direction.DOWN).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).cullface(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end()
+				.element().from(7.0F, 6.0F, 0.0F).to(9.0F, 9.0F, 6.0F)
+				    .face(Direction.DOWN).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).cullface(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(7.0F, 6.0F, 0.0F).to(9.0F, 9.0F, 6.0F)
+				    .face(Direction.DOWN).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).cullface(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder fenceGate2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "fence_gate_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder fenceGate2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, boolean ao,
+											 float fpost, float tpost,
+											 float finner, float tinner,
+											 float flowbar, float tlowbar,
+											 float fupbar, float tupbar) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.ao(ao).texture("all", all).texture("over", over).texture("particle", "#all")
+				.transforms()
+				    .transform(ItemTransforms.TransformType.GUI).rotation(30.0F, 45.0F, 0.0F).translation(0.0F, -1.0F, 0.0F).scale(0.8F, 0.8F, 0.8F).end()
+				    .transform(ItemTransforms.TransformType.HEAD).rotation(0.0F, 0.0F, 0.0F).translation(0.0F, -3.0F, -6.0F).scale(1.0F, 1.0F, 1.0F).end()
+				.end()
+				.element().from(0.0F, fpost, 7.0F).to(2.0F, tpost, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(0, 7, 2, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(0, 7, 2, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(0, 0, 2, 11).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(0, 0, 2, 11).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(7, 0, 9, 11).cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(7, 0, 9, 11).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, fpost, 7.0F).to(2.0F, tpost, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(0, 7, 2, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(0, 7, 2, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(0, 0, 2, 11).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(0, 0, 2, 11).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(7, 0, 9, 11).cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(7, 0, 9, 11).emissivity(olight, olight).end()
+				.end()
+				.element().from(14.0F, fpost, 7.0F).to(16.0F, tpost, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(14, 7, 16, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(14, 7, 16, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(14, 0, 16, 11).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(14, 0, 16, 11).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(7, 0, 9, 11).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(7, 0, 9, 11).cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(14.0F, fpost, 7.0F).to(16.0F, tpost, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(14, 7, 16, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(14, 7, 16, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(14, 0, 16, 11).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(14, 0, 16, 11).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(7, 0, 9, 11).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(7, 0, 9, 11).cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end()
+				.element().from(6.0F, finner, 7.0F).to(8.0F, tinner, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(6, 7, 8, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(6, 7, 8, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(6, 1, 8, 10).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(6, 1, 8, 10).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(7, 1, 9, 10).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(7, 1, 9, 10).emissivity(alight, alight).end()
+				.end()
+				.element().from(6.0F, finner, 7.0F).to(8.0F, tinner, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(6, 7, 8, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(6, 7, 8, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(6, 1, 8, 10).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(6, 1, 8, 10).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(7, 1, 9, 10).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(7, 1, 9, 10).emissivity(olight, olight).end()
+				.end()
+				.element().from(8.0F, finner, 7.0F).to(10.0F, tinner, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(8, 7, 10, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(8, 7, 10, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(8, 1, 10, 10).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(8, 1, 10, 10).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(7, 1, 9, 10).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(7, 1, 9, 10).emissivity(alight, alight).end()
+				.end()
+				.element().from(8.0F, finner, 7.0F).to(10.0F, tinner, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(8, 7, 10, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(8, 7, 10, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(8, 1, 10, 10).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(8, 1, 10, 10).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(7, 1, 9, 10).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(7, 1, 9, 10).emissivity(olight, olight).end()
+				.end()
+				.element().from(2.0F, flowbar, 7.0F).to(6.0F, tlowbar, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(2, 7, 6, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(2, 7, 6, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(2, 7, 6, 10).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(2, 7, 6, 10).emissivity(alight, alight).end()
+				.end()
+				.element().from(2.0F, flowbar, 7.0F).to(6.0F, tlowbar, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(2, 7, 6, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(2, 7, 6, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(2, 7, 6, 10).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(2, 7, 6, 10).emissivity(olight, olight).end()
+				.end()
+				.element().from(2.0F, fupbar, 7.0F).to(6.0F, tupbar, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(2, 7, 6, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(2, 7, 6, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(2, 1, 6, 4).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(2, 1, 6, 4).emissivity(alight, alight).end()
+				.end()
+				.element().from(2.0F, fupbar, 7.0F).to(6.0F, tupbar, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(2, 7, 6, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(2, 7, 6, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(2, 1, 6, 4).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(2, 1, 6, 4).emissivity(olight, olight).end()
+				.end()
+				.element().from(10.0F, flowbar, 7.0F).to(14.0F, tlowbar, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(10, 7, 14, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(10, 7, 14, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(10, 7, 14, 10).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(10, 7, 14, 10).emissivity(alight, alight).end()
+				.end()
+				.element().from(10.0F, flowbar, 7.0F).to(14.0F, tlowbar, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(10, 7, 14, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(10, 7, 14, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(10, 7, 14, 10).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(10, 7, 14, 10).emissivity(olight, olight).end()
+				.end()
+				.element().from(10.0F, fupbar, 7.0F).to(14.0F, tupbar, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(10, 7, 14, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(10, 7, 14, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(10, 7, 14, 4).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(10, 7, 14, 4).emissivity(alight, alight).end()
+				.end()
+				.element().from(10.0F, fupbar, 7.0F).to(14.0F, tupbar, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(10, 7, 14, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(10, 7, 14, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(10, 7, 14, 4).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(10, 7, 14, 4).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder fenceGateOpen2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "fence_gate_open_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder fenceGateOpen2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, boolean ao,
+											 float fpost, float tpost,
+											 float finner, float tinner,
+											 float flowbar, float tlowbar,
+											 float fupbar, float tupbar) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.ao(ao).texture("all", all).texture("over", over).texture("particle", "#all")
+				.transforms()
+				    .transform(ItemTransforms.TransformType.GUI).rotation(30.0F, 45.0F, 0.0F).translation(0.0F, -1.0F, 0.0F).scale(0.8F, 0.8F, 0.8F).end()
+				    .transform(ItemTransforms.TransformType.HEAD).rotation(0.0F, 0.0F, 0.0F).translation(0.0F, -3.0F, -6.0F).scale(1.0F, 1.0F, 1.0F).end()
+				.end()
+				.element().from(0.0F, fpost, 7.0F).to(2.0F, tpost, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(0, 7, 2, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(0, 7, 2, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(0, 0, 2, 11).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(0, 0, 2, 11).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(7, 0, 9, 11).cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(7, 0, 9, 11).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, fpost, 7.0F).to(2.0F, tpost, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(0, 7, 2, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(0, 7, 2, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(0, 0, 2, 11).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(0, 0, 2, 11).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(7, 0, 9, 11).cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(7, 0, 9, 11).emissivity(olight, olight).end()
+				.end()
+				.element().from(14.0F, fpost, 7.0F).to(16.0F, tpost, 9.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(14, 7, 16, 9).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(14, 7, 16, 9).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(14, 0, 16, 11).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(14, 0, 16, 11).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(7, 0, 9, 11).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(7, 0, 9, 11).cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(14.0F, fpost, 7.0F).to(16.0F, tpost, 9.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(14, 7, 16, 9).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(14, 7, 16, 9).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(14, 0, 16, 11).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(14, 0, 16, 11).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(7, 0, 9, 11).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(7, 0, 9, 11).cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end()
+				.element().from(0.0F, finner, 13.0F).to(2.0F, tinner, 15.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(0, 13, 2, 15).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(0, 13, 2, 15).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(0, 1, 2, 10).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(0, 1, 2, 10).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(13, 1, 15, 10).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(13, 1, 15, 10).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, finner, 13.0F).to(2.0F, tinner, 15.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(0, 13, 2, 15).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(0, 13, 2, 15).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(0, 1, 2, 10).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(0, 1, 2, 10).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(13, 1, 15, 10).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(13, 1, 15, 10).emissivity(olight, olight).end()
+				.end()
+				.element().from(14.0F, finner, 13.0F).to(16.0F, tinner, 15.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(14, 13, 16, 15).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(14, 13, 16, 15).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").uvs(14, 1, 16, 10).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").uvs(14, 1, 16, 10).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(13, 1, 9, 10).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(13, 1, 9, 10).emissivity(alight, alight).end()
+				.end()
+				.element().from(14.0F, finner, 13.0F).to(16.0F, tinner, 15.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(14, 13, 16, 15).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(14, 13, 16, 15).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").uvs(14, 1, 16, 10).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").uvs(14, 1, 16, 10).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(13, 1, 9, 10).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(13, 1, 9, 10).emissivity(olight, olight).end()
+				.end()
+				.element().from(0.0F, flowbar, 9.0F).to(2.0F, tlowbar, 13.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(0, 9, 2, 13).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(0, 9, 2, 13).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(13, 7, 15, 10).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(13, 7, 15, 10).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, flowbar, 9.0F).to(2.0F, tlowbar, 13.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(0, 9, 2, 13).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(0, 9, 2, 13).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(13, 7, 15, 10).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(13, 7, 15, 10).emissivity(olight, olight).end()
+				.end()
+				.element().from(0.0F, fupbar, 9.0F).to(2.0F, tupbar, 13.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(0, 9, 2, 13).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(0, 9, 2, 13).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(13, 1, 15, 4).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(13, 1, 15, 4).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, fupbar, 9.0F).to(2.0F, tupbar, 13.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(0, 9, 2, 13).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(0, 9, 2, 13).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(13, 1, 15, 4).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(13, 1, 15, 4).emissivity(olight, olight).end()
+				.end()
+				.element().from(14.0F, flowbar, 9.0F).to(16.0F, tlowbar, 13.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(14, 9, 16, 13).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(14, 9, 16, 13).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(13, 7, 15, 10).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(13, 7, 15, 10).emissivity(alight, alight).end()
+				.end()
+				.element().from(14.0F, flowbar, 9.0F).to(16.0F, tlowbar, 13.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(14, 9, 16, 13).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(14, 9, 16, 13).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(13, 7, 15, 10).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(13, 7, 15, 10).emissivity(olight, olight).end()
+				.end()
+				.element().from(14.0F, fupbar, 9.0F).to(16.0F, tupbar, 13.0F)
+				    .face(Direction.DOWN).texture("#all").uvs(14, 9, 16, 13).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").uvs(14, 9, 16, 13).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").uvs(13, 1, 15, 4).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").uvs(13, 1, 15, 4).emissivity(alight, alight).end()
+				.end()
+				.element().from(14.0F, fupbar, 9.0F).to(16.0F, tupbar, 13.0F)
+				    .face(Direction.DOWN).texture("#over").uvs(14, 9, 16, 13).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").uvs(14, 9, 16, 13).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").uvs(13, 1, 15, 4).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").uvs(13, 1, 15, 4).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder fenceGateWall2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "fence_gate_wall_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder poleWhole2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder fenceGateWallOpen2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "fence_gate_wall_open_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder poleHorizontal2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder poleWhole2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "pole_whole_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder poleVertical2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder poleHorizontal2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "pole_horizontal_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder poleCorner2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder poleVertical2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "pole_vertical_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder beamWhole2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder poleCorner2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "pole_corner_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder beamHorizontal2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder beamWhole2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "beam_whole_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder beamVertical2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder beamHorizontal2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "beam_horizontal_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder beamCorner2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return withExistingParent(name, "minecraft:block/block")
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
 	}
 
-	public BlockModelBuilder beamVertical2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "beam_vertical_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder wallPost2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return getBuilder(name)
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(4.0F, 0.0F, 4.0F).to(12.0F, 16.0F, 12.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(4.0F, 0.0F, 4.0F).to(12.0F, 16.0F, 12.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end();
 	}
 
-	public BlockModelBuilder beamCorner2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "beam_corner_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder wallSide2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return getBuilder(name)
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(5.0F, 0.0F, 0.0F).to(11.0F, 14.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(5.0F, 0.0F, 0.0F).to(11.0F, 14.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end();
 	}
 
-	public BlockModelBuilder wallPost2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "wall_post_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
-	}
-
-	public BlockModelBuilder wallSide2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "wall_side_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
-	}
-
-	public BlockModelBuilder wallSideTall2Layer(String name, ResourceLocation base, ResourceLocation overlay) {
-		return withExistingParent(name, DIAC_MODELS + "wall_side_tall_2_layer")
-				.texture("all", base)
-				.texture("over", overlay);
+	public BlockModelBuilder wallSideTall2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+		return getBuilder(name)
+				.renderType(new ResourceLocation("translucent")) //TODO
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(5.0F, 0.0F, 0.0F).to(11.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(5.0F, 0.0F, 0.0F).to(11.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end();
 	}
 }

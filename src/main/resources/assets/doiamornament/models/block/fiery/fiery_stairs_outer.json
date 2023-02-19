@@ -7,51 +7,51 @@
     "over": "twilightforest:block/fiery_pattern"
   },
   "elements": [{
-    "from": [ 16, 8, 16 ],
-    "to": [ 0, 0, 0 ],
+    "from": [ 15.99, 8, 15.99 ],
+    "to": [ 0.01, 0.01, 0.01 ],
     "shade": false,
     "faces": {
-      "down":  { "texture": "#over", "emissivity": 15, "cullface": "up" },
-      "up":    { "texture": "#over", "emissivity": 15 },
-      "north": { "texture": "#over", "emissivity": 15, "cullface": "south" },
-      "south": { "texture": "#over", "emissivity": 15, "cullface": "north" },
-      "west":  { "texture": "#over", "emissivity": 15, "cullface": "east" },
-      "east":  { "texture": "#over", "emissivity": 15, "cullface": "west" }
+      "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "up" },
+      "up":    { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "north": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "south" },
+      "south": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "north" },
+      "west":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "east" },
+      "east":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "west" }
       }
     }, {
     "from": [ 1, 1, 1 ],
     "to": [ 15, 7, 15 ],
     "shade": false,
     "faces": {
-      "down":  { "texture": "#all", "emissivity": 15 },
-      "up":    { "texture": "#all", "emissivity": 15 },
-      "north": { "texture": "#all", "emissivity": 15 },
-      "south": { "texture": "#all", "emissivity": 15 },
-      "west":  { "texture": "#all", "emissivity": 15 },
-      "east":  { "texture": "#all", "emissivity": 15 }
+      "down":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "up":    { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "north": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "south": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "west":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "east":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
     }
   }, {
-    "from": [ 16, 16, 16 ],
+    "from": [ 15.99, 15.99, 15.99 ],
     "to": [ 8, 8, 8 ],
     "shade": false,
     "faces": {
-      "down":  { "texture": "#over", "emissivity": 15, "cullface": "up" },
-      "north": { "texture": "#over", "emissivity": 15 },
-      "south": { "texture": "#over", "emissivity": 15, "cullface": "north" },
-      "west":  { "texture": "#over", "emissivity": 15 },
-      "east":  { "texture": "#over", "emissivity": 15, "cullface": "west" }
+      "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "up" },
+      "north": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "south": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "north" },
+      "west":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "east":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "west" }
     }
   }, {
     "from": [ 9, 7, 8 ],
     "to": [ 15, 15, 15 ],
     "shade": false,
     "faces": {
-      "down":  { "texture": "#all", "emissivity": 15 },
-      "up":    { "texture": "#all", "emissivity": 15 },
-      "north": { "texture": "#all", "emissivity": 15 },
-      "south": { "texture": "#all", "emissivity": 15 },
-      "west":  { "texture": "#all", "emissivity": 15 },
-      "east":  { "texture": "#all", "emissivity": 15 }
+      "down":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "up":    { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "north": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "south": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "west":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+      "east":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
     }
   }]
 }

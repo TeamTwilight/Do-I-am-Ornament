@@ -1,9 +1,12 @@
 package com.androsa.doiamornament;
 
+import com.androsa.doiamornament.data.BlockTagGenerator;
 import com.androsa.ornamental.builder.OrnamentBuilder;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
+
+import java.util.List;
 
 public class TFOrnamentBuilders {
 
@@ -12,14 +15,16 @@ public class TFOrnamentBuilders {
 					.properties(Material.WOOD)
 					.sound(SoundType.WOOD)
 					.hardnessAndResistance(5.0F, 6.0F)
-					.canOpen());
+					.canOpen()
+					.addBlockTags(List.of(BlockTagGenerator.AXE)));
 
 	public static final TFOrnamentBuilder FIERY = new TFOrnamentBuilder(
 			new OrnamentBuilder("fiery")
 					.properties(Material.METAL, MaterialColor.TERRACOTTA_BLACK)
 					.sound(SoundType.METAL)
 					.hardnessAndResistance(5.0F, 6.0F)
-					.requiresTool())
+					.requiresTool()
+					.addBlockTags(List.of(BlockTagGenerator.PICKAXE)))
 			.noOcclusion()
 			.emissiveRender()
 			.shadeBrightness(1.0F)
@@ -30,7 +35,8 @@ public class TFOrnamentBuilders {
 					.properties(Material.LEAVES)
 					.sound(SoundType.MOSS)
 					.hardnessAndResistance(5.0F, 6.0F)
-					.canOpen());
+					.canOpen()
+					.addBlockTags(List.of(BlockTagGenerator.PORTAL_DECO, BlockTagGenerator.HOE)));
 
 	public static final TFOrnamentBuilder ARCTIC_FUR = new TFOrnamentBuilder(
 			new OrnamentBuilder("arctic_fur")
@@ -38,7 +44,8 @@ public class TFOrnamentBuilders {
 					.sound(SoundType.WOOL)
 					.hardnessAndResistance(0.8F)
 					.fall(0.1F)
-					.canOpen())
+					.canOpen()
+					.addBlockTags(List.of(BlockTagGenerator.HOE)))
 			.shearable(0.2F);
 
 	public static final TFOrnamentBuilder CARMINITE = new TFOrnamentBuilder(
@@ -74,6 +81,7 @@ public class TFOrnamentBuilders {
 						.sound(SoundType.WOOD)
 						.hardnessAndResistance(2.0F)
 						.canOpen()
-						.burnTime(300, 300, 300, 150, 300, 150, 150, 300, 300));
+						.burnTime(300, 300, 300, 150, 300, 150, 150, 300, 300)
+						.addBlockTags(List.of(BlockTagGenerator.AXE)));
 	}
 }

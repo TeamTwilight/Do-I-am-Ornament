@@ -4,6 +4,14 @@
     "doiamornament:fiery_door",
     "doiamornament:steeleaf_door",
     "doiamornament:arctic_fur_door",
-    "doiamornament:carminite_door"
+    "doiamornament:carminite_door",
+    "doiamornament:twilight_oak_log_door",
+    "doiamornament:canopy_log_door",
+    "doiamornament:mangrove_log_door",
+    "doiamornament:dark_log_door",
+    "doiamornament:time_log_door",
+    "doiamornament:transformation_log_door",
+    "doiamornament:mining_log_door",
+    "doiamornament:sorting_log_door"
   ]
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "ornamental:block/util/door_top_left",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "side": "doiamornament:block/carminite_door_top",
-    "top": "doiamornament:block/carminite_door_top"
-  }
-}

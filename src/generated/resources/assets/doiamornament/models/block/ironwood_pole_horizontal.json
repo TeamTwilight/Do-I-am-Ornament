@@ -1,7 +1,77 @@
 {
-  "parent": "doiamornament:block/pole_horizontal_2_layer",
+  "parent": "minecraft:block/block",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#all"
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#all"
+        },
+        "south": {
+          "texture": "#all"
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#all"
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#all"
+        }
+      },
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        8,
+        16,
+        8
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#over"
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#over"
+        },
+        "south": {
+          "texture": "#over"
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#over"
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#over"
+        }
+      },
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        8,
+        16,
+        8
+      ]
+    }
+  ],
+  "render_type": "minecraft:translucent",
   "textures": {
     "all": "twilightforest:block/ironwood_pattern",
-    "over": "twilightforest:block/ironwood_block"
+    "over": "twilightforest:block/ironwood_block",
+    "particle": "#all"
   }
 }

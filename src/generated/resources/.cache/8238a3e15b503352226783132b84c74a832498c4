@@ -1,0 +1,19 @@
+// 1.19.3	2023-02-09T11:16:51.9069658	Tags for minecraft:item mod id doiamornament
+e33d85e1f373ab34782ba0859b71bae4bf23b7de data/forge/tags/items/fences.json
+c47e783fea66dd5a5cfd3d34844fb7c691d991de data/forge/tags/items/fences/wooden.json
+a2e6c864dfc7eb45ef124523b585fa0964d87377 data/forge/tags/items/fence_gates.json
+be3a4e48846c2ed5bfcd1700dbe4e6f05556b1b2 data/forge/tags/items/fence_gates/wooden.json
+a902800a37a66043ed70788133619c86388b22dd data/minecraft/tags/items/doors.json
+e33d85e1f373ab34782ba0859b71bae4bf23b7de data/minecraft/tags/items/fences.json
+a67f77756e20a3dae6eeda707e35f60a577b398a data/minecraft/tags/items/slabs.json
+e583d7d3390784359226dc1d6bec60da7a83f74c data/minecraft/tags/items/stairs.json
+e56cd340df03ce8f32908493975950d6cd171638 data/minecraft/tags/items/trapdoors.json
+c7f0ded10f7ad19e0961aa9b10cda1a571dc52b7 data/minecraft/tags/items/walls.json
+e277f3e747d719f56da7496a71701dd308316f90 data/minecraft/tags/items/wooden_doors.json
+c47e783fea66dd5a5cfd3d34844fb7c691d991de data/minecraft/tags/items/wooden_fences.json
+c37079f1f8c03a4fec784688a11f166168e64ae4 data/minecraft/tags/items/wooden_slabs.json
+f297c02605cba05c59e1daaf6c74489ef682771c data/minecraft/tags/items/wooden_stairs.json
+c0c234579ee7851d7754288174cc328308847d62 data/minecraft/tags/items/wooden_trapdoors.json
+0587ad8799b77dc7d47948c838a31d2055c4e50d data/ornamental/tags/items/beams.json
+d9786a4666dd259a2d51c6b3edd0e23fc1451238 data/ornamental/tags/items/poles.json
+e65a9e7058179fe922664015b0b027002b6a6059 data/ornamental/tags/items/saddle_doors.json

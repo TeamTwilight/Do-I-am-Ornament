@@ -1,7 +1,232 @@
 {
-  "parent": "doiamornament:block/inner_stairs_2_layer",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#all"
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#all"
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#all"
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#all"
+        },
+        "up": {
+          "texture": "#all"
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#all"
+        }
+      },
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        8,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#over"
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#over"
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#over"
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#over"
+        },
+        "up": {
+          "texture": "#over"
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#over"
+        }
+      },
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        8,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#all"
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#all"
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#all"
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#all"
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#all"
+        },
+        "west": {
+          "texture": "#all"
+        }
+      },
+      "from": [
+        8,
+        8,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#over"
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#over"
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#over"
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#over"
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#over"
+        },
+        "west": {
+          "texture": "#over"
+        }
+      },
+      "from": [
+        8,
+        8,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#all"
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#all"
+        },
+        "north": {
+          "texture": "#all"
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#all"
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#all"
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#all"
+        }
+      },
+      "from": [
+        0,
+        8,
+        8
+      ],
+      "to": [
+        8,
+        16,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#over"
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#over"
+        },
+        "north": {
+          "texture": "#over"
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#over"
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#over"
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#over"
+        }
+      },
+      "from": [
+        0,
+        8,
+        8
+      ],
+      "to": [
+        8,
+        16,
+        16
+      ]
+    }
+  ],
+  "render_type": "minecraft:translucent",
   "textures": {
     "all": "twilightforest:block/ironwood_pattern",
-    "over": "twilightforest:block/ironwood_block"
+    "over": "twilightforest:block/ironwood_block",
+    "particle": "#all"
   }
 }

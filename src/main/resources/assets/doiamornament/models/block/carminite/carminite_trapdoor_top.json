@@ -1,0 +1,21 @@
+{
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "doiamornament:block/carminite_trapdoor",
+    "particle": "#texture"
+  },
+  "elements": [
+    {
+      "from": [ 0, 13, 0 ],
+      "to": [ 16, 16, 16 ],
+      "faces": {
+        "down":  { "uv": [ 0,  0, 16, 16 ], "texture": "#texture", "forge_data": { "block_light": 7, "sky_light": 7 } },
+        "up":    { "uv": [ 0, 16, 16, 0 ], "texture": "#texture", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "up" },
+        "north": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "north" },
+        "south": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "south" },
+        "west":  { "uv": [ 0, 0, 16, 3 ], "texture": "#texture", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "west" },
+        "east":  { "uv": [ 0, 0, 16, 3 ], "texture": "#texture", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "east" }
+      }
+    }
+  ]
+}

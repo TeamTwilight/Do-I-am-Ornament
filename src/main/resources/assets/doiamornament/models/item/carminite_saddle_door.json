@@ -1,0 +1,20 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "side": "doiamornament:block/carminite_trapdoor"
+  },
+  "elements": [
+    {
+      "from": [ 6, 0, 0 ],
+      "to": [ 9, 16, 16 ],
+      "faces": {
+        "down":  { "texture": "#side", "forge_data": { "block_light": 7, "sky_light": 7 } },
+        "up":    { "texture": "#side", "forge_data": { "block_light": 7, "sky_light": 7 } },
+        "north": { "texture": "#side", "forge_data": { "block_light": 7, "sky_light": 7 } },
+        "south": { "texture": "#side", "forge_data": { "block_light": 7, "sky_light": 7 } },
+        "west":  { "texture": "#side", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "west" },
+        "east":  { "texture": "#side", "forge_data": { "block_light": 7, "sky_light": 7 }, "cullface": "east" }
+      }
+    }
+  ]
+}
