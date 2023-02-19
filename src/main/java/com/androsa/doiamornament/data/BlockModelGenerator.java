@@ -11,8 +11,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 
-	private static final String DIAC_MODELS = "doiamornament:block/";
-
 	public BlockModelGenerator(PackOutput output, ExistingFileHelper helper) {
 		super(output, DoIAmOrnamentMod.MODID, helper);
 	}
