@@ -14,32 +14,60 @@
     },
     "ambientocclusion": false,
     "textures": {
-        "side": "twilightforest:block/fiery_block"
+        "all": "twilightforest:block/fiery_block_inner",
+        "over": "twilightforest:block/fiery_pattern"
     },
     "elements": [
         {
-            "from": [ 4, 0, 4 ],
-            "to": [ 12, 16, 12 ],
+            "from": [ 12, 16, 12 ],
+            "to": [ 4, 0, 4 ],
+            "shade": false,
             "faces": {
-                "down":  { "uv": [ 4, 4, 12, 12 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
-                "up":    { "uv": [ 4, 4, 12, 12 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 } },
-                "north": { "uv": [ 4, 0, 12, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 } },
-                "south": { "uv": [ 4, 0, 12, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 } },
-                "west":  { "uv": [ 4, 0, 12, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 } },
-                "east":  { "uv": [ 4, 0, 12, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 } }
+                "down":  { "uv": [ 4, 4, 12, 12 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
+                "up":    { "uv": [ 4, 4, 12, 12 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "north": { "uv": [ 4, 0, 12, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "south": { "uv": [ 4, 0, 12, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "west":  { "uv": [ 4, 0, 12, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "east":  { "uv": [ 4, 0, 12, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } }
             },
             "__comment": "Center post"
-        },
-        {
-            "from": [ 5, 0, 0 ],
-            "to": [ 11, 13, 16 ],
+        }, {
+            "from": [ 5, 1, 5 ],
+            "to": [ 11, 15, 11 ],
+            "shade": false,
             "faces": {
-                "down":  { "uv": [ 5, 0, 11, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
-                "up":    { "uv": [ 5, 0, 11, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 } },
-                "north": { "uv": [ 5, 3, 11, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "north" },
-                "south": { "uv": [ 5, 3, 11, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "south" },
-                "west":  { "uv": [ 0, 3, 16, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 } },
-                "east":  { "uv": [ 0, 3, 16, 16 ], "texture": "#side", "forge_data": { "block_light": 15, "sky_light": 15 } }
+                "down":  { "uv": [ 5, 5, 11, 11 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
+                "up":    { "uv": [ 5, 5, 11, 11 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "north": { "uv": [ 5, 1, 11, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "south": { "uv": [ 5, 1, 11, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "west":  { "uv": [ 5, 1, 11, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "east":  { "uv": [ 5, 1, 11, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
+            },
+            "__comment": "Center post"
+        }, {
+            "from": [ 11, 13, 16 ],
+            "to": [ 5, 0, 0 ],
+            "shade": false,
+            "faces": {
+                "down":  { "uv": [ 5, 0, 11, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
+                "up":    { "uv": [ 5, 0, 11, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "north": { "uv": [ 5, 3, 11, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "north" },
+                "south": { "uv": [ 5, 3, 11, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "south" },
+                "west":  { "uv": [ 0, 3, 16, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "east":  { "uv": [ 0, 3, 16, 16 ], "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } }
+            },
+            "__comment": "Full wall"
+        }, {
+            "from": [ 6, 1, 1 ],
+            "to": [ 10, 12, 15 ],
+            "shade": false,
+            "faces": {
+                "down":  { "uv": [ 6, 1, 11, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
+                "up":    { "uv": [ 6, 1, 11, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "north": { "uv": [ 6, 4, 11, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "north" },
+                "south": { "uv": [ 6, 4, 11, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "south" },
+                "west":  { "uv": [ 1, 4, 15, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
+                "east":  { "uv": [ 1, 4, 15, 15 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
             },
             "__comment": "Full wall"
         }

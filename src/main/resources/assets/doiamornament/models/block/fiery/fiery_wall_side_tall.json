@@ -23,8 +23,8 @@
             "to": [ 5, 0.01, 0 ],
             "shade": false,
             "faces": {
-                "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down" },
-                "up":    { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "up"},
+                "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "up" },
+                "up":    { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "down"},
                 "west":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
                 "east":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } }
             }
