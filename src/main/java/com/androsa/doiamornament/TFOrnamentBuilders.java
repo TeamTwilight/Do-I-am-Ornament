@@ -2,6 +2,7 @@ package com.androsa.doiamornament;
 
 import com.androsa.doiamornament.data.BlockTagGenerator;
 import com.androsa.ornamental.builder.OrnamentBuilder;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -24,6 +25,9 @@ public class TFOrnamentBuilders {
 					.sound(SoundType.METAL)
 					.hardnessAndResistance(5.0F, 6.0F)
 					.requiresTool()
+					.trapdoorSounds(SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE)
+					.doorSounds(SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_DOOR_CLOSE)
+					.saddledoorSounds(SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE)
 					.addBlockTags(List.of(BlockTagGenerator.PICKAXE)))
 			.noOcclusion()
 			.emissiveRender()
