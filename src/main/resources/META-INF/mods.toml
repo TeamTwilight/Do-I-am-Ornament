@@ -1,5 +1,5 @@
 modLoader="javafml" #mandatory
-loaderVersion="[43,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[44,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 license="GNU General Public Licence v3"
 
 [[mods]] #mandatory
@@ -19,27 +19,27 @@ All your favourite blocks from Twilight Forest now in all arrays of decorative b
 [[dependencies.doiamornament]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[43.1,)" #mandatory
+    versionRange="[44.1.1,)" #mandatory
     ordering="NONE"
     side="BOTH"
 # Here's another dependency
 [[dependencies.doiamornament]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2,)"
+    versionRange="[1.19.3,)"
     ordering="NONE"
     side="BOTH"
 # Twilight Forest
 [[dependencies.doiamornament]]
     modId="twilightforest"
     mandatory=true
-    versionRange="[4.2.1392,)"
+    versionRange="[4.2.1549,)"
     ordering="NONE"
     side="BOTH"
 # Ornamental
 [[dependencies.doiamornament]]
     modId="ornamental"
     mandatory=true
-    versionRange="[1.19.1-4.9.8,)"
+    versionRange="[1.19.3-4.10.39,)"
     ordering="NONE"
     side="BOTH"
