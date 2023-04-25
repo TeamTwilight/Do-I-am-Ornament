@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "doiamornament:time_log_wall"
-  }
+  },
+  "show_notification": true
 }

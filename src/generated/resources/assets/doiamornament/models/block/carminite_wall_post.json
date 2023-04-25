@@ -63,46 +63,46 @@
         "down": {
           "cullface": "down",
           "forge_data": {
-            "block_light": 4,
-            "sky_light": 4
+            "block_light": 7,
+            "sky_light": 7
           },
-          "texture": "#all"
+          "texture": "#over"
         },
         "east": {
           "forge_data": {
-            "block_light": 4,
-            "sky_light": 4
+            "block_light": 7,
+            "sky_light": 7
           },
-          "texture": "#all"
+          "texture": "#over"
         },
         "north": {
           "forge_data": {
-            "block_light": 4,
-            "sky_light": 4
+            "block_light": 7,
+            "sky_light": 7
           },
-          "texture": "#all"
+          "texture": "#over"
         },
         "south": {
           "forge_data": {
-            "block_light": 4,
-            "sky_light": 4
+            "block_light": 7,
+            "sky_light": 7
           },
-          "texture": "#all"
+          "texture": "#over"
         },
         "up": {
           "cullface": "up",
           "forge_data": {
-            "block_light": 4,
-            "sky_light": 4
+            "block_light": 7,
+            "sky_light": 7
           },
-          "texture": "#all"
+          "texture": "#over"
         },
         "west": {
           "forge_data": {
-            "block_light": 4,
-            "sky_light": 4
+            "block_light": 7,
+            "sky_light": 7
           },
-          "texture": "#all"
+          "texture": "#over"
         }
       },
       "from": [

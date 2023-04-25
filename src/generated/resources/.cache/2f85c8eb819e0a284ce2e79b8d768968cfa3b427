@@ -1,4 +1,4 @@
-// 1.19.3	2023-02-10T16:14:47.2777867	Tags for minecraft:block mod id doiamornament
+// 1.19.4	2023-04-25T00:21:54.770761	Tags for minecraft:block mod id doiamornament
 e33d85e1f373ab34782ba0859b71bae4bf23b7de data/forge/tags/blocks/fences.json
 c47e783fea66dd5a5cfd3d34844fb7c691d991de data/forge/tags/blocks/fences/wooden.json
 a2e6c864dfc7eb45ef124523b585fa0964d87377 data/forge/tags/blocks/fence_gates.json
@@ -9,7 +9,7 @@ e33d85e1f373ab34782ba0859b71bae4bf23b7de data/minecraft/tags/blocks/fences.json
 694488aeebf74fd853de8a319e05b8bace5c5137 data/minecraft/tags/blocks/fence_gates.json
 0eefd65c84da079234bddd9351951bfaa816e8b6 data/minecraft/tags/blocks/mineable/axe.json
 fddf2751b3fc7447588ac0637ba04a4e898dd2c9 data/minecraft/tags/blocks/mineable/hoe.json
-ccb9c13c9d420c90bdb3e73d11598e2fbf0775f5 data/minecraft/tags/blocks/mineable/pickaxe.json
+6394d1fe03fc7ccdf8b988feeb04f9d3f2850026 data/minecraft/tags/blocks/mineable/pickaxe.json
 a67f77756e20a3dae6eeda707e35f60a577b398a data/minecraft/tags/blocks/slabs.json
 e583d7d3390784359226dc1d6bec60da7a83f74c data/minecraft/tags/blocks/stairs.json
 e56cd340df03ce8f32908493975950d6cd171638 data/minecraft/tags/blocks/trapdoors.json

@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "doiamornament:transformation_wall"
-  }
+  },
+  "show_notification": true
 }

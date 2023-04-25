@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "doiamornament:mangrove_log_door"
-  }
+  },
+  "show_notification": true
 }

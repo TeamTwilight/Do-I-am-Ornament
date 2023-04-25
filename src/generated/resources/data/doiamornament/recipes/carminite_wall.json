@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "doiamornament:carminite_wall"
-  }
+  },
+  "show_notification": true
 }

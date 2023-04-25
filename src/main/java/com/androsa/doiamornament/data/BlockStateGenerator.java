@@ -45,11 +45,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 
 	@Override
 	protected void registerStatesAndModels() {
-		stairsTwoLayer(ModBlocks.ironwood_stairs, "ironwood", "ironwood_pattern", "ironwood_block", 0, 0);
+		stairsTwoLayer(ModBlocks.ironwood_stairs, "ironwood", "ironwood_pattern", "ironwood_block", 0, 0, CUTOUT);
 		stairsFiery(ModBlocks.fiery_stairs);
 		stairsBasic(ModBlocks.steeleaf_stairs, "steeleaf_block");
 		stairsBasic(ModBlocks.arctic_fur_stairs, "arctic_fur_block");
-		stairsTwoLayer(ModBlocks.carminite_stairs, "carminite", "carminite_block", "carminite_block_overlay", 4, 7);
+		stairsTwoLayer(ModBlocks.carminite_stairs, "carminite", "carminite_block", "carminite_block_overlay", 4, 7, TRANSLUCENT);
 		stairsColumn(ModBlocks.twilight_oak_log_stairs, "twilight_oak_log", "twilight_oak_log_top");
 		stairsColumn(ModBlocks.canopy_log_stairs, "canopy_log", "canopy_log_top");
 		stairsColumn(ModBlocks.mangrove_log_stairs, "mangrove_log", "mangrove_log_top");
@@ -59,11 +59,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		stairsColumn(ModBlocks.mining_log_stairs, "mining_log", "mining_log_top");
 		stairsColumn(ModBlocks.sorting_log_stairs, "sorting_log", "sorting_log_top");
 
-		slabTwoLayer(ModBlocks.ironwood_slab, "ironwood_block", "ironwood_pattern", "ironwood_block", 0, 0);
+		slabTwoLayer(ModBlocks.ironwood_slab, "ironwood_block", "ironwood_pattern", "ironwood_block", 0, 0, CUTOUT);
 		slabFiery(ModBlocks.fiery_slab, "fiery_block");
 		slabBasic(ModBlocks.steeleaf_slab, "steeleaf_block");
 		slabBasic(ModBlocks.arctic_fur_slab, "arctic_fur_block");
-		slabTwoLayer(ModBlocks.carminite_slab, "carminite_block", "carminite_block", "carminite_block_overlay", 4, 7);
+		slabTwoLayer(ModBlocks.carminite_slab, "carminite_block", "carminite_block", "carminite_block_overlay", 4, 7, TRANSLUCENT);
 		slabColumn(ModBlocks.twilight_oak_log_slab, "twilight_oak_log", "twilight_oak_log", "twilight_oak_log_top");
 		slabColumn(ModBlocks.canopy_log_slab, "canopy_log", "canopy_log", "canopy_log_top");
 		slabColumn(ModBlocks.mangrove_log_slab, "mangrove_log", "mangrove_log", "mangrove_log_top");
@@ -73,11 +73,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		slabColumn(ModBlocks.mining_log_slab, "mining_log", "mining_log", "mining_log_top");
 		slabColumn(ModBlocks.sorting_log_slab, "sorting_log", "sorting_log", "sorting_log_top");
 
-		fenceTwoLayer(ModBlocks.ironwood_fence, "ironwood_pattern", "ironwood_block", 0, 0);
+		fenceTwoLayer(ModBlocks.ironwood_fence, "ironwood_pattern", "ironwood_block", 0, 0, CUTOUT);
 		fenceFiery(ModBlocks.fiery_fence);
 		fenceBasic(ModBlocks.steeleaf_fence, "steeleaf_block");
 		fenceBasic(ModBlocks.arctic_fur_fence, "arctic_fur_block");
-		fenceTwoLayer(ModBlocks.carminite_fence, "carminite_block", "carminite_block_overlay", 4, 7);
+		fenceTwoLayer(ModBlocks.carminite_fence, "carminite_block", "carminite_block_overlay", 4, 7, TRANSLUCENT);
 		fenceColumn(ModBlocks.twilight_oak_log_fence, "twilight_oak_log", "twilight_oak_log_top");
 		fenceColumn(ModBlocks.canopy_log_fence, "canopy_log", "canopy_log_top");
 		fenceColumn(ModBlocks.mangrove_log_fence, "mangrove_log", "mangrove_log_top");
@@ -101,11 +101,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		trapdoorTF(ModBlocks.mining_log_trapdoor, "mining_log");
 		trapdoorTF(ModBlocks.sorting_log_trapdoor, "sorting_log");
 
-		fenceGateTwoLayer(ModBlocks.ironwood_fence_gate, "ironwood_pattern", "ironwood_block", 0, 0);
+		fenceGateTwoLayer(ModBlocks.ironwood_fence_gate, "ironwood_pattern", "ironwood_block", 0, 0, CUTOUT);
 		fenceGateFiery(ModBlocks.fiery_fence_gate);
 		fenceGateBasic(ModBlocks.steeleaf_fence_gate, "steeleaf_block");
 		fenceGateBasic(ModBlocks.arctic_fur_fence_gate, "arctic_fur_block");
-		fenceGateTwoLayer(ModBlocks.carminite_fence_gate, "carminite_block", "carminite_block_overlay", 4, 7);
+		fenceGateTwoLayer(ModBlocks.carminite_fence_gate, "carminite_block", "carminite_block_overlay", 4, 7, TRANSLUCENT);
 		fenceGateColumn(ModBlocks.twilight_oak_log_fence_gate, "twilight_oak_log", "twilight_oak_log_top");
 		fenceGateColumn(ModBlocks.canopy_log_fence_gate, "canopy_log", "canopy_log_top");
 		fenceGateColumn(ModBlocks.mangrove_log_fence_gate, "mangrove_log", "mangrove_log_top");
@@ -116,7 +116,9 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		fenceGateColumn(ModBlocks.sorting_log_fence_gate, "sorting_log", "sorting_log_top");
 
 		doorBasic(ModBlocks.ironwood_door, "ironwood");
+		doorExist(ModBlocks.fiery_door, "fiery");
 		doorBasic(ModBlocks.steeleaf_door, "steeleaf");
+		doorExist(ModBlocks.carminite_door, "carminite");
 		doorBasic(ModBlocks.arctic_fur_door, "arctic_fur");
 		doorTF(ModBlocks.twilight_oak_log_door, "twilight_oak_log");
 		doorTF(ModBlocks.canopy_log_door, "canopy_log");
@@ -127,11 +129,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		doorTF(ModBlocks.mining_log_door, "mining_log");
 		doorTF(ModBlocks.sorting_log_door, "sorting_log");
 
-		poleTwoLayer(ModBlocks.ironwood_pole, "ironwood_pattern", "ironwood_block", "ironwood_block", 0, 0);
+		poleTwoLayer(ModBlocks.ironwood_pole, "ironwood_pattern", "ironwood_block", "ironwood_block", 0, 0, CUTOUT);
 		poleFiery(ModBlocks.fiery_pole, "fiery_block");
 		poleBasic(ModBlocks.steeleaf_pole, "steeleaf_block", "steeleaf_block");
 		poleBasic(ModBlocks.arctic_fur_pole, "arctic_fur_block", "arctic_fur_block");
-		poleTwoLayer(ModBlocks.carminite_pole, "carminite_block", "carminite_block_overlay", "carminite_block", 4, 7);
+		poleTwoLayer(ModBlocks.carminite_pole, "carminite_block", "carminite_block_overlay", "carminite_block", 4, 7, TRANSLUCENT);
 		poleColumn(ModBlocks.twilight_oak_log_pole, "twilight_oak_log");
 		poleColumn(ModBlocks.canopy_log_pole, "canopy_log");
 		poleColumn(ModBlocks.mangrove_log_pole, "mangrove_log");
@@ -149,11 +151,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		poleBasic(ModBlocks.mining_plank_pole, "wood/planks_mine_0", "wood/planks/mine/mining_planks");
 		poleBasic(ModBlocks.sorting_plank_pole, "wood/planks_sort_0", "wood/planks/sort/sorting_planks");
 
-		beamTwoLayer(ModBlocks.ironwood_beam, "ironwood_block", "ironwood_pattern", "ironwood_block", 0, 0);
+		beamTwoLayer(ModBlocks.ironwood_beam, "ironwood_block", "ironwood_pattern", "ironwood_block", 0, 0, CUTOUT);
 		beamFiery(ModBlocks.fiery_beam, "fiery_block");
 		beamBasic(ModBlocks.steeleaf_beam, "steeleaf_block", "steeleaf_block");
 		beamBasic(ModBlocks.arctic_fur_beam, "arctic_fur_block", "arctic_fur_block");
-		beamTwoLayer(ModBlocks.carminite_beam, "carminite_block", "carminite_block", "carminite_block_overlay", 4, 7);
+		beamTwoLayer(ModBlocks.carminite_beam, "carminite_block", "carminite_block", "carminite_block_overlay", 4, 7, TRANSLUCENT);
 		beamColumn(ModBlocks.twilight_oak_log_beam, "twilight_oak_log");
 		beamColumn(ModBlocks.canopy_log_beam, "canopy_log");
 		beamColumn(ModBlocks.mangrove_log_beam, "mangrove_log");
@@ -171,11 +173,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		beamBasic(ModBlocks.mining_plank_beam, "wood/planks_mine_0", "wood/planks/mine/mining_planks");
 		beamBasic(ModBlocks.sorting_plank_beam, "wood/planks_sort_0", "wood/planks/sort/sorting_planks");
 
-		wallTwoLayer(ModBlocks.ironwood_wall, "ironwood_pattern", "ironwood_block", 0, 0);
+		wallTwoLayer(ModBlocks.ironwood_wall, "ironwood_pattern", "ironwood_block", 0, 0, CUTOUT);
 		wallFiery(ModBlocks.fiery_wall);
 		wallBasic(ModBlocks.steeleaf_wall, "steeleaf_block");
 		wallBasic(ModBlocks.arctic_fur_wall, "arctic_fur_block");
-		wallTwoLayer(ModBlocks.carminite_wall, "carminite_block", "carminite_block_overlay", 4, 7);
+		wallTwoLayer(ModBlocks.carminite_wall, "carminite_block", "carminite_block_overlay", 4, 7, TRANSLUCENT);
 		wallColumn(ModBlocks.twilight_oak_log_wall, "twilight_oak_log");
 		wallColumn(ModBlocks.canopy_log_wall, "canopy_log");
 		wallColumn(ModBlocks.mangrove_log_wall, "mangrove_log");
@@ -194,7 +196,9 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		wallBasic(ModBlocks.sorting_plank_wall, "wood/planks_sort_0");
 
 		saddleDoorBasic(ModBlocks.ironwood_saddle_door, "ironwood");
+		saddleDoorExist(ModBlocks.fiery_saddle_door, "fiery");
 		saddleDoorBasic(ModBlocks.steeleaf_saddle_door, "steeleaf");
+		saddleDoorExist(ModBlocks.carminite_saddle_door, "carminite");
 		saddleDoorBasic(ModBlocks.arctic_fur_saddle_door, "arctic_fur");
 		saddleDoorTF(ModBlocks.twilight_oak_log_saddle_door, "twilight_oak_log");
 		saddleDoorTF(ModBlocks.canopy_log_saddle_door, "canopy_log");
@@ -224,11 +228,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.stairs(block, this.tfLoc(side), this.tfLoc(end), this.tfLoc(end), SOLID);
 	}
 
-	private void stairsTwoLayer(RegistryObject<? extends StairBlock> block, String baseName, String base, String over, int alight, int olight) {
+	private void stairsTwoLayer(RegistryObject<? extends StairBlock> block, String baseName, String base, String over, int alight, int olight, ResourceLocation render) {
 		String basename = baseName + "_stairs";
-		ModelFile stairs = models().stairs2Layer(basename, tfLoc(base), tfLoc(over), alight, olight);
-		ModelFile stairsInner = models().stairsInner2Layer(basename + "_inner", tfLoc(base), tfLoc(over), alight, olight);
-		ModelFile stairsOuter = models().stairsOuter2Layer(basename + "_outer", tfLoc(base), tfLoc(over), alight, olight);
+		ModelFile stairs = models().stairs2Layer(basename, tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile stairsInner = models().stairsInner2Layer(basename + "_inner", tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile stairsOuter = models().stairsOuter2Layer(basename + "_outer", tfLoc(base), tfLoc(over), alight, olight, render);
 		stairsBlock(block.get(), stairs, stairsInner, stairsOuter);
 	}
 
@@ -250,9 +254,9 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.slabBlock(block.get(), this.tfLoc(blockname), this.tfLoc(side), this.tfLoc(end), this.tfLoc(end));
 	}
 
-	public void slabTwoLayer(RegistryObject<? extends SlabBlock> block, String doubleslab, String base, String over, int alight, int olight) {
-		ModelFile bottom = models().slab2Layer(block.getId().getPath(), tfLoc(base), tfLoc(over), alight, olight);
-		ModelFile top = models().slabTop2Layer(block.getId().getPath() + "_top", tfLoc(base), tfLoc(over), alight, olight);
+	public void slabTwoLayer(RegistryObject<? extends SlabBlock> block, String doubleslab, String base, String over, int alight, int olight, ResourceLocation render) {
+		ModelFile bottom = models().slab2Layer(block.getId().getPath(), tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile top = models().slabTop2Layer(block.getId().getPath() + "_top", tfLoc(base), tfLoc(over), alight, olight, render);
 		ModelFile full = models().getExistingFile(tfLoc(doubleslab));
 		this.slabBlock(block.get(), bottom, top, full);
 	}
@@ -276,10 +280,10 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.fourWayBlock(block.get(), this.models().fencePost(baseName + "_post", tfLoc(side), tfLoc(top), tfLoc(top)), this.models().fenceSide(baseName + "_side", this.tfLoc(side)));
 	}
 
-	public void fenceTwoLayer(RegistryObject<? extends FenceBlock> block, String base, String over, int alight, int olight) {
+	public void fenceTwoLayer(RegistryObject<? extends FenceBlock> block, String base, String over, int alight, int olight, ResourceLocation render) {
 		String baseName = block.getId().getPath();
-		ModelFile post = this.models().fencePost2Layer(baseName + "_post", tfLoc(base), tfLoc(over), alight, olight);
-		ModelFile side = this.models().fenceSide2Layer(baseName + "_side", tfLoc(base), tfLoc(over), alight, olight);
+		ModelFile post = this.models().fencePost2Layer(baseName + "_post", tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile side = this.models().fenceSide2Layer(baseName + "_side", tfLoc(base), tfLoc(over), alight, olight, render);
 		this.fourWayBlock(block.get(), post, side);
 	}
 
@@ -292,14 +296,6 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 
 	public void trapdoorTF(RegistryObject<? extends TrapDoorBlock> block, String name) {
 		this.trapdoorBlockWithRenderType(block.get(), this.tfLoc(name), true, CUTOUT);
-	}
-
-	public void trapdoorFiery(RegistryObject<? extends TrapDoorBlock> block) {
-		String name = block.getId().getPath();
-		ModelFile bottom = this.models().getExistingFile(modLoc("block/fiery/" + name + "_bottom"));
-		ModelFile top = this.models().getExistingFile(modLoc("block/fiery/" + name + "_top"));
-		ModelFile open = this.models().getExistingFile(modLoc("block/fiery/" + name + "_open"));
-		this.trapdoorBlock(block.get(), bottom, top, open, true);
 	}
 
 	public void trapdoorExist(RegistryObject<? extends TrapDoorBlock> block, String dir) {
@@ -320,11 +316,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.fenceGate(block, tfLoc(side), tfLoc(top), tfLoc(top), SOLID);
 	}
 
-	public void fenceGateTwoLayer(RegistryObject<? extends FenceGateBlock> block, String base, String over, int alight, int olight) {
-		ModelFile gate = this.models().fenceGate2Layer(block.getId().getPath(), tfLoc(base), tfLoc(over), alight, olight, true, 5.0F, 16.0F, 6.0F, 15.0F, 6.0F, 9.0F, 12.0F, 15.0F);
-		ModelFile gateOpen = this.models().fenceGateOpen2Layer(block.getId().getPath() + "_open", tfLoc(base), tfLoc(over), alight, olight, true, 5.0F, 16.0F, 6.0F, 15.0F, 6.0F, 9.0F, 12.0F, 15.0F);
-		ModelFile gateWall = this.models().fenceGate2Layer(block.getId().getPath() + "_wall", tfLoc(base), tfLoc(over), alight, olight, false, 2.0F, 13.0F, 3.0F, 12.0F, 3.0F, 6.0F, 9.0F, 12.0F);
-		ModelFile gateWallOpen = this.models().fenceGateOpen2Layer(block.getId().getPath() + "_wall_open", tfLoc(base), tfLoc(over), alight, olight, true, 2.0F, 13.0F, 3.0F, 12.0F, 3.0F, 6.0F, 9.0F, 12.0F);
+	public void fenceGateTwoLayer(RegistryObject<? extends FenceGateBlock> block, String base, String over, int alight, int olight, ResourceLocation render) {
+		ModelFile gate = this.models().fenceGate2Layer(block.getId().getPath(), tfLoc(base), tfLoc(over), alight, olight, render, true, 5.0F, 16.0F, 6.0F, 15.0F, 6.0F, 9.0F, 12.0F, 15.0F);
+		ModelFile gateOpen = this.models().fenceGateOpen2Layer(block.getId().getPath() + "_open", tfLoc(base), tfLoc(over), alight, olight, render, true, 5.0F, 16.0F, 6.0F, 15.0F, 6.0F, 9.0F, 12.0F, 15.0F);
+		ModelFile gateWall = this.models().fenceGate2Layer(block.getId().getPath() + "_wall", tfLoc(base), tfLoc(over), alight, olight, render, false, 2.0F, 13.0F, 3.0F, 12.0F, 3.0F, 6.0F, 9.0F, 12.0F);
+		ModelFile gateWallOpen = this.models().fenceGateOpen2Layer(block.getId().getPath() + "_wall_open", tfLoc(base), tfLoc(over), alight, olight, render, true, 2.0F, 13.0F, 3.0F, 12.0F, 3.0F, 6.0F, 9.0F, 12.0F);
 		this.fenceGateBlock(block.get(), gate, gateOpen, gateWall, gateWallOpen);
 	}
 
@@ -341,6 +337,19 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.door(block, tfLoc(name), tfLoc(name), tfLoc(name), tfLoc(name), CUTOUT);
 	}
 
+	public void doorExist(RegistryObject<? extends DoorBlock> block, String dir) {
+		String name = block.getId().getPath();
+		ModelFile bl = this.models().getExistingFile(modLoc(String.format("block/%s/%s_bottom_left", dir, name)));
+		ModelFile blo = this.models().getExistingFile(modLoc(String.format("block/%s/%s_bottom_left_open", dir, name)));
+		ModelFile br = this.models().getExistingFile(modLoc(String.format("block/%s/%s_bottom_right", dir, name)));
+		ModelFile bro = this.models().getExistingFile(modLoc(String.format("block/%s/%s_bottom_right_open", dir, name)));
+		ModelFile tl = this.models().getExistingFile(modLoc(String.format("block/%s/%s_top_left", dir, name)));
+		ModelFile tlo = this.models().getExistingFile(modLoc(String.format("block/%s/%s_top_left_open", dir, name)));
+		ModelFile tr = this.models().getExistingFile(modLoc(String.format("block/%s/%s_top_right", dir, name)));
+		ModelFile tro = this.models().getExistingFile(modLoc(String.format("block/%s/%s_top_right_open", dir, name)));
+		this.doorBlock(block.get(), bl, blo, br, bro, tl, tlo, tr, tro);
+	}
+
 	public void poleBasic(RegistryObject<? extends OrnamentPole> block, String name, String fullblock) {
 		this.pole(block, tfLoc(fullblock), tfLoc(name), tfLoc(name), tfLoc(name), SOLID);
 	}
@@ -349,11 +358,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.pole(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), tfLoc(name), SOLID);
 	}
 
-	public void poleTwoLayer(RegistryObject<? extends OrnamentPole> block, String base, String over, String fullblock, int alight, int olight) {
-		ModelFile whole = this.models().poleWhole2Layer(block.getId().getPath() + "_whole", tfLoc(base), tfLoc(over), alight, olight);
-		ModelFile horizon = this.models().poleHorizontal2Layer(block.getId().getPath() + "_horizontal", tfLoc(base), tfLoc(over), alight, olight);
-		ModelFile vertical = this.models().poleVertical2Layer(block.getId().getPath() + "_vertical", tfLoc(base), tfLoc(over), alight, olight);
-		ModelFile corner = this.models().poleCorner2Layer(block.getId().getPath() + "_corner", tfLoc(base), tfLoc(over), alight, olight);
+	public void poleTwoLayer(RegistryObject<? extends OrnamentPole> block, String base, String over, String fullblock, int alight, int olight, ResourceLocation render) {
+		ModelFile whole = this.models().poleWhole2Layer(block.getId().getPath() + "_whole", tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile horizon = this.models().poleHorizontal2Layer(block.getId().getPath() + "_horizontal", tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile vertical = this.models().poleVertical2Layer(block.getId().getPath() + "_vertical", tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile corner = this.models().poleCorner2Layer(block.getId().getPath() + "_corner", tfLoc(base), tfLoc(over), alight, olight, render);
 		ModelFile full = this.models().getExistingFile(tfLoc(fullblock));
 		this.poleBlock(block, whole, horizon, vertical, corner, full);
 	}
@@ -376,11 +385,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.beam(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), tfLoc(name), SOLID);
 	}
 
-	public void beamTwoLayer(RegistryObject<? extends OrnamentBeam> block, String name, String under, String overlay, int alight, int olight) {
-		ModelFile whole = this.models().beamWhole2Layer(block.getId().getPath() + "_whole", tfLoc(under), tfLoc(overlay), alight, olight);
-		ModelFile horizon = this.models().beamHorizontal2Layer(block.getId().getPath() + "_horizontal", tfLoc(under), tfLoc(overlay), alight, olight);
-		ModelFile vertical = this.models().beamVertical2Layer(block.getId().getPath() + "_verticalal", tfLoc(under), tfLoc(overlay), alight, olight);
-		ModelFile corner = this.models().beamCorner2Layer(block.getId().getPath() + "_corner", tfLoc(under), tfLoc(overlay), alight, olight);
+	public void beamTwoLayer(RegistryObject<? extends OrnamentBeam> block, String name, String under, String overlay, int alight, int olight, ResourceLocation render) {
+		ModelFile whole = this.models().beamWhole2Layer(block.getId().getPath() + "_whole", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile horizon = this.models().beamHorizontal2Layer(block.getId().getPath() + "_horizontal", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile vertical = this.models().beamVertical2Layer(block.getId().getPath() + "_verticalal", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile corner = this.models().beamCorner2Layer(block.getId().getPath() + "_corner", tfLoc(under), tfLoc(overlay), alight, olight, render);
 		ModelFile full = this.models().getExistingFile(this.tfLoc(name));
 		this.beamBlock(block, whole, horizon, vertical, corner, full);
 	}
@@ -404,11 +413,11 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.wall(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), SOLID);
 	}
 
-	public void wallTwoLayer(RegistryObject<? extends WallBlock> block, String under, String overlay, int alight, int olight) {
+	public void wallTwoLayer(RegistryObject<? extends WallBlock> block, String under, String overlay, int alight, int olight, ResourceLocation render) {
 		String baseName = block.getId().getPath();
-		ModelFile post = models().wallPost2Layer(baseName + "_post", tfLoc(under), tfLoc(overlay), alight, olight);
-		ModelFile side = models().wallSide2Layer(baseName + "_side", tfLoc(under), tfLoc(overlay), alight, olight);
-		ModelFile sideTall = models().wallSideTall2Layer(baseName + "_side_tall", tfLoc(under), tfLoc(overlay), alight, olight);
+		ModelFile post = models().wallPost2Layer(baseName + "_post", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile side = models().wallSide2Layer(baseName + "_side", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile sideTall = models().wallSideTall2Layer(baseName + "_side_tall", tfLoc(under), tfLoc(overlay), alight, olight, render);
 		this.wallBlock(block.get(), post, side, sideTall);
 	}
 
@@ -422,5 +431,14 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 
 	public void saddleDoorTF(RegistryObject<? extends OrnamentSaddleDoor> block, String name) {
 		this.saddleDoor(block, tfLoc(name), tfLoc(name), tfLoc(name), CUTOUT);
+	}
+
+	public void saddleDoorExist(RegistryObject<? extends OrnamentSaddleDoor> block, String dir) {
+		String name = block.getId().getPath();
+		ModelFile left = this.models().getExistingFile(modLoc(String.format("block/%s/%s_left", dir, name)));
+		ModelFile leftopen = this.models().getExistingFile(modLoc(String.format("block/%s/%s_left_open", dir, name)));
+		ModelFile right = this.models().getExistingFile(modLoc(String.format("block/%s/%s_right", dir, name)));
+		ModelFile rightopen = this.models().getExistingFile(modLoc(String.format("block/%s/%s_right_open", dir, name)));
+		this.saddleDoorBlock(block, left, leftopen, right, rightopen);
 	}
 }

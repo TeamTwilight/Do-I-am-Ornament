@@ -2,10 +2,10 @@ package com.androsa.doiamornament.data;
 
 import com.androsa.doiamornament.DoIAmOrnamentMod;
 import com.androsa.ornamental.data.provider.OrnamentalBlockModelProvider;
-import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -15,14 +15,14 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 		super(output, DoIAmOrnamentMod.MODID, helper);
 	}
 
-	public BlockModelBuilder stairs2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder stairs2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.transforms()
-				    .transform(ItemTransforms.TransformType.GUI).rotation(30.0F, 135.0F, 0.0F).translation(0.0F, 0.0F, 0.0F).scale(0.625F, 0.625F, 0.625F).end()
-				    .transform(ItemTransforms.TransformType.HEAD).rotation(0.0F, -90.0F, 0.0F).translation(0.0F, 0.0F, 0.0F).scale(1.0F, 1.0F, 1.0F).end()
-				    .transform(ItemTransforms.TransformType.THIRD_PERSON_LEFT_HAND).rotation(75.0F, -135.0F, 0.0F).translation(0.0F, 2.50F, 0.0F).scale(0.375F, 0.375F, 0.375F).end()
+				    .transform(ItemDisplayContext.GUI).rotation(30.0F, 135.0F, 0.0F).translation(0.0F, 0.0F, 0.0F).scale(0.625F, 0.625F, 0.625F).end()
+				    .transform(ItemDisplayContext.HEAD).rotation(0.0F, -90.0F, 0.0F).translation(0.0F, 0.0F, 0.0F).scale(1.0F, 1.0F, 1.0F).end()
+				    .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND).rotation(75.0F, -135.0F, 0.0F).translation(0.0F, 2.50F, 0.0F).scale(0.375F, 0.375F, 0.375F).end()
 				.end()
 				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -58,9 +58,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder stairsInner2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder stairsInner2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return getBuilder(name)
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -112,9 +112,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder stairsOuter2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder stairsOuter2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -150,9 +150,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder slab2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder slab2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 16.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -172,9 +172,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder slabTop2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder slabTop2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 8.0F, 0.0F).to(16.0F, 16.0F, 16.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -194,9 +194,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder fencePost2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder fencePost2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(6.0F, 0.0F, 6.0F).to(10.0F, 16.0F, 10.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -216,9 +216,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder fenceSide2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder fenceSide2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(7.0F, 12.0F, 0.0F).to(9.0F, 15.0F, 6.0F)
 				    .face(Direction.DOWN).texture("#all").emissivity(alight, alight).end()
@@ -250,17 +250,17 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder fenceGate2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, boolean ao,
+	public BlockModelBuilder fenceGate2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render, boolean ao,
 											 float fpost, float tpost,
 											 float finner, float tinner,
 											 float flowbar, float tlowbar,
 											 float fupbar, float tupbar) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.ao(ao).texture("all", all).texture("over", over).texture("particle", "#all")
 				.transforms()
-				    .transform(ItemTransforms.TransformType.GUI).rotation(30.0F, 45.0F, 0.0F).translation(0.0F, -1.0F, 0.0F).scale(0.8F, 0.8F, 0.8F).end()
-				    .transform(ItemTransforms.TransformType.HEAD).rotation(0.0F, 0.0F, 0.0F).translation(0.0F, -3.0F, -6.0F).scale(1.0F, 1.0F, 1.0F).end()
+				    .transform(ItemDisplayContext.GUI).rotation(30.0F, 45.0F, 0.0F).translation(0.0F, -1.0F, 0.0F).scale(0.8F, 0.8F, 0.8F).end()
+				    .transform(ItemDisplayContext.HEAD).rotation(0.0F, 0.0F, 0.0F).translation(0.0F, -3.0F, -6.0F).scale(1.0F, 1.0F, 1.0F).end()
 				.end()
 				.element().from(0.0F, fpost, 7.0F).to(2.0F, tpost, 9.0F)
 				    .face(Direction.DOWN).texture("#all").uvs(0, 7, 2, 9).emissivity(alight, alight).end()
@@ -376,17 +376,17 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder fenceGateOpen2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, boolean ao,
+	public BlockModelBuilder fenceGateOpen2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render, boolean ao,
 											 float fpost, float tpost,
 											 float finner, float tinner,
 											 float flowbar, float tlowbar,
 											 float fupbar, float tupbar) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.ao(ao).texture("all", all).texture("over", over).texture("particle", "#all")
 				.transforms()
-				    .transform(ItemTransforms.TransformType.GUI).rotation(30.0F, 45.0F, 0.0F).translation(0.0F, -1.0F, 0.0F).scale(0.8F, 0.8F, 0.8F).end()
-				    .transform(ItemTransforms.TransformType.HEAD).rotation(0.0F, 0.0F, 0.0F).translation(0.0F, -3.0F, -6.0F).scale(1.0F, 1.0F, 1.0F).end()
+				    .transform(ItemDisplayContext.GUI).rotation(30.0F, 45.0F, 0.0F).translation(0.0F, -1.0F, 0.0F).scale(0.8F, 0.8F, 0.8F).end()
+				    .transform(ItemDisplayContext.HEAD).rotation(0.0F, 0.0F, 0.0F).translation(0.0F, -3.0F, -6.0F).scale(1.0F, 1.0F, 1.0F).end()
 				.end()
 				.element().from(0.0F, fpost, 7.0F).to(2.0F, tpost, 9.0F)
 				    .face(Direction.DOWN).texture("#all").uvs(0, 7, 2, 9).emissivity(alight, alight).end()
@@ -502,9 +502,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder poleWhole2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder poleWhole2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -524,9 +524,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder poleHorizontal2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder poleHorizontal2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -544,9 +544,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder poleVertical2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder poleVertical2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -564,9 +564,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder poleCorner2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder poleCorner2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -582,9 +582,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder beamWhole2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder beamWhole2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -604,9 +604,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder beamHorizontal2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder beamHorizontal2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -624,9 +624,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder beamVertical2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder beamVertical2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -644,9 +644,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder beamCorner2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder beamCorner2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return withExistingParent(name, "minecraft:block/block")
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(0.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -662,9 +662,9 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				.end();
 	}
 
-	public BlockModelBuilder wallPost2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder wallPost2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return getBuilder(name)
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(4.0F, 0.0F, 4.0F).to(12.0F, 16.0F, 12.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -675,18 +675,18 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
 				.end()
 				.element().from(4.0F, 0.0F, 4.0F).to(12.0F, 16.0F, 12.0F)
-				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
-				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
-				    .face(Direction.NORTH).texture("#all").emissivity(alight, alight).end()
-				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
-				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
-				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
 				.end();
 	}
 
-	public BlockModelBuilder wallSide2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder wallSide2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return getBuilder(name)
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(5.0F, 0.0F, 0.0F).to(11.0F, 14.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -696,17 +696,17 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
 				.end()
 				.element().from(5.0F, 0.0F, 0.0F).to(11.0F, 14.0F, 8.0F)
-				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
-				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
-				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
-				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
-				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
 				.end();
 	}
 
-	public BlockModelBuilder wallSideTall2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight) {
+	public BlockModelBuilder wallSideTall2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
 		return getBuilder(name)
-				.renderType(new ResourceLocation("translucent")) //TODO
+				.renderType(render)
 				.texture("all", all).texture("over", over).texture("particle", "#all")
 				.element().from(5.0F, 0.0F, 0.0F).to(11.0F, 16.0F, 8.0F)
 				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
@@ -716,11 +716,11 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
 				.end()
 				.element().from(5.0F, 0.0F, 0.0F).to(11.0F, 16.0F, 8.0F)
-				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
-				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
-				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
-				    .face(Direction.WEST).texture("#all").emissivity(alight, alight).end()
-				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
 				.end();
 	}
 }

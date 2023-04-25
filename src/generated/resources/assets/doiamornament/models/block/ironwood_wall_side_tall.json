@@ -36,21 +36,21 @@
       "faces": {
         "down": {
           "cullface": "down",
-          "texture": "#all"
+          "texture": "#over"
         },
         "east": {
-          "texture": "#all"
+          "texture": "#over"
         },
         "north": {
           "cullface": "north",
-          "texture": "#all"
+          "texture": "#over"
         },
         "up": {
           "cullface": "up",
-          "texture": "#all"
+          "texture": "#over"
         },
         "west": {
-          "texture": "#all"
+          "texture": "#over"
         }
       },
       "from": [
@@ -65,7 +65,7 @@
       ]
     }
   ],
-  "render_type": "minecraft:translucent",
+  "render_type": "minecraft:cutout",
   "textures": {
     "all": "twilightforest:block/ironwood_pattern",
     "over": "twilightforest:block/ironwood_block",

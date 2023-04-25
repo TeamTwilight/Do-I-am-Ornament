@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "doiamornament:mangrove_wall"
-  }
+  },
+  "show_notification": true
 }

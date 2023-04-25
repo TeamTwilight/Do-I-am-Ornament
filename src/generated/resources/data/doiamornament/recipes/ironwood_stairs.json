@@ -14,5 +14,6 @@
   "result": {
     "count": 8,
     "item": "doiamornament:ironwood_stairs"
-  }
+  },
+  "show_notification": true
 }

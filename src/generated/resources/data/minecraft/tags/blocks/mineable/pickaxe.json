@@ -1,14 +1,24 @@
 {
   "values": [
+    "doiamornament:ironwood_stairs",
     "doiamornament:fiery_stairs",
+    "doiamornament:ironwood_slab",
     "doiamornament:fiery_slab",
+    "doiamornament:ironwood_fence",
     "doiamornament:fiery_fence",
+    "doiamornament:ironwood_trapdoor",
     "doiamornament:fiery_trapdoor",
+    "doiamornament:ironwood_fence_gate",
     "doiamornament:fiery_fence_gate",
+    "doiamornament:ironwood_door",
     "doiamornament:fiery_door",
+    "doiamornament:ironwood_pole",
     "doiamornament:fiery_pole",
+    "doiamornament:ironwood_beam",
     "doiamornament:fiery_beam",
+    "doiamornament:ironwood_wall",
     "doiamornament:fiery_wall",
+    "doiamornament:ironwood_saddle_door",
     "doiamornament:fiery_saddle_door"
   ]
 }

@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "doiamornament:dark_log_trapdoor"
-  }
+  },
+  "show_notification": true
 }

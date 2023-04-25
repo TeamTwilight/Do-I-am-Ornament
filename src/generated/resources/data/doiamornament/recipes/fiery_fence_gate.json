@@ -15,5 +15,6 @@
   ],
   "result": {
     "item": "doiamornament:fiery_fence_gate"
-  }
+  },
+  "show_notification": true
 }

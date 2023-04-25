@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "doiamornament:canopy_log_trapdoor"
-  }
+  },
+  "show_notification": true
 }

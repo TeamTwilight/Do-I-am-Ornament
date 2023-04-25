@@ -16,5 +16,6 @@
   "result": {
     "count": 3,
     "item": "doiamornament:mangrove_log_fence"
-  }
+  },
+  "show_notification": true
 }

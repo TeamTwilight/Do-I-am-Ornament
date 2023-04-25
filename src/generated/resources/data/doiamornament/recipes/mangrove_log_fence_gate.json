@@ -15,5 +15,6 @@
   ],
   "result": {
     "item": "doiamornament:mangrove_log_fence_gate"
-  }
+  },
+  "show_notification": true
 }

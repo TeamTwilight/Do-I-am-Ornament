@@ -14,5 +14,6 @@
   "result": {
     "count": 8,
     "item": "doiamornament:sorting_log_stairs"
-  }
+  },
+  "show_notification": true
 }

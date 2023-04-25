@@ -9,7 +9,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import com.google.common.collect.Lists;
-import twilightforest.init.TFBlocks;
 
 public class ModBlocks {
 
@@ -17,19 +16,19 @@ public class ModBlocks {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DoIAmOrnamentMod.MODID);
 	public static final TFRegistryHelper HELPER = new TFRegistryHelper(BLOCKS, ITEMS);
 
-	public static final RegistryObject<OrnamentTFStairs> ironwood_stairs = HELPER.stairs(TFBlocks.IRONWOOD_BLOCK, TFOrnamentBuilders.IRONWOOD, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
-	public static final RegistryObject<OrnamentTFStairs> fiery_stairs = HELPER.stairs(TFBlocks.FIERY_BLOCK, TFOrnamentBuilders.FIERY, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
-	public static final RegistryObject<OrnamentTFStairs> steeleaf_stairs = HELPER.stairs(TFBlocks.STEELEAF_BLOCK, TFOrnamentBuilders.STEELEAF, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
-	public static final RegistryObject<OrnamentTFStairs> arctic_fur_stairs = HELPER.stairs(TFBlocks.ARCTIC_FUR_BLOCK, TFOrnamentBuilders.ARCTIC_FUR, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
-	public static final RegistryObject<OrnamentTFStairs> carminite_stairs = HELPER.stairs(TFBlocks.CARMINITE_BLOCK, TFOrnamentBuilders.CARMINITE, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
-	public static final RegistryObject<OrnamentTFStairs> twilight_oak_log_stairs = HELPER.stairs(TFBlocks.TWILIGHT_OAK_LOG, TFOrnamentBuilders.TWILIGHT_OAK_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
-	public static final RegistryObject<OrnamentTFStairs> canopy_log_stairs = HELPER.stairs(TFBlocks.CANOPY_LOG, TFOrnamentBuilders.CANOPY_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
-	public static final RegistryObject<OrnamentTFStairs> mangrove_log_stairs = HELPER.stairs(TFBlocks.MANGROVE_LOG, TFOrnamentBuilders.MANGROVE_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
-	public static final RegistryObject<OrnamentTFStairs> dark_oak_log_stairs = HELPER.stairs(TFBlocks.DARK_LOG, TFOrnamentBuilders.DARK_OAK_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
-	public static final RegistryObject<OrnamentTFStairs> time_log_stairs = HELPER.stairs(TFBlocks.TIME_LOG, TFOrnamentBuilders.TIME_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
-	public static final RegistryObject<OrnamentTFStairs> transformation_log_stairs = HELPER.stairs(TFBlocks.TRANSFORMATION_LOG, TFOrnamentBuilders.TRANSFORMATION_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
-	public static final RegistryObject<OrnamentTFStairs> mining_log_stairs = HELPER.stairs(TFBlocks.MINING_LOG, TFOrnamentBuilders.MINING_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
-	public static final RegistryObject<OrnamentTFStairs> sorting_log_stairs = HELPER.stairs(TFBlocks.SORTING_LOG, TFOrnamentBuilders.SORTING_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
+	public static final RegistryObject<OrnamentTFStairs> ironwood_stairs = HELPER.stairs(TFOrnamentBuilders.IRONWOOD, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
+	public static final RegistryObject<OrnamentTFStairs> fiery_stairs = HELPER.stairs(TFOrnamentBuilders.FIERY, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
+	public static final RegistryObject<OrnamentTFStairs> steeleaf_stairs = HELPER.stairs(TFOrnamentBuilders.STEELEAF, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
+	public static final RegistryObject<OrnamentTFStairs> arctic_fur_stairs = HELPER.stairs(TFOrnamentBuilders.ARCTIC_FUR, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
+	public static final RegistryObject<OrnamentTFStairs> carminite_stairs = HELPER.stairs(TFOrnamentBuilders.CARMINITE, HELPER.array(BlockTagGenerator.BEACON_BASES), Lists.newArrayList());
+	public static final RegistryObject<OrnamentTFStairs> twilight_oak_log_stairs = HELPER.stairs(TFOrnamentBuilders.TWILIGHT_OAK_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
+	public static final RegistryObject<OrnamentTFStairs> canopy_log_stairs = HELPER.stairs(TFOrnamentBuilders.CANOPY_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
+	public static final RegistryObject<OrnamentTFStairs> mangrove_log_stairs = HELPER.stairs(TFOrnamentBuilders.MANGROVE_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
+	public static final RegistryObject<OrnamentTFStairs> dark_oak_log_stairs = HELPER.stairs(TFOrnamentBuilders.DARK_OAK_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
+	public static final RegistryObject<OrnamentTFStairs> time_log_stairs = HELPER.stairs(TFOrnamentBuilders.TIME_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
+	public static final RegistryObject<OrnamentTFStairs> transformation_log_stairs = HELPER.stairs(TFOrnamentBuilders.TRANSFORMATION_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
+	public static final RegistryObject<OrnamentTFStairs> mining_log_stairs = HELPER.stairs(TFOrnamentBuilders.MINING_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
+	public static final RegistryObject<OrnamentTFStairs> sorting_log_stairs = HELPER.stairs(TFOrnamentBuilders.SORTING_LOG, HELPER.array(BlockTagGenerator.WOOD_STAIRS), HELPER.array(ItemTagGenerator.WOOD_STAIRS));
 
 	public static final RegistryObject<OrnamentTFSlab> ironwood_slab = HELPER.slab(TFOrnamentBuilders.IRONWOOD);
 	public static final RegistryObject<OrnamentTFSlab> fiery_slab = HELPER.slab(TFOrnamentBuilders.FIERY);

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "doiamornament:twilight_oak_log_door"
-  }
+  },
+  "show_notification": true
 }

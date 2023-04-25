@@ -10,8 +10,6 @@ public class TFOrnamentBuilder extends OrnamentBuilder {
 	public float shadeBrightness = -1.0F;
 	public boolean shearable = false;
 	public float shearSpeed = 1.0F;
-	public boolean fireHazard = false;
-	public float hazardDamage = 0.0F;
 	public boolean sticky = false;
 
 	public TFOrnamentBuilder(OrnamentBuilder builder) {
@@ -27,16 +25,8 @@ public class TFOrnamentBuilder extends OrnamentBuilder {
 	/**
 	 * Determines if a block does not have occlusion
 	 */
-	public TFOrnamentBuilder noOcclusion() {
+	public TFOrnamentBuilder noOcclusionShape() {
 		this.occlusion = false;
-		return this;
-	}
-
-	/**
-	 * Determines if a block has emissive rendering
-	 */
-	public TFOrnamentBuilder emissiveRender() {
-		this.emissive = true;
 		return this;
 	}
 
@@ -54,15 +44,6 @@ public class TFOrnamentBuilder extends OrnamentBuilder {
 	public TFOrnamentBuilder shearable(float speed) {
 		this.shearable = true;
 		this.shearSpeed = speed;
-		return this;
-	}
-
-	/**
-	 * Determines if the block deals fire damage when walked on
-	 */
-	public TFOrnamentBuilder fireHazard(float damage) {
-		this.fireHazard = true;
-		this.hazardDamage = damage;
 		return this;
 	}
 

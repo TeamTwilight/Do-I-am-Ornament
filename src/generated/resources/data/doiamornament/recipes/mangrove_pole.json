@@ -14,5 +14,6 @@
   "result": {
     "count": 6,
     "item": "doiamornament:mangrove_pole"
-  }
+  },
+  "show_notification": true
 }

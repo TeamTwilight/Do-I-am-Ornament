@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "doiamornament:twilight_oak_wall"
-  }
+  },
+  "show_notification": true
 }

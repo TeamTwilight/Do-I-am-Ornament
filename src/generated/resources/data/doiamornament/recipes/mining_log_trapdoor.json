@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "doiamornament:mining_log_trapdoor"
-  }
+  },
+  "show_notification": true
 }

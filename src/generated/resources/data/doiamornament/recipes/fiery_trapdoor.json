@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "doiamornament:fiery_trapdoor"
-  }
+  },
+  "show_notification": true
 }
