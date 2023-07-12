@@ -3,10 +3,12 @@ package com.androsa.doiamornament;
 import com.androsa.doiamornament.block.*;
 import com.androsa.doiamornament.data.BlockTagGenerator;
 import com.androsa.doiamornament.data.ItemTagGenerator;
+import com.androsa.ornamental.builder.OrnamentBuilder;
 import com.androsa.ornamental.registry.helper.MasterRegistryHelper;
 import com.google.common.collect.Lists;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -20,103 +22,183 @@ public class TFRegistryHelper extends MasterRegistryHelper {
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> stairBlockTags() {
-        return array(BlockTagGenerator.STAIRS);
+    protected BlockBehaviour.Properties stairProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.stairProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> stairItemTags() {
-        return array(ItemTagGenerator.STAIRS);
+    protected BlockBehaviour.Properties slabProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.slabProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> slabBlockTags() {
-        return array(BlockTagGenerator.SLABS);
+    protected BlockBehaviour.Properties fenceProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.fenceProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> slabItemTags() {
-        return array(ItemTagGenerator.SLABS);
+    protected BlockBehaviour.Properties trapdoorProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.trapdoorProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> fenceBlockTags() {
-        return array(BlockTagGenerator.FENCES);
+    protected BlockBehaviour.Properties fencegateProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.fencegateProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> fenceItemTags() {
-        return array(ItemTagGenerator.FENCES);
+    protected BlockBehaviour.Properties doorProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.doorProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> trapdoorBlockTags() {
-        return array(BlockTagGenerator.TRAPDOORS);
+    protected BlockBehaviour.Properties poleProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.poleProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> trapdoorItemTags() {
-        return array(ItemTagGenerator.TRAPDOORS);
+    protected BlockBehaviour.Properties beamProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.beamProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> fencegateBlockTags() {
-        return array(BlockTagGenerator.FENCE_GATES);
+    protected BlockBehaviour.Properties wallProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.wallProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> fencegateItemTags() {
-        return array(ItemTagGenerator.FENCE_GATES);
+    protected BlockBehaviour.Properties saddledoorProperties(OrnamentBuilder builder) {
+        BlockBehaviour.Properties props = super.saddledoorProperties(builder);
+
+        if (builder instanceof TFOrnamentBuilder tf) {
+            if (tf.ignites) props.ignitedByLava();
+        }
+
+        return props;
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> doorBlockTags() {
-        return array(BlockTagGenerator.DOORS);
+    protected TagHelper stairTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.STAIRS),
+                array(ItemTagGenerator.STAIRS));
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> doorItemTags() {
-        return array(ItemTagGenerator.DOORS);
+    protected TagHelper slabTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.SLABS),
+                array(ItemTagGenerator.SLABS));
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> poleBlockTags() {
-        return array(BlockTagGenerator.POLES);
+    protected TagHelper fenceTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.FENCES),
+                array(ItemTagGenerator.FENCES));
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> poleItemTags() {
-        return array(ItemTagGenerator.POLES);
+    protected TagHelper trapdoorTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.TRAPDOORS),
+                array(ItemTagGenerator.TRAPDOORS));
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> beamBlockTags() {
-        return array(BlockTagGenerator.BEAMS);
+    protected TagHelper fencegateTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.FENCE_GATES),
+                array(ItemTagGenerator.FENCE_GATES));
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> beamItemTags() {
-        return array(ItemTagGenerator.BEAMS);
+    protected TagHelper doorTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.DOORS),
+                array(ItemTagGenerator.DOORS));
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> wallBlockTags() {
-        return array(BlockTagGenerator.WALLS);
+    protected TagHelper poleTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.POLES),
+                array(ItemTagGenerator.POLES));
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> wallItemTags() {
-        return array(ItemTagGenerator.WALLS);
+    protected TagHelper beamTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.BEAMS),
+                array(ItemTagGenerator.BEAMS));
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> saddledoorBlockTags() {
-        return array(BlockTagGenerator.SADDLE_DOORS);
+    protected TagHelper wallTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.WALLS),
+                array(ItemTagGenerator.WALLS));
     }
 
     @Override
-    protected ArrayList<List<RegistryObject<? extends Block>>> saddledoorItemTags() {
-        return array(ItemTagGenerator.SADDLE_DOORS);
+    protected TagHelper saddledoorTags() {
+        return new TagHelper(
+                array(BlockTagGenerator.SADDLE_DOORS),
+                array(ItemTagGenerator.SADDLE_DOORS));
     }
 
     public RegistryObject<OrnamentTFStairs> stairs(TFOrnamentBuilder builder) {

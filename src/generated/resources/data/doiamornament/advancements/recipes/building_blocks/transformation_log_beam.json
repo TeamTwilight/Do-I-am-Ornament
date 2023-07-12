@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:transformation_log_beam"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

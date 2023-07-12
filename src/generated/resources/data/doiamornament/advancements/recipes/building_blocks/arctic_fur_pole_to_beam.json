@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:arctic_fur_pole_to_beam"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

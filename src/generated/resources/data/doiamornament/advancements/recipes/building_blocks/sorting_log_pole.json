@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:sorting_log_pole"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

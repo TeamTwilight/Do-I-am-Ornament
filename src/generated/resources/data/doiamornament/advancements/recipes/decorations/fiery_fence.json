@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:fiery_fence"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -15,7 +15,7 @@ public class OrnamentTFStairs extends OrnamentStair {
 	private final TFOrnamentBuilder tfBuilder;
 
 	public OrnamentTFStairs(Properties props, TFOrnamentBuilder tfbuilder) {
-		super(props, tfbuilder.getBuilder());
+		super(props, tfbuilder);
 		this.tfBuilder = tfbuilder;
 	}
 

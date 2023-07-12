@@ -15,7 +15,7 @@ public class OrnamentTFDoor extends OrnamentDoor {
     private final TFOrnamentBuilder tfBuilder;
 
     public OrnamentTFDoor(Properties props, TFOrnamentBuilder builder) {
-        super(props, builder.getBuilder());
+        super(props, builder);
         this.tfBuilder = builder;
     }
 

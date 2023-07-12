@@ -15,7 +15,7 @@ public class OrnamentTFWall extends OrnamentWall {
     private final TFOrnamentBuilder tfBuilder;
 
     public OrnamentTFWall(Properties props, TFOrnamentBuilder builder) {
-        super(props, builder.getBuilder());
+        super(props, builder);
         this.tfBuilder = builder;
     }
 

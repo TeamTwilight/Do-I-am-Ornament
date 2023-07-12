@@ -15,7 +15,7 @@ public class OrnamentTFBeam extends OrnamentBeam {
 	private final TFOrnamentBuilder tfBuilder;
 
 	public OrnamentTFBeam(Properties props, TFOrnamentBuilder tfbuilder) {
-		super(props, tfbuilder.getBuilder());
+		super(props, tfbuilder);
 		this.tfBuilder = tfbuilder;
 	}
 

@@ -4,22 +4,15 @@ import com.androsa.ornamental.builder.OrnamentBuilder;
 
 public class TFOrnamentBuilder extends OrnamentBuilder {
 
-	private final OrnamentBuilder builder;
 	public boolean occlusion = true;
-	public boolean emissive = false;
 	public float shadeBrightness = -1.0F;
 	public boolean shearable = false;
 	public float shearSpeed = 1.0F;
 	public boolean sticky = false;
+	public boolean ignites = false;
 
 	public TFOrnamentBuilder(OrnamentBuilder builder) {
-		super(builder.name);
-		this.builder = builder;
-	}
-
-	@Override
-	public OrnamentBuilder getBuilder() {
-		return builder;
+		super(builder);
 	}
 
 	/**
@@ -52,6 +45,14 @@ public class TFOrnamentBuilder extends OrnamentBuilder {
 	 */
 	public TFOrnamentBuilder sticky() {
 		this.sticky = true;
+		return this;
+	}
+
+	/**
+	 * Determines if lava can ignite this block
+	 */
+	public TFOrnamentBuilder lavaIgnites() {
+		this.ignites = true;
 		return this;
 	}
 }

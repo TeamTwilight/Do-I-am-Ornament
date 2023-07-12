@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:steeleaf_door"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:twilight_oak_wall"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

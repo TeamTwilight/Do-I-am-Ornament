@@ -15,7 +15,7 @@ public class OrnamentTFTrapdoor extends OrnamentTrapDoor {
 	private final TFOrnamentBuilder tfBuilder;
 
 	public OrnamentTFTrapdoor(Properties props, TFOrnamentBuilder tfbuilder) {
-		super(props, tfbuilder.getBuilder());
+		super(props, tfbuilder);
 		this.tfBuilder = tfbuilder;
 	}
 

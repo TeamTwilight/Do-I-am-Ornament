@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:fiery_pole"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

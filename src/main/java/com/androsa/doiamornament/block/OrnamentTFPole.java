@@ -15,7 +15,7 @@ public class OrnamentTFPole extends OrnamentPole {
 	private final TFOrnamentBuilder tfBuilder;
 
 	public OrnamentTFPole(Properties props, TFOrnamentBuilder tfbuilder) {
-		super(props, tfbuilder.getBuilder());
+		super(props, tfbuilder);
 		this.tfBuilder = tfbuilder;
 	}
 

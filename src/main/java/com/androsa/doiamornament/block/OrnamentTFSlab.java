@@ -15,7 +15,7 @@ public class OrnamentTFSlab extends OrnamentSlab {
 	private final TFOrnamentBuilder tfBuilder;
 
 	public OrnamentTFSlab(Properties props, TFOrnamentBuilder tfBuilder) {
-		super(props, tfBuilder.getBuilder());
+		super(props, tfBuilder);
 		this.tfBuilder = tfBuilder;
 	}
 

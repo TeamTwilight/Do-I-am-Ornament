@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:sorting_wall"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

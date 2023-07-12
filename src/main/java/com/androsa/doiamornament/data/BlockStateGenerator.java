@@ -21,7 +21,7 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 	private final BlockModelGenerator blockModels;
 
 	public BlockStateGenerator(PackOutput output, ExistingFileHelper helper) {
-		super(output, DoIAmOrnamentMod.MODID, helper);
+		super(output, DoIAmOrnamentMod.MODID, TwilightForestMod.ID, helper);
 
 		blockModels = new BlockModelGenerator(output, helper) {
 			@Override
@@ -218,16 +218,6 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		saddleDoorTF(ModBlocks.sorting_plank_saddle_door, "wood/trapdoor/sort_trapdoor");
 	}
 
-	@Override
-	public void stairsBasic(RegistryObject<? extends StairBlock> block, String name) {
-		this.stairsBasic(block, this.tfLoc(name), SOLID);
-	}
-
-	@Override
-	public void stairsColumn(RegistryObject<? extends StairBlock> block, String side, String end) {
-		this.stairs(block, this.tfLoc(side), this.tfLoc(end), this.tfLoc(end), SOLID);
-	}
-
 	private void stairsTwoLayer(RegistryObject<? extends StairBlock> block, String baseName, String base, String over, int alight, int olight, ResourceLocation render) {
 		String basename = baseName + "_stairs";
 		ModelFile stairs = models().stairs2Layer(basename, tfLoc(base), tfLoc(over), alight, olight, render);
@@ -244,16 +234,6 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		stairsBlock(block.get(), stairs, stairsInner, stairsOuter);
 	}
 
-	@Override
-	public void slabBasic(RegistryObject<? extends SlabBlock> block, String name) {
-		this.slabBlock(block.get(), this.tfLoc(name), this.tfLoc(name));
-	}
-
-	@Override
-	public void slabColumn(RegistryObject<? extends SlabBlock> block, String blockname, String side, String end) {
-		this.slabBlock(block.get(), this.tfLoc(blockname), this.tfLoc(side), this.tfLoc(end), this.tfLoc(end));
-	}
-
 	public void slabTwoLayer(RegistryObject<? extends SlabBlock> block, String doubleslab, String base, String over, int alight, int olight, ResourceLocation render) {
 		ModelFile bottom = models().slab2Layer(block.getId().getPath(), tfLoc(base), tfLoc(over), alight, olight, render);
 		ModelFile top = models().slabTop2Layer(block.getId().getPath() + "_top", tfLoc(base), tfLoc(over), alight, olight, render);
@@ -267,17 +247,6 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		ModelFile top = models().getExistingFile(modLoc("block/fiery/" + name + "_top"));
 		ModelFile full = models().getExistingFile(tfLoc(doubleslab));
 		this.slabBlock(block.get(), bottom, top, full);
-	}
-
-	@Override
-	public void fenceBasic(RegistryObject<? extends FenceBlock> block, String name) {
-		this.fenceBasic(block, this.tfLoc(name), SOLID);
-	}
-
-	@Override
-	public void fenceColumn(RegistryObject<? extends FenceBlock> block, String side, String top) {
-		String baseName = block.getId().getPath();
-		this.fourWayBlock(block.get(), this.models().fencePost(baseName + "_post", tfLoc(side), tfLoc(top), tfLoc(top)), this.models().fenceSide(baseName + "_side", this.tfLoc(side)));
 	}
 
 	public void fenceTwoLayer(RegistryObject<? extends FenceBlock> block, String base, String over, int alight, int olight, ResourceLocation render) {
@@ -304,16 +273,6 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		ModelFile top = this.models().getExistingFile(modLoc(String.format("block/%s/%s_top", dir, name)));
 		ModelFile open = this.models().getExistingFile(modLoc(String.format("block/%s/%s_open", dir, name)));
 		this.trapdoorBlock(block.get(), bottom, top, open, true);
-	}
-
-	@Override
-	public void fenceGateBasic(RegistryObject<? extends FenceGateBlock> block, String name) {
-		this.fenceGateBasic(block, this.tfLoc(name), SOLID);
-	}
-
-	@Override
-	public void fenceGateColumn(RegistryObject<? extends FenceGateBlock> block, String side, String top) {
-		this.fenceGate(block, tfLoc(side), tfLoc(top), tfLoc(top), SOLID);
 	}
 
 	public void fenceGateTwoLayer(RegistryObject<? extends FenceGateBlock> block, String base, String over, int alight, int olight, ResourceLocation render) {
@@ -402,11 +361,6 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		ModelFile corner = this.models().getExistingFile(modLoc("block/fiery/" + name + "_corner"));
 		ModelFile full = this.models().getExistingFile(tfLoc(fullblock));
 		this.beamBlock(block, whole, horizon, vertical, corner, full);
-	}
-
-	@Override
-	public void wallBasic(RegistryObject<? extends WallBlock> block, String name) {
-		this.wallBasic(block, tfLoc(name), SOLID);
 	}
 
 	public void wallColumn(RegistryObject<? extends WallBlock> block, String name) {

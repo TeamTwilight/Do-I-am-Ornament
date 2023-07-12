@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:mining_beam"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -15,7 +15,7 @@ public class OrnamentTFFenceGate extends OrnamentFenceGate {
 	private final TFOrnamentBuilder tfBuilder;
 
 	public OrnamentTFFenceGate(Properties props, TFOrnamentBuilder tfbuilder) {
-		super(props, tfbuilder.getBuilder());
+		super(props, tfbuilder);
 		this.tfBuilder = tfbuilder;
 	}
 

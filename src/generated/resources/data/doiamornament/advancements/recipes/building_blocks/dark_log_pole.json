@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:dark_log_pole"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

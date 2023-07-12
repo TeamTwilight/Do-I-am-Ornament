@@ -30,5 +30,6 @@
     "recipes": [
       "doiamornament:arctic_fur_wall"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
