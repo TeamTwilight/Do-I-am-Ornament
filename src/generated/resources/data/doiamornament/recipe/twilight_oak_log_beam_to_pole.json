@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "doiamornament:twilight_oak_log_beam"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "doiamornament:twilight_oak_log_pole"
+  }
+}

@@ -5,14 +5,14 @@
       "faces": {
         "down": {
           "cullface": "down",
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 4,
             "sky_light": 4
           },
           "texture": "#all"
         },
         "east": {
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 4,
             "sky_light": 4
           },
@@ -20,7 +20,7 @@
         },
         "north": {
           "cullface": "north",
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 4,
             "sky_light": 4
           },
@@ -28,7 +28,7 @@
         },
         "up": {
           "cullface": "up",
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 4,
             "sky_light": 4
           },
@@ -36,7 +36,7 @@
         },
         "west": {
           "cullface": "west",
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 4,
             "sky_light": 4
           },
@@ -58,14 +58,14 @@
       "faces": {
         "down": {
           "cullface": "down",
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 7,
             "sky_light": 7
           },
           "texture": "#over"
         },
         "east": {
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 7,
             "sky_light": 7
           },
@@ -73,7 +73,7 @@
         },
         "north": {
           "cullface": "north",
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 7,
             "sky_light": 7
           },
@@ -81,7 +81,7 @@
         },
         "up": {
           "cullface": "up",
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 7,
             "sky_light": 7
           },
@@ -89,7 +89,7 @@
         },
         "west": {
           "cullface": "west",
-          "forge_data": {
+          "neoforge_data": {
             "block_light": 7,
             "sky_light": 7
           },

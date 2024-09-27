@@ -13,12 +13,12 @@
       "to": [ 0.01, 2, 7 ],
       "shade": false,
       "faces": {
-        "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "up":    { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "north": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "west":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "east" },
-        "east":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } }
+        "down":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "north": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "west":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "east" },
+        "east":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }, {
       "__comment": "Left-hand post",
@@ -26,12 +26,12 @@
       "to": [ 1.5, 12.5, 8.5 ],
       "shade": false,
       "faces": {
-        "down":  { "uv": [ 1.5, 7.5, 2.5,  8.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "up":    { "uv": [ 1.5, 7.5, 2.5,  8.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "north": { "uv": [ 1.5, 1.5, 2.5, 11.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "uv": [ 1.5, 1.5, 2.5, 11.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "west":  { "uv": [ 7.5, 1.5, 8.5, 11.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "east":  { "uv": [ 7.5, 1.5, 8.5, 11.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
+        "down":  { "uv": [ 1.5, 7.5, 2.5,  8.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "uv": [ 1.5, 7.5, 2.5,  8.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "north": { "uv": [ 1.5, 1.5, 2.5, 11.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "uv": [ 1.5, 1.5, 2.5, 11.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "west":  { "uv": [ 7.5, 1.5, 8.5, 11.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "east":  { "uv": [ 7.5, 1.5, 8.5, 11.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }, {
       "__comment": "Right-hand post",
@@ -39,12 +39,12 @@
       "to": [ 14, 2, 7 ],
       "shade": false,
       "faces": {
-        "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "up":    { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "north": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "west":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "east":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "west" }
+        "down":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "north": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "west":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "east":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "west" }
       }
     }, {
       "__comment": "Right-hand post",
@@ -52,12 +52,12 @@
       "to": [ 15.5, 12.5, 8.5 ],
       "shade": false,
       "faces": {
-        "down":  { "uv": [ 13.5, 7.5, 14.5,  8.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "up":    { "uv": [ 13.5, 7.5, 14.5,  8.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "north": { "uv": [ 13.5, 1.5, 14.5, 11.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "uv": [ 13.5, 1.5, 14.5, 11.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "west":  { "uv": [  7.5, 1.5,  8.5, 11.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "east":  { "uv": [  7.5, 1.5,  8.5, 11.5 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
+        "down":  { "uv": [ 13.5, 7.5, 14.5,  8.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "uv": [ 13.5, 7.5, 14.5,  8.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "north": { "uv": [ 13.5, 1.5, 14.5, 11.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "uv": [ 13.5, 1.5, 14.5, 11.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "west":  { "uv": [  7.5, 1.5,  8.5, 11.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "east":  { "uv": [  7.5, 1.5,  8.5, 11.5 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }, {
       "__comment": "Inner vertical post",
@@ -65,10 +65,10 @@
       "to": [ 6, 6, 7 ],
       "shade": false,
       "faces": {
-        "north": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "west":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "east":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } }
+        "north": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "west":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "east":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }, {
       "__comment": "Inner vertical post",
@@ -76,10 +76,10 @@
       "to": [ 9, 10, 8.5 ],
       "shade": false,
       "faces": {
-        "north": { "uv": [ 7, 1, 9, 6 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "uv": [ 7, 1, 9, 6 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "west":  { "uv": [ 7, 1, 9, 6 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "east":  { "uv": [ 7, 1, 9, 6 ], "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
+        "north": { "uv": [ 7, 1, 9, 6 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "uv": [ 7, 1, 9, 6 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "west":  { "uv": [ 7, 1, 9, 6 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "east":  { "uv": [ 7, 1, 9, 6 ], "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }, {
       "__comment": "Lower horizontal bar",
@@ -87,10 +87,10 @@
       "to": [ 2, 3, 7 ],
       "shade": false,
       "faces": {
-        "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "up":    { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "north": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } }
+        "down":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "north": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }, {
       "__comment": "Lower horizontal bar",
@@ -98,10 +98,10 @@
       "to": [ 14.5, 5, 8.5 ],
       "shade": false,
       "faces": {
-        "down":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "up":    { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "north": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
+        "down":  { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "north": { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }, {
       "__comment": "Upper horizontal bar",
@@ -109,10 +109,10 @@
       "to": [ 2, 9, 7 ],
       "shade": false,
       "faces": {
-        "down":  { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "up":    { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "north": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "texture": "#over", "forge_data": { "block_light": 15, "sky_light": 15 } }
+        "down":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "north": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }, {
       "__comment": "Upper horizontal bar",
@@ -120,10 +120,10 @@
       "to": [ 14.5, 11, 8.5 ],
       "shade": false,
       "faces": {
-        "down":  { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "up":    { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "north": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } },
-        "south": { "texture": "#all", "forge_data": { "block_light": 15, "sky_light": 15 } }
+        "down":  { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "north": { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "south": { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } }
       }
     }
   ]

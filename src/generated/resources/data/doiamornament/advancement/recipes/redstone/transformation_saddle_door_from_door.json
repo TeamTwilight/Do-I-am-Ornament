@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "doiamornament:transformation_saddle_door_from_door"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_transformation": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilightforest:transformation_door"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_transformation"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "doiamornament:transformation_saddle_door_from_door"
+    ]
+  }
+}

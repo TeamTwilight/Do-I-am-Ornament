@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "doiamornament:canopy_beam"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "doiamornament:canopy_pole"
+  }
+}

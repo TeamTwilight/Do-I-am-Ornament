@@ -4,11 +4,10 @@ import com.androsa.doiamornament.data.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,9 +18,7 @@ public class DoIAmOrnamentMod {
     public static final String MODID = "doiamornament";
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public DoIAmOrnamentMod() {
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
+    public DoIAmOrnamentMod(IEventBus bus) {
         bus.addListener(this::gatherData);
 
         ModBlocks.BLOCKS.register(bus);
@@ -39,10 +36,10 @@ public class DoIAmOrnamentMod {
             generator.addProvider(true, new ItemModelGenerator(output, event.getExistingFileHelper()));
 		}
         if (event.includeServer()) {
-            generator.addProvider(true, new RecipeGenerator(output));
+            generator.addProvider(true, new RecipeGenerator(output, provider));
             generator.addProvider(true, blocktags);
             generator.addProvider(true, new ItemTagGenerator(output, provider, blocktags, event.getExistingFileHelper()));
-            generator.addProvider(true, new LootTableGenerator(output));
+            generator.addProvider(true, new LootTableGenerator(output, provider));
         }
 	}
 }

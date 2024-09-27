@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "twilightforest:time_door"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "doiamornament:time_saddle_door"
+  }
+}

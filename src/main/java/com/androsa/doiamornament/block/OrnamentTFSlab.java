@@ -14,8 +14,8 @@ public class OrnamentTFSlab extends OrnamentSlab {
 
 	private final TFOrnamentBuilder tfBuilder;
 
-	public OrnamentTFSlab(Properties props, TFOrnamentBuilder tfBuilder) {
-		super(props, tfBuilder);
+	public OrnamentTFSlab(TFOrnamentBuilder tfBuilder, Properties props) {
+		super(tfBuilder, props);
 		this.tfBuilder = tfBuilder;
 	}
 
@@ -35,10 +35,5 @@ public class OrnamentTFSlab extends OrnamentSlab {
 	@Deprecated
 	public VoxelShape getOcclusionShape(BlockState state, BlockGetter getter, BlockPos pos) {
 		return !tfBuilder.occlusion ? Shapes.empty() : super.getOcclusionShape(state, getter, pos);
-	}
-
-	@Override
-	public boolean isStickyBlock(BlockState state) {
-		return tfBuilder.sticky;
 	}
 }

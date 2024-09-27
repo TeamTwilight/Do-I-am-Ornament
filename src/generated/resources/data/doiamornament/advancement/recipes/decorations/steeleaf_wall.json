@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steeleaf": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilightforest:steeleaf_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "doiamornament:steeleaf_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steeleaf"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "doiamornament:steeleaf_wall"
+    ]
+  }
+}

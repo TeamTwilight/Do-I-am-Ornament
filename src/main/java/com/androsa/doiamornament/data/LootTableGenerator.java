@@ -2,9 +2,11 @@ package com.androsa.doiamornament.data;
 
 import com.androsa.doiamornament.ModBlocks;
 import com.androsa.ornamental.data.provider.OrnamentLootTableProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.WritableRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -12,25 +14,25 @@ import net.minecraft.world.level.storage.loot.ValidationContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class LootTableGenerator extends LootTableProvider {
 
-    public LootTableGenerator(PackOutput output) {
-        super(output, Set.of(), List.of(new SubProviderEntry(BlockTables::new, LootContextParamSets.BLOCK)));
+    public LootTableGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
+        super(output, Set.of(), List.of(new SubProviderEntry(BlockTables::new, LootContextParamSets.BLOCK)), provider);
     }
 
     @Override
-    protected void validate(Map<ResourceLocation, LootTable> map, ValidationContext validationtracker) {
+    protected void validate(WritableRegistry<LootTable> registry, ValidationContext validationtracker, ProblemReporter.Collector reporter) {
     }
 
     public static class BlockTables extends OrnamentLootTableProvider {
 
-        protected BlockTables() {
-            super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+        protected BlockTables(HolderLookup.Provider provider) {
+            super(Set.of(), FeatureFlags.REGISTRY.allFlags(), provider);
         }
 
         @Override

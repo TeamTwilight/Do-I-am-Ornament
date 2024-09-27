@@ -6,15 +6,16 @@ import com.androsa.ornamental.blocks.OrnamentBeam;
 import com.androsa.ornamental.blocks.OrnamentPole;
 import com.androsa.ornamental.blocks.OrnamentSaddleDoor;
 import com.androsa.ornamental.data.provider.OrnamentalBlockStateProvider;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import twilightforest.TwilightForestMod;
 
 import javax.annotation.Nonnull;
+import java.util.function.Supplier;
 
 public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 
@@ -40,7 +41,7 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 	}
 
 	private ResourceLocation tfLoc(String name) {
-		return new ResourceLocation(TwilightForestMod.ID, "block/" + name);
+		return ResourceLocation.fromNamespaceAndPath(TwilightForestMod.ID, "block/" + name);
 	}
 
 	@Override
@@ -218,7 +219,7 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		saddleDoorTF(ModBlocks.sorting_plank_saddle_door, "wood/trapdoor/sort_trapdoor");
 	}
 
-	private void stairsTwoLayer(RegistryObject<? extends StairBlock> block, String baseName, String base, String over, int alight, int olight, ResourceLocation render) {
+	private void stairsTwoLayer(Supplier<? extends StairBlock> block, String baseName, String base, String over, int alight, int olight, ResourceLocation render) {
 		String basename = baseName + "_stairs";
 		ModelFile stairs = models().stairs2Layer(basename, tfLoc(base), tfLoc(over), alight, olight, render);
 		ModelFile stairsInner = models().stairsInner2Layer(basename + "_inner", tfLoc(base), tfLoc(over), alight, olight, render);
@@ -226,65 +227,67 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		stairsBlock(block.get(), stairs, stairsInner, stairsOuter);
 	}
 
-	public void stairsFiery(RegistryObject<? extends StairBlock> block) {
-		String name = block.getId().getPath();
+	public void stairsFiery(Supplier<? extends StairBlock> block) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile stairs = models().getExistingFile(modLoc("block/fiery/" + name));
 		ModelFile stairsInner = models().getExistingFile(modLoc("block/fiery/" + name + "_inner"));
 		ModelFile stairsOuter = models().getExistingFile(modLoc("block/fiery/" + name + "_outer"));
 		stairsBlock(block.get(), stairs, stairsInner, stairsOuter);
 	}
 
-	public void slabTwoLayer(RegistryObject<? extends SlabBlock> block, String doubleslab, String base, String over, int alight, int olight, ResourceLocation render) {
-		ModelFile bottom = models().slab2Layer(block.getId().getPath(), tfLoc(base), tfLoc(over), alight, olight, render);
-		ModelFile top = models().slabTop2Layer(block.getId().getPath() + "_top", tfLoc(base), tfLoc(over), alight, olight, render);
+	public void slabTwoLayer(Supplier<? extends SlabBlock> block, String doubleslab, String base, String over, int alight, int olight, ResourceLocation render) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
+		ModelFile bottom = models().slab2Layer(name, tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile top = models().slabTop2Layer(name + "_top", tfLoc(base), tfLoc(over), alight, olight, render);
 		ModelFile full = models().getExistingFile(tfLoc(doubleslab));
 		this.slabBlock(block.get(), bottom, top, full);
 	}
 
-	public void slabFiery(RegistryObject<? extends SlabBlock> block, String doubleslab) {
-		String name = block.getId().getPath();
+	public void slabFiery(Supplier<? extends SlabBlock> block, String doubleslab) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile bottom = models().getExistingFile(modLoc("block/fiery/" + name));
 		ModelFile top = models().getExistingFile(modLoc("block/fiery/" + name + "_top"));
 		ModelFile full = models().getExistingFile(tfLoc(doubleslab));
 		this.slabBlock(block.get(), bottom, top, full);
 	}
 
-	public void fenceTwoLayer(RegistryObject<? extends FenceBlock> block, String base, String over, int alight, int olight, ResourceLocation render) {
-		String baseName = block.getId().getPath();
+	public void fenceTwoLayer(Supplier<? extends FenceBlock> block, String base, String over, int alight, int olight, ResourceLocation render) {
+		String baseName = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile post = this.models().fencePost2Layer(baseName + "_post", tfLoc(base), tfLoc(over), alight, olight, render);
 		ModelFile side = this.models().fenceSide2Layer(baseName + "_side", tfLoc(base), tfLoc(over), alight, olight, render);
 		this.fourWayBlock(block.get(), post, side);
 	}
 
-	public void fenceFiery(RegistryObject<? extends FenceBlock> block) {
-		String name = block.getId().getPath();
+	public void fenceFiery(Supplier<? extends FenceBlock> block) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile post = this.models().getExistingFile(modLoc("block/fiery/" + name + "_post"));
 		ModelFile side = this.models().getExistingFile(modLoc("block/fiery/" + name + "_side"));
 		this.fourWayBlock(block.get(), post, side);
 	}
 
-	public void trapdoorTF(RegistryObject<? extends TrapDoorBlock> block, String name) {
+	public void trapdoorTF(Supplier<? extends TrapDoorBlock> block, String name) {
 		this.trapdoorBlockWithRenderType(block.get(), this.tfLoc(name), true, CUTOUT);
 	}
 
-	public void trapdoorExist(RegistryObject<? extends TrapDoorBlock> block, String dir) {
-		String name = block.getId().getPath();
+	public void trapdoorExist(Supplier<? extends TrapDoorBlock> block, String dir) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile bottom = this.models().getExistingFile(modLoc(String.format("block/%s/%s_bottom", dir, name)));
 		ModelFile top = this.models().getExistingFile(modLoc(String.format("block/%s/%s_top", dir, name)));
 		ModelFile open = this.models().getExistingFile(modLoc(String.format("block/%s/%s_open", dir, name)));
 		this.trapdoorBlock(block.get(), bottom, top, open, true);
 	}
 
-	public void fenceGateTwoLayer(RegistryObject<? extends FenceGateBlock> block, String base, String over, int alight, int olight, ResourceLocation render) {
-		ModelFile gate = this.models().fenceGate2Layer(block.getId().getPath(), tfLoc(base), tfLoc(over), alight, olight, render, true, 5.0F, 16.0F, 6.0F, 15.0F, 6.0F, 9.0F, 12.0F, 15.0F);
-		ModelFile gateOpen = this.models().fenceGateOpen2Layer(block.getId().getPath() + "_open", tfLoc(base), tfLoc(over), alight, olight, render, true, 5.0F, 16.0F, 6.0F, 15.0F, 6.0F, 9.0F, 12.0F, 15.0F);
-		ModelFile gateWall = this.models().fenceGate2Layer(block.getId().getPath() + "_wall", tfLoc(base), tfLoc(over), alight, olight, render, false, 2.0F, 13.0F, 3.0F, 12.0F, 3.0F, 6.0F, 9.0F, 12.0F);
-		ModelFile gateWallOpen = this.models().fenceGateOpen2Layer(block.getId().getPath() + "_wall_open", tfLoc(base), tfLoc(over), alight, olight, render, true, 2.0F, 13.0F, 3.0F, 12.0F, 3.0F, 6.0F, 9.0F, 12.0F);
+	public void fenceGateTwoLayer(Supplier<? extends FenceGateBlock> block, String base, String over, int alight, int olight, ResourceLocation render) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
+		ModelFile gate = this.models().fenceGate2Layer(name, tfLoc(base), tfLoc(over), alight, olight, render, true, 5.0F, 16.0F, 6.0F, 15.0F, 6.0F, 9.0F, 12.0F, 15.0F);
+		ModelFile gateOpen = this.models().fenceGateOpen2Layer(name + "_open", tfLoc(base), tfLoc(over), alight, olight, render, true, 5.0F, 16.0F, 6.0F, 15.0F, 6.0F, 9.0F, 12.0F, 15.0F);
+		ModelFile gateWall = this.models().fenceGate2Layer(name + "_wall", tfLoc(base), tfLoc(over), alight, olight, render, false, 2.0F, 13.0F, 3.0F, 12.0F, 3.0F, 6.0F, 9.0F, 12.0F);
+		ModelFile gateWallOpen = this.models().fenceGateOpen2Layer(name + "_wall_open", tfLoc(base), tfLoc(over), alight, olight, render, true, 2.0F, 13.0F, 3.0F, 12.0F, 3.0F, 6.0F, 9.0F, 12.0F);
 		this.fenceGateBlock(block.get(), gate, gateOpen, gateWall, gateWallOpen);
 	}
 
-	public void fenceGateFiery(RegistryObject<? extends FenceGateBlock> block) {
-		String name = block.getId().getPath();
+	public void fenceGateFiery(Supplier<? extends FenceGateBlock> block) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile gate = this.models().getExistingFile(modLoc("block/fiery/" + name));
 		ModelFile gateOpen = this.models().getExistingFile(modLoc("block/fiery/" + name + "_open"));
 		ModelFile gateWall = this.models().getExistingFile(modLoc("block/fiery/" + name + "_wall"));
@@ -292,12 +295,12 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.fenceGateBlock(block.get(), gate, gateOpen, gateWall, gateWallOpen);
 	}
 
-	public void doorTF(RegistryObject<? extends DoorBlock> block, String name) {
+	public void doorTF(Supplier<? extends DoorBlock> block, String name) {
 		this.door(block, tfLoc(name), tfLoc(name), tfLoc(name), tfLoc(name), CUTOUT);
 	}
 
-	public void doorExist(RegistryObject<? extends DoorBlock> block, String dir) {
-		String name = block.getId().getPath();
+	public void doorExist(Supplier<? extends DoorBlock> block, String dir) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile bl = this.models().getExistingFile(modLoc(String.format("block/%s/%s_bottom_left", dir, name)));
 		ModelFile blo = this.models().getExistingFile(modLoc(String.format("block/%s/%s_bottom_left_open", dir, name)));
 		ModelFile br = this.models().getExistingFile(modLoc(String.format("block/%s/%s_bottom_right", dir, name)));
@@ -309,25 +312,26 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.doorBlock(block.get(), bl, blo, br, bro, tl, tlo, tr, tro);
 	}
 
-	public void poleBasic(RegistryObject<? extends OrnamentPole> block, String name, String fullblock) {
+	public void poleBasic(Supplier<? extends OrnamentPole> block, String name, String fullblock) {
 		this.pole(block, tfLoc(fullblock), tfLoc(name), tfLoc(name), tfLoc(name), SOLID);
 	}
 
-	public void poleColumn(RegistryObject<? extends OrnamentPole> block, String name) {
+	public void poleColumn(Supplier<? extends OrnamentPole> block, String name) {
 		this.pole(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), tfLoc(name), SOLID);
 	}
 
-	public void poleTwoLayer(RegistryObject<? extends OrnamentPole> block, String base, String over, String fullblock, int alight, int olight, ResourceLocation render) {
-		ModelFile whole = this.models().poleWhole2Layer(block.getId().getPath() + "_whole", tfLoc(base), tfLoc(over), alight, olight, render);
-		ModelFile horizon = this.models().poleHorizontal2Layer(block.getId().getPath() + "_horizontal", tfLoc(base), tfLoc(over), alight, olight, render);
-		ModelFile vertical = this.models().poleVertical2Layer(block.getId().getPath() + "_vertical", tfLoc(base), tfLoc(over), alight, olight, render);
-		ModelFile corner = this.models().poleCorner2Layer(block.getId().getPath() + "_corner", tfLoc(base), tfLoc(over), alight, olight, render);
+	public void poleTwoLayer(Supplier<? extends OrnamentPole> block, String base, String over, String fullblock, int alight, int olight, ResourceLocation render) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
+		ModelFile whole = this.models().poleWhole2Layer(name + "_whole", tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile horizon = this.models().poleHorizontal2Layer(name + "_horizontal", tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile vertical = this.models().poleVertical2Layer(name + "_vertical", tfLoc(base), tfLoc(over), alight, olight, render);
+		ModelFile corner = this.models().poleCorner2Layer(name + "_corner", tfLoc(base), tfLoc(over), alight, olight, render);
 		ModelFile full = this.models().getExistingFile(tfLoc(fullblock));
 		this.poleBlock(block, whole, horizon, vertical, corner, full);
 	}
 
-	public void poleFiery(RegistryObject<? extends OrnamentPole> block, String fullblock) {
-		String name = block.getId().getPath();
+	public void poleFiery(Supplier<? extends OrnamentPole> block, String fullblock) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile whole = this.models().getExistingFile(modLoc("block/fiery/" + name + "_whole"));
 		ModelFile horizon = this.models().getExistingFile(modLoc("block/fiery/" + name + "_horizontal"));
 		ModelFile vertical = this.models().getExistingFile(modLoc("block/fiery/" + name + "_vertical"));
@@ -336,25 +340,26 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.poleBlock(block, whole, horizon, vertical, corner, full);
 	}
 
-	public void beamBasic(RegistryObject<? extends OrnamentBeam> block, String name, String fullblock) {
+	public void beamBasic(Supplier<? extends OrnamentBeam> block, String name, String fullblock) {
 		this.beam(block, tfLoc(fullblock), tfLoc(name), tfLoc(name), tfLoc(name), SOLID);
 	}
 
-	public void beamColumn(RegistryObject<? extends OrnamentBeam> block, String name) {
+	public void beamColumn(Supplier<? extends OrnamentBeam> block, String name) {
 		this.beam(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), tfLoc(name), SOLID);
 	}
 
-	public void beamTwoLayer(RegistryObject<? extends OrnamentBeam> block, String name, String under, String overlay, int alight, int olight, ResourceLocation render) {
-		ModelFile whole = this.models().beamWhole2Layer(block.getId().getPath() + "_whole", tfLoc(under), tfLoc(overlay), alight, olight, render);
-		ModelFile horizon = this.models().beamHorizontal2Layer(block.getId().getPath() + "_horizontal", tfLoc(under), tfLoc(overlay), alight, olight, render);
-		ModelFile vertical = this.models().beamVertical2Layer(block.getId().getPath() + "_verticalal", tfLoc(under), tfLoc(overlay), alight, olight, render);
-		ModelFile corner = this.models().beamCorner2Layer(block.getId().getPath() + "_corner", tfLoc(under), tfLoc(overlay), alight, olight, render);
+	public void beamTwoLayer(Supplier<? extends OrnamentBeam> block, String name, String under, String overlay, int alight, int olight, ResourceLocation render) {
+		String baseName = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
+		ModelFile whole = this.models().beamWhole2Layer(baseName + "_whole", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile horizon = this.models().beamHorizontal2Layer(baseName + "_horizontal", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile vertical = this.models().beamVertical2Layer(baseName + "_vertical", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile corner = this.models().beamCorner2Layer(baseName + "_corner", tfLoc(under), tfLoc(overlay), alight, olight, render);
 		ModelFile full = this.models().getExistingFile(this.tfLoc(name));
 		this.beamBlock(block, whole, horizon, vertical, corner, full);
 	}
 
-	public void beamFiery(RegistryObject<? extends OrnamentBeam> block, String fullblock) {
-		String name = block.getId().getPath();
+	public void beamFiery(Supplier<? extends OrnamentBeam> block, String fullblock) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile whole = this.models().getExistingFile(modLoc("block/fiery/" + name + "_whole"));
 		ModelFile horizon = this.models().getExistingFile(modLoc("block/fiery/" + name + "_horizontal"));
 		ModelFile vertical = this.models().getExistingFile(modLoc("block/fiery/" + name + "_vertical"));
@@ -363,32 +368,32 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		this.beamBlock(block, whole, horizon, vertical, corner, full);
 	}
 
-	public void wallColumn(RegistryObject<? extends WallBlock> block, String name) {
+	public void wallColumn(Supplier<? extends WallBlock> block, String name) {
 		this.wall(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), SOLID);
 	}
 
-	public void wallTwoLayer(RegistryObject<? extends WallBlock> block, String under, String overlay, int alight, int olight, ResourceLocation render) {
-		String baseName = block.getId().getPath();
+	public void wallTwoLayer(Supplier<? extends WallBlock> block, String under, String overlay, int alight, int olight, ResourceLocation render) {
+		String baseName = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile post = models().wallPost2Layer(baseName + "_post", tfLoc(under), tfLoc(overlay), alight, olight, render);
 		ModelFile side = models().wallSide2Layer(baseName + "_side", tfLoc(under), tfLoc(overlay), alight, olight, render);
 		ModelFile sideTall = models().wallSideTall2Layer(baseName + "_side_tall", tfLoc(under), tfLoc(overlay), alight, olight, render);
 		this.wallBlock(block.get(), post, side, sideTall);
 	}
 
-	public void wallFiery(RegistryObject<? extends WallBlock> block) {
-		String name = block.getId().getPath();
+	public void wallFiery(Supplier<? extends WallBlock> block) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile post = models().getExistingFile(modLoc("block/fiery/" + name + "_post"));
 		ModelFile side = models().getExistingFile(modLoc("block/fiery/" + name + "_side"));
 		ModelFile sideTall = models().getExistingFile(modLoc("block/fiery/" + name + "_side_tall"));
 		this.wallBlock(block.get(), post, side, sideTall);
 	}
 
-	public void saddleDoorTF(RegistryObject<? extends OrnamentSaddleDoor> block, String name) {
+	public void saddleDoorTF(Supplier<? extends OrnamentSaddleDoor> block, String name) {
 		this.saddleDoor(block, tfLoc(name), tfLoc(name), tfLoc(name), CUTOUT);
 	}
 
-	public void saddleDoorExist(RegistryObject<? extends OrnamentSaddleDoor> block, String dir) {
-		String name = block.getId().getPath();
+	public void saddleDoorExist(Supplier<? extends OrnamentSaddleDoor> block, String dir) {
+		String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
 		ModelFile left = this.models().getExistingFile(modLoc(String.format("block/%s/%s_left", dir, name)));
 		ModelFile leftopen = this.models().getExistingFile(modLoc(String.format("block/%s/%s_left_open", dir, name)));
 		ModelFile right = this.models().getExistingFile(modLoc(String.format("block/%s/%s_right", dir, name)));

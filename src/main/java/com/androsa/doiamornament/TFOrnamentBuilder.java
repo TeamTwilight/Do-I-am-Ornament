@@ -8,8 +8,6 @@ public class TFOrnamentBuilder extends OrnamentBuilder {
 	public float shadeBrightness = -1.0F;
 	public boolean shearable = false;
 	public float shearSpeed = 1.0F;
-	public boolean sticky = false;
-	public boolean ignites = false;
 
 	public TFOrnamentBuilder(OrnamentBuilder builder) {
 		super(builder);
@@ -37,22 +35,6 @@ public class TFOrnamentBuilder extends OrnamentBuilder {
 	public TFOrnamentBuilder shearable(float speed) {
 		this.shearable = true;
 		this.shearSpeed = speed;
-		return this;
-	}
-
-	/**
-	 * Determines if the block sticks to other blocks
-	 */
-	public TFOrnamentBuilder sticky() {
-		this.sticky = true;
-		return this;
-	}
-
-	/**
-	 * Determines if lava can ignite this block
-	 */
-	public TFOrnamentBuilder lavaIgnites() {
-		this.ignites = true;
 		return this;
 	}
 }

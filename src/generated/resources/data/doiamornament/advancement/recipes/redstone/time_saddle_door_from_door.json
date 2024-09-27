@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "doiamornament:time_saddle_door_from_door"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_time": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilightforest:time_door"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_time"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "doiamornament:time_saddle_door_from_door"
+    ]
+  }
+}

@@ -14,8 +14,8 @@ public class OrnamentTFSaddleDoor extends OrnamentSaddleDoor {
 
     private final TFOrnamentBuilder tfBuilder;
 
-    public OrnamentTFSaddleDoor(Properties props, TFOrnamentBuilder builder) {
-        super(props, builder);
+    public OrnamentTFSaddleDoor(TFOrnamentBuilder builder, Properties props) {
+        super(builder, props);
         this.tfBuilder = builder;
     }
 
@@ -35,10 +35,5 @@ public class OrnamentTFSaddleDoor extends OrnamentSaddleDoor {
     @Deprecated
     public VoxelShape getOcclusionShape(BlockState state, BlockGetter getter, BlockPos pos) {
         return !tfBuilder.occlusion ? Shapes.empty() : super.getOcclusionShape(state, getter, pos);
-    }
-
-    @Override
-    public boolean isStickyBlock(BlockState state) {
-        return tfBuilder.sticky;
     }
 }

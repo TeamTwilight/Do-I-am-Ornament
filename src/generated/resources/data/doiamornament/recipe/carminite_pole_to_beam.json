@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "doiamornament:carminite_pole"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "doiamornament:carminite_beam"
+  }
+}

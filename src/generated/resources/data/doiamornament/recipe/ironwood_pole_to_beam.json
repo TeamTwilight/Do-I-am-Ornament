@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "doiamornament:ironwood_pole"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "doiamornament:ironwood_beam"
+  }
+}

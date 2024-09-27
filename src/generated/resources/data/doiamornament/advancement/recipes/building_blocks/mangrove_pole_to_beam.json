@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mangrove": {
+      "conditions": {
+        "items": [
+          {
+            "items": "doiamornament:mangrove_pole"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "doiamornament:mangrove_pole_to_beam"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mangrove"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "doiamornament:mangrove_pole_to_beam"
+    ]
+  }
+}
