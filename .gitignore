@@ -20,7 +20,12 @@ build
 # other
 eclipse
 run
+src/main/disabled
+logs
+secrets.properties
+run-data
+runs
 
 # Files from Forge MDK
 forge*changelog.txt
-secrets.properties
+
