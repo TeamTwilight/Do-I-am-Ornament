@@ -34,6 +34,7 @@ public class ItemTagGenerator extends OrnamentalItemTagProvider {
     public static final List<Supplier<? extends Block>> BEAMS = Lists.newArrayList();
     public static final List<Supplier<? extends Block>> WALLS = Lists.newArrayList();
     public static final List<Supplier<? extends Block>> SADDLE_DOORS = Lists.newArrayList();
+    public static final List<Supplier<? extends Block>> SUPPORTS = Lists.newArrayList();
 
     public ItemTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, BlockTagsProvider blocktags, ExistingFileHelper existingFileHelper) {
         super(output, provider, DoIAmOrnamentMod.MODID, existingFileHelper, blocktags);
@@ -59,5 +60,6 @@ public class ItemTagGenerator extends OrnamentalItemTagProvider {
         this.addToTag(ModTags.Items.BEAMS, BEAMS);
         this.addToTag(ItemTags.WALLS, WALLS);
         this.addToTag(ModTags.Items.SADDLE_DOORS, SADDLE_DOORS);
+        this.addToTag(ModTags.Items.SUPPORTS, SUPPORTS);
     }
 }

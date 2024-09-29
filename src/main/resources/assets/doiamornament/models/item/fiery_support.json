@@ -1,0 +1,87 @@
+{
+  "parent": "block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "all": "twilightforest:block/fiery_block_inner",
+    "over": "twilightforest:block/fiery_pattern"
+  },
+  "elements": [
+    {
+      "from": [ 1, 1, 9 ],
+      "to": [ 7, 15, 15 ],
+      "shade": false,
+      "faces":{
+        "down":  { "texture": "#all", "cullface": "down" },
+        "up":    { "texture": "#all" },
+        "north": { "texture": "#all",   "cullface": "north" },
+        "south": { "texture": "#all" },
+        "west":  { "texture": "#all",   "cullface": "west" },
+        "east":  { "texture": "#all" }
+      }
+    }, {
+      "from": [ 7, 1, 9 ],
+      "to": [ 15, 7, 15 ],
+      "shade": false,
+      "faces":{
+        "down":  { "texture": "#all", "cullface": "down" },
+        "up":    { "texture": "#all" },
+        "north": { "texture": "#all",   "cullface": "north" },
+        "south": { "texture": "#all" },
+        "east":  { "texture": "#all" }
+      }
+    }, {
+      "from": [ 1, 1, 1 ],
+      "to": [ 7, 7, 9 ],
+      "shade": false,
+      "faces":{
+        "down":  { "texture": "#all", "cullface": "down" },
+        "up":    { "texture": "#all" },
+        "north": { "texture": "#all",   "cullface": "north" },
+        "west":  { "texture": "#all",   "cullface": "west" },
+        "east":  { "texture": "#all" }
+      }
+    }, {
+      "from": [ 8, 8, 16 ],
+      "to": [ 0, 0, 8 ],
+      "shade": false,
+      "faces":{
+        "up":    { "texture": "#over" },
+        "north": { "texture": "#over",   "cullface": "north" },
+        "east":  { "texture": "#over" }
+      }
+    }, {
+      "from": [ 8, 16, 16 ],
+      "to": [ 0, 8, 8 ],
+      "shade": false,
+      "faces":{
+        "down":  { "texture": "#over", "cullface": "down" },
+        "north": { "texture": "#over" },
+        "south": { "texture": "#over" },
+        "west":  { "texture": "#over",   "cullface": "west" },
+        "east":  { "texture": "#over" }
+      }
+    }, {
+      "from": [ 16, 8, 16 ],
+      "to": [ 8, 0, 8 ],
+      "shade": false,
+      "faces":{
+        "down":  { "texture": "#over", "cullface": "down" },
+        "up":    { "texture": "#over" },
+        "north": { "texture": "#over",   "cullface": "north" },
+        "south": { "texture": "#over" },
+        "west":  { "texture": "#over" }
+      }
+    }, {
+      "from": [ 8, 8, 8 ],
+      "to": [ 0, 0, 0 ],
+      "shade": false,
+      "faces":{
+        "down":  { "texture": "#over" },
+        "up":    { "texture": "#over" },
+        "south": { "texture": "#over" },
+        "west":  { "texture": "#over" },
+        "east":  { "texture": "#over" }
+      }
+    }
+  ]
+}

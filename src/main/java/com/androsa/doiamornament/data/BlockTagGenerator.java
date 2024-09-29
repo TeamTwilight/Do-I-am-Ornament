@@ -33,6 +33,7 @@ public class BlockTagGenerator extends OrnamentalBlockTagProvider {
     public static final List<Supplier<? extends Block>> BEAMS = Lists.newArrayList();
     public static final List<Supplier<? extends Block>> WALLS = Lists.newArrayList();
     public static final List<Supplier<? extends Block>> SADDLE_DOORS = Lists.newArrayList();
+    public static final List<Supplier<? extends Block>> SUPPORTS = Lists.newArrayList();
     public static final List<Supplier<? extends Block>> BEACON_BASES = Lists.newArrayList();
     public static final List<Supplier<? extends Block>> PORTAL_DECO = Lists.newArrayList();
 
@@ -66,6 +67,7 @@ public class BlockTagGenerator extends OrnamentalBlockTagProvider {
         this.addToTag(ModTags.Blocks.BEAMS, BEAMS);
         this.addToTag(BlockTags.WALLS, WALLS);
         this.addToTag(ModTags.Blocks.SADDLE_DOORS, SADDLE_DOORS);
+        this.addToTag(ModTags.Blocks.SUPPORTS, SUPPORTS);
         this.addToTag(BlockTags.BEACON_BASE_BLOCKS, BEACON_BASES);
         this.addToTag(twilightforest.data.tags.BlockTagGenerator.PORTAL_DECO, PORTAL_DECO);
 

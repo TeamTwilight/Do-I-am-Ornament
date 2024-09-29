@@ -175,4 +175,12 @@ public class TFRegistryHelper extends MasterRegistryHelper {
     public Supplier<OrnamentTFSaddleDoor> saddledoor(TFOrnamentBuilder builder, ArrayList<List<Supplier<? extends Block>>> blocktags, ArrayList<List<Supplier<? extends Block>>> itemtags) {
         return this.saddledoor(builder, blocktags, itemtags, OrnamentTFSaddleDoor::new);
     }
+
+    public Supplier<OrnamentTFSupport> support(TFOrnamentBuilder builder) {
+        return this.support(builder, Lists.newArrayList(), Lists.newArrayList());
+    }
+
+    public Supplier<OrnamentTFSupport> support(TFOrnamentBuilder builder, ArrayList<List<Supplier<? extends Block>>> blocktags, ArrayList<List<Supplier<? extends Block>>> itemtags) {
+        return this.support(builder, blocktags, itemtags, OrnamentTFSupport::new);
+    }
 }

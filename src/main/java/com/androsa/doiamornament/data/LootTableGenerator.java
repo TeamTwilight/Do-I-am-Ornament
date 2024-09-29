@@ -208,6 +208,28 @@ public class LootTableGenerator extends LootTableProvider {
             this.dropSelf(ModBlocks.transformation_plank_saddle_door);
             this.dropSelf(ModBlocks.mining_plank_saddle_door);
             this.dropSelf(ModBlocks.sorting_plank_saddle_door);
+
+            this.dropSelf(ModBlocks.ironwood_support);
+            this.dropSelf(ModBlocks.fiery_support);
+            this.dropSelf(ModBlocks.steeleaf_support);
+            this.dropSelf(ModBlocks.arctic_fur_support);
+            this.dropSelf(ModBlocks.carminite_support);
+            this.dropSelf(ModBlocks.twilight_oak_log_support);
+            this.dropSelf(ModBlocks.canopy_log_support);
+            this.dropSelf(ModBlocks.mangrove_log_support);
+            this.dropSelf(ModBlocks.dark_oak_log_support);
+            this.dropSelf(ModBlocks.time_log_support);
+            this.dropSelf(ModBlocks.transformation_log_support);
+            this.dropSelf(ModBlocks.mining_log_support);
+            this.dropSelf(ModBlocks.sorting_log_support);
+            this.dropSelf(ModBlocks.twilight_oak_plank_support);
+            this.dropSelf(ModBlocks.canopy_plank_support);
+            this.dropSelf(ModBlocks.mangrove_plank_support);
+            this.dropSelf(ModBlocks.dark_oak_plank_support);
+            this.dropSelf(ModBlocks.time_plank_support);
+            this.dropSelf(ModBlocks.transformation_plank_support);
+            this.dropSelf(ModBlocks.mining_plank_support);
+            this.dropSelf(ModBlocks.sorting_plank_support);
         }
 
         @Override

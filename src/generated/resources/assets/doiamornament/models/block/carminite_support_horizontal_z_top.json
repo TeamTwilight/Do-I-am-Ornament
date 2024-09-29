@@ -1,0 +1,114 @@
+{
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "neoforge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        },
+        "east": {
+          "neoforge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        },
+        "south": {
+          "cullface": "south",
+          "neoforge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        },
+        "up": {
+          "cullface": "up",
+          "neoforge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        },
+        "west": {
+          "cullface": "west",
+          "neoforge_data": {
+            "block_light": 4,
+            "sky_light": 4
+          },
+          "texture": "#all"
+        }
+      },
+      "from": [
+        0,
+        8,
+        8
+      ],
+      "to": [
+        8,
+        16,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "neoforge_data": {
+            "block_light": 7,
+            "sky_light": 7
+          },
+          "texture": "#over"
+        },
+        "east": {
+          "neoforge_data": {
+            "block_light": 7,
+            "sky_light": 7
+          },
+          "texture": "#over"
+        },
+        "south": {
+          "cullface": "south",
+          "neoforge_data": {
+            "block_light": 7,
+            "sky_light": 7
+          },
+          "texture": "#over"
+        },
+        "up": {
+          "cullface": "up",
+          "neoforge_data": {
+            "block_light": 7,
+            "sky_light": 7
+          },
+          "texture": "#over"
+        },
+        "west": {
+          "cullface": "west",
+          "neoforge_data": {
+            "block_light": 7,
+            "sky_light": 7
+          },
+          "texture": "#over"
+        }
+      },
+      "from": [
+        0,
+        8,
+        8
+      ],
+      "to": [
+        8,
+        16,
+        16
+      ]
+    }
+  ],
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "all": "twilightforest:block/carminite_block",
+    "over": "twilightforest:block/carminite_block_overlay",
+    "particle": "#all"
+  }
+}

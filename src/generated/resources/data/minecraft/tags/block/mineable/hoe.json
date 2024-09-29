@@ -19,6 +19,8 @@
     "doiamornament:steeleaf_wall",
     "doiamornament:arctic_fur_wall",
     "doiamornament:steeleaf_saddle_door",
-    "doiamornament:arctic_fur_saddle_door"
+    "doiamornament:arctic_fur_saddle_door",
+    "doiamornament:steeleaf_support",
+    "doiamornament:arctic_fur_support"
   ]
 }

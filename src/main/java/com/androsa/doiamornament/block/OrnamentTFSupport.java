@@ -1,0 +1,40 @@
+package com.androsa.doiamornament.block;
+
+import com.androsa.doiamornament.TFOrnamentBuilder;
+import com.androsa.ornamental.blocks.OrnamentPole;
+import com.androsa.ornamental.blocks.OrnamentSupport;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ShearsItem;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+public class OrnamentTFSupport extends OrnamentSupport {
+
+	private final TFOrnamentBuilder tfBuilder;
+
+	public OrnamentTFSupport(TFOrnamentBuilder tfbuilder, Properties props) {
+		super(tfbuilder, props);
+		this.tfBuilder = tfbuilder;
+	}
+
+	@Override
+	@Deprecated
+	public float getShadeBrightness(BlockState state, BlockGetter reader, BlockPos pos) {
+		return tfBuilder.shadeBrightness > 0.0F ? tfBuilder.shadeBrightness : super.getShadeBrightness(state, reader, pos);
+	}
+
+	@Override
+	@Deprecated
+	public float getDestroyProgress(BlockState state, Player player, BlockGetter reader, BlockPos pos) {
+		return tfBuilder.shearable ? player.getMainHandItem().getItem() instanceof ShearsItem ? tfBuilder.shearSpeed : super.getDestroyProgress(state, player, reader, pos) : super.getDestroyProgress(state, player, reader, pos);
+	}
+
+	@Override
+	@Deprecated
+	public VoxelShape getOcclusionShape(BlockState state, BlockGetter getter, BlockPos pos) {
+		return !tfBuilder.occlusion ? Shapes.empty() : super.getOcclusionShape(state, getter, pos);
+	}
+}

@@ -194,6 +194,27 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
         blockItemSaddleDoorTF(ModBlocks.transformation_plank_saddle_door, "wood/trapdoor/trans_trapdoor");
         blockItemSaddleDoorTF(ModBlocks.mining_plank_saddle_door, "wood/trapdoor/mine_trapdoor");
         blockItemSaddleDoorTF(ModBlocks.sorting_plank_saddle_door, "wood/trapdoor/sort_trapdoor");
+
+        blockItemSupport(ModBlocks.ironwood_support, "ironwood_block");
+        blockItemSupport(ModBlocks.steeleaf_support, "steeleaf_block");
+        blockItemSupport(ModBlocks.arctic_fur_support, "arctic_fur_block");
+        blockItemSupport(ModBlocks.carminite_support, "carminite_block");
+        blockItemSupport(ModBlocks.twilight_oak_log_support, "twilight_oak_log_top", "twilight_oak_log");
+        blockItemSupport(ModBlocks.canopy_log_support, "canopy_log_top", "canopy_log");
+        blockItemSupport(ModBlocks.mangrove_log_support, "mangrove_log_top", "mangrove_log");
+        blockItemSupport(ModBlocks.dark_oak_log_support, "dark_log_top", "dark_log");
+        blockItemSupport(ModBlocks.time_log_support, "time_log_top", "time_log");
+        blockItemSupport(ModBlocks.transformation_log_support, "transformation_log_top", "transformation_log");
+        blockItemSupport(ModBlocks.mining_log_support, "mining_log_top", "mining_log");
+        blockItemSupport(ModBlocks.sorting_log_support, "sorting_log_top", "sorting_log");
+        blockItemSupport(ModBlocks.twilight_oak_plank_support, "wood/planks_twilight_oak_0");
+        blockItemSupport(ModBlocks.canopy_plank_support, "wood/planks_canopy_0");
+        blockItemSupport(ModBlocks.mangrove_plank_support, "wood/planks_mangrove_0");
+        blockItemSupport(ModBlocks.dark_oak_plank_support, "wood/planks_darkwood_0");
+        blockItemSupport(ModBlocks.time_plank_support, "wood/planks_time_0");
+        blockItemSupport(ModBlocks.transformation_plank_support, "wood/planks_trans_0");
+        blockItemSupport(ModBlocks.mining_plank_support, "wood/planks_mine_0");
+        blockItemSupport(ModBlocks.sorting_plank_support, "wood/planks_sort_0");
     }
 
     public void blockItemFiery(Supplier<? extends Block> block) {
@@ -261,5 +282,16 @@ public class ItemModelGenerator extends OrnamentalItemModelProvider {
     public void blockItemSaddleDoorTF(Supplier<? extends Block> block, String name) {
         ResourceLocation tex = TwilightForestMod.prefix("block/" + name);
         this.blockItemSaddleDoor(block, tex, tex, tex);
+    }
+
+    @Override
+    public void blockItemSupport(Supplier<? extends Block> block, String name) {
+        this.blockItemSupport(block, name, name);
+    }
+
+    @Override
+    public void blockItemSupport(Supplier<? extends Block> block, String side, String top) {
+        ResourceLocation toptex = TwilightForestMod.prefix("block/" + top);
+        this.blockItemSupport(block, TwilightForestMod.prefix("block/" + side), toptex, toptex);
     }
 }

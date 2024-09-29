@@ -29,6 +29,9 @@
     "doiamornament:carminite_wall",
     "doiamornament:ironwood_saddle_door",
     "doiamornament:fiery_saddle_door",
-    "doiamornament:carminite_saddle_door"
+    "doiamornament:carminite_saddle_door",
+    "doiamornament:ironwood_support",
+    "doiamornament:fiery_support",
+    "doiamornament:carminite_support"
   ]
 }

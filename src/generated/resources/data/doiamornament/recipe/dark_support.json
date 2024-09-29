@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "doiamornament:dark_pole"
+    },
+    {
+      "item": "doiamornament:dark_beam"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "doiamornament:dark_support"
+  }
+}

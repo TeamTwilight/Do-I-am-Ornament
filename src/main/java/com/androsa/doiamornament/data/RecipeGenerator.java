@@ -43,6 +43,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.fiery_beam, false))
                 .wall(add(ModBlocks.fiery_wall, false))
                 .saddledoor(add(ModBlocks.fiery_saddle_door, false))
+                .support(add(ModBlocks.fiery_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.STEELEAF_BLOCK.get(), TFItems.STEELEAF_INGOT.get(), false)
                 .stairs(add(ModBlocks.steeleaf_stairs, false))
@@ -55,6 +56,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.steeleaf_beam, false))
                 .wall(add(ModBlocks.steeleaf_wall, false))
                 .saddledoor(add(ModBlocks.steeleaf_saddle_door, false))
+                .support(add(ModBlocks.steeleaf_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.ARCTIC_FUR_BLOCK.get(), TFItems.ARCTIC_FUR.get(), false)
                 .stairs(add(ModBlocks.arctic_fur_stairs, false))
@@ -67,6 +69,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.arctic_fur_beam, false))
                 .wall(add(ModBlocks.arctic_fur_wall, false))
                 .saddledoor(add(ModBlocks.arctic_fur_saddle_door, false))
+                .support(add(ModBlocks.arctic_fur_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.CARMINITE_BLOCK.get(), TFItems.CARMINITE.get(), false)
                 .stairs(add(ModBlocks.carminite_stairs, false))
@@ -79,6 +82,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.carminite_beam, false))
                 .wall(add(ModBlocks.carminite_wall, false))
                 .saddledoor(add(ModBlocks.carminite_saddle_door, false))
+                .support(add(ModBlocks.carminite_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.TWILIGHT_OAK_LOG.get(), ModBlocks.twilight_oak_log_slab.get(), false)
                 .stairs(add(ModBlocks.twilight_oak_log_stairs, false))
@@ -91,6 +95,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.twilight_oak_log_beam, false))
                 .wall(add(ModBlocks.twilight_oak_log_wall, false))
                 .saddledoor(add(ModBlocks.twilight_oak_log_saddle_door, false))
+                .support(add(ModBlocks.twilight_oak_log_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.CANOPY_LOG.get(), ModBlocks.canopy_log_slab.get(), false)
                 .stairs(add(ModBlocks.canopy_log_stairs, false))
@@ -103,6 +108,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.canopy_log_beam, false))
                 .wall(add(ModBlocks.canopy_log_wall, false))
                 .saddledoor(add(ModBlocks.canopy_log_saddle_door, false))
+                .support(add(ModBlocks.canopy_log_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.MANGROVE_LOG.get(), ModBlocks.mangrove_log_slab.get(), false)
                 .stairs(add(ModBlocks.mangrove_log_stairs, false))
@@ -115,6 +121,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.mangrove_log_beam, false))
                 .wall(add(ModBlocks.mangrove_log_wall, false))
                 .saddledoor(add(ModBlocks.mangrove_log_saddle_door, false))
+                .support(add(ModBlocks.mangrove_log_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.DARK_LOG.get(), ModBlocks.dark_oak_log_slab.get(), false)
                 .stairs(add(ModBlocks.dark_oak_log_stairs, false))
@@ -127,6 +134,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.dark_oak_log_beam, false))
                 .wall(add(ModBlocks.dark_oak_log_wall, false))
                 .saddledoor(add(ModBlocks.dark_oak_log_saddle_door, false))
+                .support(add(ModBlocks.dark_oak_log_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.TIME_LOG.get(), ModBlocks.time_log_slab.get(), false)
                 .stairs(add(ModBlocks.time_log_stairs, false))
@@ -139,6 +147,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.time_log_beam, false))
                 .wall(add(ModBlocks.time_log_wall, false))
                 .saddledoor(add(ModBlocks.time_log_saddle_door, false))
+                .support(add(ModBlocks.time_log_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.TRANSFORMATION_LOG.get(), ModBlocks.transformation_log_slab.get(), false)
                 .stairs(add(ModBlocks.transformation_log_stairs, false))
@@ -151,6 +160,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.transformation_log_beam, false))
                 .wall(add(ModBlocks.transformation_log_wall, false))
                 .saddledoor(add(ModBlocks.transformation_log_saddle_door, false))
+                .support(add(ModBlocks.transformation_log_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.MINING_LOG.get(), ModBlocks.mining_log_slab.get(), false)
                 .stairs(add(ModBlocks.mining_log_stairs, false))
@@ -163,6 +173,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.mining_log_beam, false))
                 .wall(add(ModBlocks.mining_log_wall, false))
                 .saddledoor(add(ModBlocks.mining_log_saddle_door, false))
+                .support(add(ModBlocks.mining_log_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.SORTING_LOG.get(), ModBlocks.sorting_log_slab.get(), false)
                 .stairs(add(ModBlocks.sorting_log_stairs, false))
@@ -175,6 +186,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.sorting_log_beam, false))
                 .wall(add(ModBlocks.sorting_log_wall, false))
                 .saddledoor(add(ModBlocks.sorting_log_saddle_door, false))
+                .support(add(ModBlocks.sorting_log_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.TWILIGHT_OAK_PLANKS.get(), TFBlocks.TWILIGHT_OAK_SLAB.get(), false)
                 .slab(add(TFBlocks.TWILIGHT_OAK_SLAB, false))
@@ -184,6 +196,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.twilight_oak_plank_beam, false))
                 .wall(add(ModBlocks.twilight_oak_plank_wall, false))
                 .saddledoor(add(ModBlocks.twilight_oak_plank_saddle_door, false))
+                .support(add(ModBlocks.twilight_oak_plank_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.CANOPY_PLANKS.get(), TFBlocks.CANOPY_SLAB.get(), false)
                 .slab(add(TFBlocks.CANOPY_SLAB, false))
@@ -193,6 +206,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.canopy_plank_beam, false))
                 .wall(add(ModBlocks.canopy_plank_wall, false))
                 .saddledoor(add(ModBlocks.canopy_plank_saddle_door, false))
+                .support(add(ModBlocks.canopy_plank_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.MANGROVE_PLANKS.get(), TFBlocks.MANGROVE_SLAB.get(), false)
                 .slab(add(TFBlocks.MANGROVE_SLAB, false))
@@ -202,6 +216,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.mangrove_plank_beam, false))
                 .wall(add(ModBlocks.mangrove_plank_wall, false))
                 .saddledoor(add(ModBlocks.mangrove_plank_saddle_door, false))
+                .support(add(ModBlocks.mangrove_plank_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.DARK_PLANKS.get(), TFBlocks.DARK_SLAB.get(), false)
                 .slab(add(TFBlocks.DARK_SLAB, false))
@@ -211,6 +226,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.dark_oak_plank_beam, false))
                 .wall(add(ModBlocks.dark_oak_plank_wall, false))
                 .saddledoor(add(ModBlocks.dark_oak_plank_saddle_door, false))
+                .support(add(ModBlocks.dark_oak_plank_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.TIME_PLANKS.get(), TFBlocks.TIME_SLAB.get(), false)
                 .slab(add(TFBlocks.TIME_SLAB, false))
@@ -220,6 +236,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.time_plank_beam, false))
                 .wall(add(ModBlocks.time_plank_wall, false))
                 .saddledoor(add(ModBlocks.time_plank_saddle_door, false))
+                .support(add(ModBlocks.time_plank_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.TRANSFORMATION_PLANKS.get(), TFBlocks.TRANSFORMATION_SLAB.get(), false)
                 .slab(add(TFBlocks.TRANSFORMATION_SLAB, false))
@@ -229,6 +246,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.transformation_plank_beam, false))
                 .wall(add(ModBlocks.transformation_plank_wall, false))
                 .saddledoor(add(ModBlocks.transformation_plank_saddle_door, false))
+                .support(add(ModBlocks.transformation_plank_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.MINING_PLANKS.get(), TFBlocks.MINING_SLAB.get(), false)
                 .slab(add(TFBlocks.MINING_SLAB, false))
@@ -238,6 +256,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.mining_plank_beam, false))
                 .wall(add(ModBlocks.mining_plank_wall, false))
                 .saddledoor(add(ModBlocks.mining_plank_saddle_door, false))
+                .support(add(ModBlocks.mining_plank_support, false))
                 .build());
         autoRecipe(consumer, new AutoRecipeManager.Builder(TFBlocks.SORTING_PLANKS.get(), TFBlocks.SORTING_SLAB.get(), false)
                 .slab(add(TFBlocks.SORTING_SLAB, false))
@@ -247,6 +266,7 @@ public class RecipeGenerator extends OrnamentalRecipeProvider {
                 .beam(add(ModBlocks.sorting_plank_beam, false))
                 .wall(add(ModBlocks.sorting_plank_wall, false))
                 .saddledoor(add(ModBlocks.sorting_plank_saddle_door, false))
+                .support(add(ModBlocks.sorting_plank_support, false))
                 .build());
     }
 }

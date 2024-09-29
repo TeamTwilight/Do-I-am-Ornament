@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ironwood": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:ironwood_pole",
+              "doiamornament:ironwood_beam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "doiamornament:ironwood_support"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ironwood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "doiamornament:ironwood_support"
+    ]
+  }
+}

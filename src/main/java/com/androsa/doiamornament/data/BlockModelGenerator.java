@@ -723,4 +723,168 @@ public abstract class BlockModelGenerator extends OrnamentalBlockModelProvider {
 				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
 				.end();
 	}
+
+	public BlockModelBuilder supportBase2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
+		return getBuilder(name)
+				.renderType(render)
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
+	}
+
+	public BlockModelBuilder supportBaseTop2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
+		return getBuilder(name)
+				.renderType(render)
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 8.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 8.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
+	}
+
+	public BlockModelBuilder supportHX2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
+		return getBuilder(name)
+				.renderType(render)
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(8.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(8.0F, 0.0F, 0.0F).to(16.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
+	}
+
+	public BlockModelBuilder supportHXTop2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
+		return getBuilder(name)
+				.renderType(render)
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(8.0F, 8.0F, 0.0F).to(16.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").cullface(Direction.EAST).emissivity(alight, alight).end()
+				.end()
+				.element().from(8.0F, 8.0F, 0.0F).to(16.0F, 16.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").cullface(Direction.EAST).emissivity(olight, olight).end()
+				.end();
+	}
+
+	public BlockModelBuilder supportHZ2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
+		return getBuilder(name)
+				.renderType(render)
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 8.0F).to(8.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 8.0F).to(8.0F, 8.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
+	}
+
+	public BlockModelBuilder supportHZTop2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
+		return getBuilder(name)
+				.renderType(render)
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 8.0F, 8.0F).to(8.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").cullface(Direction.SOUTH).emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 8.0F, 8.0F).to(8.0F, 16.0F, 16.0F)
+				    .face(Direction.DOWN).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").cullface(Direction.SOUTH).emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
+	}
+
+	public BlockModelBuilder supportV2Layer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
+		return getBuilder(name)
+				.renderType(render)
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 8.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.UP).texture("#all").cullface(Direction.UP).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 8.0F, 0.0F).to(8.0F, 16.0F, 8.0F)
+				    .face(Direction.UP).texture("#over").cullface(Direction.UP).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
+	}
+
+	public BlockModelBuilder supportV2TopLayer(String name, ResourceLocation all, ResourceLocation over, int alight, int olight, ResourceLocation render) {
+		return getBuilder(name)
+				.renderType(render)
+				.texture("all", all).texture("over", over).texture("particle", "#all")
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#all").cullface(Direction.DOWN).emissivity(alight, alight).end()
+				    .face(Direction.NORTH).texture("#all").cullface(Direction.NORTH).emissivity(alight, alight).end()
+				    .face(Direction.SOUTH).texture("#all").emissivity(alight, alight).end()
+				    .face(Direction.WEST).texture("#all").cullface(Direction.WEST).emissivity(alight, alight).end()
+				    .face(Direction.EAST).texture("#all").emissivity(alight, alight).end()
+				.end()
+				.element().from(0.0F, 0.0F, 0.0F).to(8.0F, 8.0F, 8.0F)
+				    .face(Direction.DOWN).texture("#over").cullface(Direction.DOWN).emissivity(olight, olight).end()
+				    .face(Direction.NORTH).texture("#over").cullface(Direction.NORTH).emissivity(olight, olight).end()
+				    .face(Direction.SOUTH).texture("#over").emissivity(olight, olight).end()
+				    .face(Direction.WEST).texture("#over").cullface(Direction.WEST).emissivity(olight, olight).end()
+				    .face(Direction.EAST).texture("#over").emissivity(olight, olight).end()
+				.end();
+	}
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "doiamornament:time_log_support"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "doiamornament:blocks/time_log_support"
+}

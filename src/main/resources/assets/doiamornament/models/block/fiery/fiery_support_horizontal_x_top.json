@@ -1,0 +1,34 @@
+{
+  "ambientocclusion": false,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "twilightforest:block/fiery_block",
+    "all": "twilightforest:block/fiery_block_inner",
+    "over": "twilightforest:block/fiery_pattern"
+  },
+  "elements": [
+    {
+      "from": [ 7, 9, 1 ],
+      "to": [ 15, 15, 7 ],
+      "shade": false,
+      "faces":{
+        "down":  { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "top" },
+        "north": { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 },   "cullface": "north" },
+        "south": { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "east":  { "texture": "#all", "neoforge_data": { "block_light": 15, "sky_light": 15 },   "cullface": "east" }
+      }
+    }, {
+      "from": [ 16, 16, 8 ],
+      "to": [ 8, 8, 0 ],
+      "shade": false,
+      "faces":{
+        "down":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "up":    { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 }, "cullface": "top" },
+        "north": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 },   "cullface": "north" },
+        "south": { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 } },
+        "east":  { "texture": "#over", "neoforge_data": { "block_light": 15, "sky_light": 15 },   "cullface": "east" }
+      }
+    }
+  ]
+}

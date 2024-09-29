@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_carminite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "doiamornament:carminite_pole",
+              "doiamornament:carminite_beam"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "doiamornament:carminite_support"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_carminite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "doiamornament:carminite_support"
+    ]
+  }
+}

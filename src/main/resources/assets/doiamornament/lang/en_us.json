@@ -169,5 +169,27 @@
   "block.doiamornament.time_saddle_door": "Time Saddle Door",
   "block.doiamornament.transformation_saddle_door": "Transformation Saddle Door",
   "block.doiamornament.mining_saddle_door": "Mining Saddle Door",
-  "block.doiamornament.sorting_saddle_door": "Sorting Saddle Door"
+  "block.doiamornament.sorting_saddle_door": "Sorting Saddle Door",
+
+  "block.doiamornament.ironwood_support": "Ironwood Support",
+  "block.doiamornament.fiery_support": "Fiery Support",
+  "block.doiamornament.steeleaf_support": "Steeleaf Support",
+  "block.doiamornament.arctic_fur_support": "Arctic Fur Support",
+  "block.doiamornament.carminite_support": "Carminite Support",
+  "block.doiamornament.twilight_oak_log_support": "Twilight Oak Log Support",
+  "block.doiamornament.canopy_log_support": "Canopy Log Support",
+  "block.doiamornament.mangrove_log_support": "Mangrove Log Support",
+  "block.doiamornament.dark_log_support": "Darkwood Log Support",
+  "block.doiamornament.time_log_support": "Time Log Support",
+  "block.doiamornament.transformation_log_support": "Transformation Log Support",
+  "block.doiamornament.mining_log_support": "Mining Log Support",
+  "block.doiamornament.sorting_log_support": "Sorting Log Support",
+  "block.doiamornament.twilight_oak_support": "Twilight Oak Support",
+  "block.doiamornament.canopy_support": "Canopy Support",
+  "block.doiamornament.mangrove_support": "Mangrove Support",
+  "block.doiamornament.dark_support": "Darkwood Support",
+  "block.doiamornament.time_support": "Time Support",
+  "block.doiamornament.transformation_support": "Transformation Support",
+  "block.doiamornament.mining_support": "Mining Support",
+  "block.doiamornament.sorting_support": "Sorting Support"
 }

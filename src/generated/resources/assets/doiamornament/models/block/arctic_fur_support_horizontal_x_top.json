@@ -1,0 +1,8 @@
+{
+  "parent": "ornamental:block/util/support_horizontal_x_top",
+  "textures": {
+    "bottom": "twilightforest:block/arctic_fur_block",
+    "side": "twilightforest:block/arctic_fur_block",
+    "top": "twilightforest:block/arctic_fur_block"
+  }
+}

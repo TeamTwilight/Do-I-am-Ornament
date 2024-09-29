@@ -2,9 +2,11 @@ package com.androsa.doiamornament.data;
 
 import com.androsa.doiamornament.DoIAmOrnamentMod;
 import com.androsa.doiamornament.ModBlocks;
+import com.androsa.doiamornament.TFOrnamentBuilders;
 import com.androsa.ornamental.blocks.OrnamentBeam;
 import com.androsa.ornamental.blocks.OrnamentPole;
 import com.androsa.ornamental.blocks.OrnamentSaddleDoor;
+import com.androsa.ornamental.blocks.OrnamentSupport;
 import com.androsa.ornamental.data.provider.OrnamentalBlockStateProvider;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -217,6 +219,28 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		saddleDoorTF(ModBlocks.transformation_plank_saddle_door, "wood/trapdoor/trans_trapdoor");
 		saddleDoorTF(ModBlocks.mining_plank_saddle_door, "wood/trapdoor/mine_trapdoor");
 		saddleDoorTF(ModBlocks.sorting_plank_saddle_door, "wood/trapdoor/sort_trapdoor");
+
+		supportTwoLayer(ModBlocks.ironwood_support, "ironwood_pattern", "ironwood_block", 0, 0, CUTOUT);
+		supportFiery(ModBlocks.fiery_support);
+		supportBasic(ModBlocks.steeleaf_support, "steeleaf_block");
+		supportBasic(ModBlocks.arctic_fur_support, "arctic_fur_block");
+		supportTwoLayer(ModBlocks.carminite_support, "carminite_block", "carminite_block_overlay", 4, 7, TRANSLUCENT);
+		supportColumn(ModBlocks.twilight_oak_log_support, "twilight_oak_log");
+		supportColumn(ModBlocks.canopy_log_support, "canopy_log");
+		supportColumn(ModBlocks.mangrove_log_support, "mangrove_log");
+		supportColumn(ModBlocks.dark_oak_log_support, "dark_log");
+		supportColumn(ModBlocks.time_log_support, "time_log");
+		supportColumn(ModBlocks.transformation_log_support, "transformation_log");
+		supportColumn(ModBlocks.mining_log_support, "mining_log");
+		supportColumn(ModBlocks.sorting_log_support, "sorting_log");
+		supportBasic(ModBlocks.twilight_oak_plank_support, "wood/planks_twilight_oak_0");
+		supportBasic(ModBlocks.canopy_plank_support, "wood/planks_canopy_0");
+		supportBasic(ModBlocks.mangrove_plank_support, "wood/planks_mangrove_0");
+		supportBasic(ModBlocks.dark_oak_plank_support, "wood/planks_darkwood_0");
+		supportBasic(ModBlocks.time_plank_support, "wood/planks_time_0");
+		supportBasic(ModBlocks.transformation_plank_support, "wood/planks_trans_0");
+		supportBasic(ModBlocks.mining_plank_support, "wood/planks_mine_0");
+		supportBasic(ModBlocks.sorting_plank_support, "wood/planks_sort_0");
 	}
 
 	private void stairsTwoLayer(Supplier<? extends StairBlock> block, String baseName, String base, String over, int alight, int olight, ResourceLocation render) {
@@ -399,5 +423,35 @@ public class BlockStateGenerator extends OrnamentalBlockStateProvider {
 		ModelFile right = this.models().getExistingFile(modLoc(String.format("block/%s/%s_right", dir, name)));
 		ModelFile rightopen = this.models().getExistingFile(modLoc(String.format("block/%s/%s_right_open", dir, name)));
 		this.saddleDoorBlock(block, left, leftopen, right, rightopen);
+	}
+
+	public void supportColumn(Supplier<? extends OrnamentSupport> block, String name) {
+		this.support(block, tfLoc(name), tfLoc(name + "_top"), tfLoc(name + "_top"), SOLID);
+	}
+
+	public void supportTwoLayer(Supplier<? extends OrnamentSupport> block, String under, String overlay, int alight, int olight, ResourceLocation render) {
+		String baseName = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
+		ModelFile base = models().supportBase2Layer(baseName + "_base", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile baseTop = models().supportBaseTop2Layer(baseName + "_base_top", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile vertical = models().supportV2Layer(baseName + "_vertical", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile verticalTop = models().supportV2TopLayer(baseName + "_vertical_top", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile horizonX = models().supportHX2Layer(baseName + "_horizontal_x", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile horizonXTop = models().supportHXTop2Layer(baseName + "_horizontal_x_top", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile horizonZ = models().supportHZ2Layer(baseName + "_horizontal_z", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		ModelFile horizonZTop = models().supportHZTop2Layer(baseName + "_horizontal_z_top", tfLoc(under), tfLoc(overlay), alight, olight, render);
+		this.supportBlock(block, base, baseTop, vertical, verticalTop, horizonX, horizonXTop, horizonZ, horizonZTop, false);
+	}
+
+	public void supportFiery(Supplier<? extends OrnamentSupport> block) {
+		String baseName = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
+		ModelFile base = models().getExistingFile(modLoc("block/fiery/" + baseName + "_base"));
+		ModelFile baseTop = models().getExistingFile(modLoc("block/fiery/" + baseName + "_base_top"));
+		ModelFile vertical = models().getExistingFile(modLoc("block/fiery/" + baseName + "_vertical"));
+		ModelFile verticalTop = models().getExistingFile(modLoc("block/fiery/" + baseName + "_vertical_top"));
+		ModelFile horizonX = models().getExistingFile(modLoc("block/fiery/" + baseName + "_horizontal_x"));
+		ModelFile horizonXTop = models().getExistingFile(modLoc("block/fiery/" + baseName + "_horizontal_x_top"));
+		ModelFile horizonZ = models().getExistingFile(modLoc("block/fiery/" + baseName + "_horizontal_z"));
+		ModelFile horizonZTop = models().getExistingFile(modLoc("block/fiery/" + baseName + "_horizontal_z_top"));
+		this.supportBlock(block, base, baseTop, vertical, verticalTop, horizonX, horizonXTop, horizonZ, horizonZTop, false);
 	}
 }
