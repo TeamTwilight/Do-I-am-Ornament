@@ -26,20 +26,20 @@ All your favourite blocks from Twilight Forest now in all arrays of decorative b
 [[dependencies.doiamornament]]
     modId="minecraft"
     type="required"
-    versionRange="[1.20.1,)"
+    versionRange="[1.21,)"
     ordering="NONE"
     side="BOTH"
 # Twilight Forest
 [[dependencies.doiamornament]]
     modId="twilightforest"
     type="required"
-    versionRange="[4.3.1740,)"
+    versionRange="[4.6.2780,)"
     ordering="NONE"
     side="BOTH"
 # Ornamental
 [[dependencies.doiamornament]]
     modId="ornamental"
     type="required"
-    versionRange="[1.20-4.12.78,)"
+    versionRange="[1.21-4.15.117,)"
     ordering="NONE"
     side="BOTH"
