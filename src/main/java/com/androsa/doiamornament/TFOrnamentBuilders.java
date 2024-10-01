@@ -122,7 +122,7 @@ public class TFOrnamentBuilders {
 						.stairBaseBlock(base)
 						.blockSetType(type)
 						.hardnessAndResistance(2.0F)
-						.burnTime(300, 300, 300, 150, 300, 150, 150, 300, 300)
+						.burnTime(300, 300, 300, 150, 300, 150, 150, 300, 300, 150, 300)
 						.addBlockTags(new ArrayList<>(List.of(BlockTagGenerator.AXE)))
 						.lavaIgnites());
 	}
